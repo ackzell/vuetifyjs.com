@@ -1,52 +1,52 @@
 export default {
-  header: 'Quick start',
-  headerText: 'Use one of the Vuetify Vue CLI packages _(based on the official examples)_ to get your project started in no time. Vuetify supports **SSR** (server-side rendering), **SPA** (single page application), **PWA** (progressive web application) and standard **HTML** pages.',
-  alert1: 'In order for your application to work properly, you **must** wrap it in a `v-app` component. This component is used for dynamically managing your content area and is the mounting point for many components.',
-  browserHeader: 'Supported Browsers',
-  browserText: 'Vuetify is a progressive framework that attempts to push web development to the next level. In order to best accomplish this task, some sacrifices had to be made in terms of support for older versions of Internet Explorer. This is not an exhaustive list of compatible browsers, but the main targeted ones.',
-  cdnHeader: 'CDN Install',
-  cdnText: 'To test using Vuetify.js without installing a template from Vue CLI, copy the code below into your `index.html`. This will pull the latest version of Vue and Vuetify, allowing you to start playing with components. You can also use the [Vuetify starter](https://template.vuetifyjs.com) on codepen.',
-  newHeader: 'New applications',
-  newText: 'Vuetify has 8 pre-made Vue CLI templates, 3 which are forked from [official Vue.js templates](https://github.com/vuejs-templates). They contain small modifications to help you get started with Vuetify even faster. These packages require `vue-cli`. For more information on vue-cli, visit the official [Github](https://github.com/vuejs/vue-cli) repository. These templates are designed to get you started as fast as possible with your next project',
-  existingHeader: 'Existing applications',
-  existingText1: 'To include Vuetify into an existing project, you must pull it into your node_modules. You can use either `npm` or `yarn` to accomplish this task. These are both package managers that allow you to control what resources are available to your application.',
-  existingText2: 'For a detailed explanation of how to get `npm` running in your environment, check out the [official documentation](https://docs.npmjs.com/getting-started/what-is-npm). Alternatively, if you wish to use yarn, you can find the official documentation [here](https://yarnpkg.com/lang/en/docs/). Once setup, you can run either command from your command prompt.',
-  existingText3: 'Once Vuetify has been installed, navigate to your applications main entry point. In most cases this will be `index.js` or `main.js`. In this file you will import Vuetify and tell Vue to use it.',
-  existingText4: 'You will also need to include the Vuetify css file. Simply include the Vuetify css file in your `index.html` or import the actual stylus file or the minified css.',
-  existingText5: 'The easiest way to include the Material Design icons is to add a `link` tag to your `index.html` file.',
-  alert2: 'Warning: While Vuetify attempts to not cause any css collision as much as possible, there is no guarantee that your custom styles will not alter your experience when integrating this framework into your existing project.',
-  ie11Header: 'IE11 & Safari 9 support',
-  ie11Text: 'In your project directory, install `babel-polyfill` and import it into your main entry:',
-  ie11Text2: 'Due to Internet Explorer\'s limited support for `<template>` tags, you must send fully compiled dom elements to the browser. This can be done by either building your Vue code in advance or by creating helper components to replace the dom elements. For instance, if sent directly to IE, this will fail:',
+  header: 'Inicio rápido',
+  headerText: 'Usa uno de los paquetes de Vue CLI de Vuetify _(basados en los ejemplos oficiales)_ para iniciar con tu proyecto en un instante. Vuetify tiene soporte para **SSR** (server-side rendering), **SPA** (single page application), **PWA** (progressive web application) y páginas estándar de **HTML** ',
+  alert1: 'Para que tu aplicación funcione apropiadamente, **debes** envolverla en un componente `v-app`. Este componente se usa para administrar dinámicamente tu área de contenido y es el punto de montaje para muchos componentes.',
+  browserHeader: 'Navegadores Soportados',
+  browserText: 'Vuetify es un framework progresivo que intenta llevar al desarrollo web al siguiente nivel. Para poder cumplir con esta tarea de la mejor forma, algunos sacrificios se han tenido que hacer en materia de soporte para versiones más antiguas de Internet Explorer. Esta no es una lista exhaustiva de navegadores compatibles, pero de los que más comunmente se les da soporte.',
+  cdnHeader: 'Instalación por CDN',
+  cdnText: 'Para probar Vuetify.js sin instalar una plantilla de Vue CLI, copia el siguiente código en tu archivo `index.html`. Esto traerá la última versión de Vue y de Vuetify, permitiéndote comenzar a jugar con los componentes. Puedes también utilizar el [Vuetify starter](https://template.vuetifyjs.com) de codepen.',
+  newHeader: 'Aplicaciones nuevas',
+  newText: 'Vuetify tiene 8 plantillas prefabricadas de Vue CLI, 3 de las cuales son forks de [plantillas oficiales de Vue.js](https://github.com/vuejs-templates). Contienen pequeñas modificaciones para ayudarte a comenzar con Vuetify aún más rápido. Estos paquetes requieren `vue-cli`. Para más información acerca de vue-cli, visita el repositorio oficial en [Github](https://github.com/vuejs/vue-cli). Estas plantillas están diseñadas para ayudarte a iniciar tu próximo proyecto tan rápido como sea posible.',
+  existingHeader: 'Aplicaciones existentes',
+  existingText1: 'Para incluir Vuetify en un proyecto existente, debes traerlo a tus node_modules. Puedes usar ya sea `npm`o `yarn` para llevarlo a cabo. Ambos son administradores de paquetes que te permitirán controlar qué recursos están disponibles para tu aplicación.',
+  existingText2: 'Para una explicación detallada de cómo correr `npm` en tu ambiente, visita la [documentación oficial](https://docs.npmjs.com/getting-started/what-is-npm). En otro caso, si deseas usar yarn, puedes encontrar la documentación oficial [aquí](https://yarnpkg.com/lang/en/docs/). Una vez que hayas instalado alguno, puedes correr cualquier comando desde tu terminal.',
+  existingText3: 'Una vez que Vuetify ha sido instalado, navega al archivo principal de tu aplicación. En la mayoría de los casos, esto será `index.js` o `main.js`. En este archivo importarás Vuetify y le dirás a Vue que debe utilizarlo.',
+  existingText4: 'También necesitarás incluir el archivo css de Vuetify. Simplemente incluye el archivo css de Vuetify en tu `index.html` o importa el archivo de stylus o el archivo con el css minificado.',
+  existingText5: 'La forma más fácil de incluir los íconos de Material Design es agregar un tag `link` a tu archivo `index.html`',
+  alert2: 'Advertencia: Aunque Vuetify intenta no causar cualquier colisión de css tanto como sea posible, no hay ninguna garantía de que tus estilos personalizados no alterarán tu experiencia cuando integres este framework en tu proyecto existente.',
+  ie11Header: 'Soporte para IE11 y Safari 9',
+  ie11Text: 'En tu directorio del proyecto, instala `babel-polyfill` e impórtalo en tu archivo principal:',
+  ie11Text2: 'Debido al soporte limitado de Internet Explorer para las etiquetas `<template>`, debes enviar elementos del DOM completamente compilados al navegador. Esto puede lograrse ya sea compilando tu código de Vue de antemano o creando componentes "helper" para reemplazar los elementos del DOM. Por ejemplo, si se envía lo siguiente directamente a IE, fallará: ',
   browserSupport: {
-    supported: 'Supported',
-    notSupported: 'Not supported',
-    polyfill: 'Supported with polyfill'
+    supported: 'Soportado',
+    notSupported: 'No soportado',
+    polyfill: 'Soportado con polyfill'
   },
   toc: [
     {
-      text: 'Introduction',
-      href: 'introduction'
+      text: 'Introducción',
+      href: 'introduccion'
     },
     {
-      text: 'Supported browsers',
-      href: 'supported-browsers'
+      text: 'Navegadores soportados',
+      href: 'navegadores-soportados'
     },
     {
-      text: 'CDN install',
-      href: 'cdn-install'
+      text: 'Instalación por CDN',
+      href: 'instalacion-cdn'
     },
     {
-      text: 'New applications',
-      href: 'new-applications'
+      text: 'Aplicaciones nuevas',
+      href: 'aplicacoines-nuevas'
     },
     {
-      text: 'Existing applications',
-      href: 'existing-applications'
+      text: 'Aplicaciones existentes',
+      href: 'aplicaciones-existentes'
     },
     {
-      text: 'IE11 support',
-      href: 'ie11-support'
+      text: 'Soporte para IE11',
+      href: 'soporte-ie11'
     }
   ]
 }
