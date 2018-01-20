@@ -23,7 +23,7 @@ export default {
     {
       img: '/static/vuetify_semantic.svg',
       title: 'Kit de herramientas semántico',
-      caption: `Vuetify está construido desde la base par ser semántico. Fácil de aprender, fácil de recordar (significa que aunque estés desarrollando tu propia aplicación o incorporando a un nuevo desarrollador, los componentes _escribe-mientras-hablas_ de Vuetify y sus propiedades hacen el desarrollo realmente fácil.`
+      caption: `Vuetify está construido desde la base para ser semántico. Fácil de aprender, fácil de recordar (significa que aunque estés desarrollando tu propia aplicación o incorporando a un nuevo desarrollador, los componentes _escribe-mientras-hablas_ de Vuetify y sus propiedades hacen el desarrollo realmente fácil.`
     },
     {
       img: '/static/vuetify_sizes.svg',
@@ -37,7 +37,6 @@ export default {
     }
   ],
   whyText: [
-    'Choosing a framework can be a daunting task, and I\'m not even talking about component frameworks. You\'ve arrived at Vue and now it\'s time to start developing your next great idea. There are many options to choose from, and everyone says that they are great. So you have to decide, what are my metrics for success?',
     'Escoger un framework puede ser una tarea abrumadora, y ni siquiera estoy hablando de frameworks de componentes. Has escogido a Vue y ahora es tiempo de comenzar a desarrollar tu siguiente gran idea. Hay muchas opciones para escoger, y cada quien asegura ser genial. Así que debes decidir: ¿Cuáles son mis métricas para el éxito?',
     'Este era yo hace casi un año. Había muchísimos **Kits de herramientas para UI** de dónde escoger, pero ninguno tenía todo lo que yo necesitaba... sí, ya has escuchado esto antes. Sin embargo, a menudo esa _es_ la razón para los intentos de cada individuo en crear productos que llenen los vacíos, y es por eso que comencé a trabajar en Vuetify.',
     'Pero ahora tú eres quien está en búsqueda de ese framework perfecto, y Vuetify es uno más en una lista de muchos que compiten por tu atención. Aunque mi opinión será subjetiva, procuraré describirte las características que considero serán de valor para tí y/o tu organización. '
