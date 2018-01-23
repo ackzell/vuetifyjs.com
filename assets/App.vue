@@ -5,6 +5,7 @@
       app-toolbar
       app-view
       app-fab
+      app-snackbar
 
     div(v-else)#app
       router-view
@@ -13,6 +14,7 @@
 <script>
   import AppDrawer from '@/components/core/AppDrawer'
   import AppFab from '@/components/core/AppFab'
+  import AppSnackbar from '@/components/core/AppSnackbar'
   import AppToolbar from '@/components/core/AppToolbar'
   import AppView from '@/components/core/AppView'
   import Meta from '@/mixins/meta'
@@ -20,11 +22,12 @@
   import { mapState } from 'vuex'
 
   export default {
-    name: 'documentation',
+    name: 'Documentation',
 
     components: {
       AppDrawer,
       AppFab,
+      AppSnackbar,
       AppToolbar,
       AppView
     },

@@ -1,4 +1,4 @@
-/* 
+/*
  * THIS FILE HAS BEEN AUTOMATICALLY GENERATED USING THE VUETIFY-HELPER-JSON TOOL.
  *
  * CHANGES MADE TO THIS FILE WILL BE LOST!
@@ -89,6 +89,12 @@ module.exports = {
     ],
     "slots": [
       "default"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "boolean"
+      }
     ]
   },
   "v-avatar": {
@@ -199,7 +205,8 @@ module.exports = {
           "String"
         ],
         "default": "undefined",
-        "source": null
+        "source": null,
+        "sync": true
       },
       {
         "name": "app",
@@ -250,6 +257,16 @@ module.exports = {
     ],
     "slots": [
       "default"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "boolean"
+      },
+      {
+        "name": "update:active",
+        "value": "string | number"
+      }
     ]
   },
   "v-bottom-sheet": {
@@ -694,6 +711,15 @@ module.exports = {
       "button-group",
       "registerable-provide",
       "themeable"
+    ],
+    "slots": [
+      "default"
+    ],
+    "events": [
+      {
+        "name": "change",
+        "value": "any[] | any"
+      }
     ]
   },
   "v-card": {
@@ -982,6 +1008,12 @@ module.exports = {
     ],
     "slots": [
       "default"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "number"
+      }
     ]
   },
   "v-carousel-item": {
@@ -1206,6 +1238,12 @@ module.exports = {
     ],
     "slots": [
       "label"
+    ],
+    "events": [
+      {
+        "name": "blur",
+        "value": "any"
+      }
     ]
   },
   "v-chip": {
@@ -1284,6 +1322,12 @@ module.exports = {
     ],
     "slots": [
       "default"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "boolean"
+      }
     ]
   },
   "v-data-iterator": {
@@ -1303,7 +1347,7 @@ module.exports = {
       {
         "name": "filter",
         "type": "Function",
-        "default": "(val, search) => {}",
+        "default": "(val: object, search: string): boolean",
         "source": "data-iterable"
       },
       {
@@ -1327,13 +1371,13 @@ module.exports = {
       {
         "name": "customSort",
         "type": "Function",
-        "default": "(items, index, isDescending) => {}",
+        "default": "(items: object[], index: number, isDescending: boolean): object[]",
         "source": "data-iterable"
       },
       {
         "name": "customFilter",
         "type": "Function",
-        "default": "(items, search, filter) => {}",
+        "default": "(items: object[], search: string, filter: Filter): object[]",
         "source": "data-iterable"
       },
       {
@@ -1457,27 +1501,45 @@ module.exports = {
       {
         "name": "footer",
         "source": "data-iterable"
+      },
+      {
+        "name": "noData",
+        "source": "data-iterable"
+      },
+      {
+        "name": "noResults",
+        "source": "data-iterable"
       }
     ],
     "scopedSlots": [
       {
         "name": "items",
-        "props": [
-          "item",
-          "index",
-          "selected",
-          "expanded"
-        ],
+        "props": {
+          "item": "object",
+          "index": "number",
+          "selected": "boolean",
+          "expanded": "boolean"
+        },
         "source": "data-iterable"
       },
       {
         "name": "pageText",
-        "props": [
-          "pageStart",
-          "pageStop",
-          "itemsLength"
-        ],
+        "props": {
+          "pageStart": "number",
+          "pageStop": "number",
+          "itemsLength": "number"
+        },
         "source": "data-iterable"
+      }
+    ],
+    "events": [
+      {
+        "name": "update:pagination",
+        "value": "object"
+      },
+      {
+        "name": "input",
+        "value": "object[]"
       }
     ]
   },
@@ -1529,24 +1591,32 @@ module.exports = {
         "name": "headers",
         "type": "Array",
         "default": [],
-        "source": null
+        "source": null,
+        "example": {
+          "text": "string",
+          "value": "string",
+          "align": "'left' | 'center' | 'right'",
+          "sortable": "boolean",
+          "class": "string[] | string",
+          "width": "string"
+        }
       },
       {
         "name": "customSort",
         "type": "Function",
-        "default": "(items, index, isDescending) => {}",
+        "default": "(items: object[], index: number, isDescending: boolean): object[]",
         "source": "data-iterable"
       },
       {
         "name": "customFilter",
         "type": "Function",
-        "default": "(items, search, filter, headers) => {}",
+        "default": "(items: object[], search: string, filter: Filter): object[]",
         "source": "data-iterable"
       },
       {
         "name": "filter",
         "type": "Function",
-        "default": "(val, search) => {}",
+        "default": "(val: object, search: string): boolean",
         "source": "data-iterable"
       },
       {
@@ -1652,41 +1722,59 @@ module.exports = {
       {
         "name": "footer",
         "source": "data-iterable"
+      },
+      {
+        "name": "noData",
+        "source": "data-iterable"
+      },
+      {
+        "name": "noResults",
+        "source": "data-iterable"
       }
     ],
     "scopedSlots": [
       {
         "name": "headerCell",
-        "props": [
-          "header"
-        ]
+        "props": {
+          "header": "object"
+        }
       },
       {
         "name": "headers",
-        "props": [
-          "headers",
-          "indeterminate",
-          "all"
-        ]
+        "props": {
+          "headers": "object[]",
+          "indeterminate": "boolean",
+          "all": "boolean"
+        }
       },
       {
         "name": "items",
-        "props": [
-          "item",
-          "index",
-          "selected",
-          "expanded"
-        ],
+        "props": {
+          "item": "object",
+          "index": "number",
+          "selected": "boolean",
+          "expanded": "boolean"
+        },
         "source": "data-iterable"
       },
       {
         "name": "pageText",
-        "props": [
-          "pageStart",
-          "pageStop",
-          "itemsLength"
-        ],
+        "props": {
+          "pageStart": "number",
+          "pageStop": "number",
+          "itemsLength": "number"
+        },
         "source": "data-iterable"
+      }
+    ],
+    "events": [
+      {
+        "name": "update:pagination",
+        "value": "object"
+      },
+      {
+        "name": "input",
+        "value": "object[]"
       }
     ]
   },
@@ -1711,6 +1799,12 @@ module.exports = {
         "source": null
       },
       {
+        "name": "returnValue",
+        "type": "Any",
+        "default": "undefined",
+        "source": "returnable"
+      },
+      {
         "name": "saveText",
         "type": "Any",
         "default": "Save",
@@ -1723,7 +1817,31 @@ module.exports = {
         "source": null
       }
     ],
-    "mixins": []
+    "mixins": [
+      "returnable"
+    ],
+    "slots": [
+      "default",
+      "input"
+    ],
+    "events": [
+      {
+        "name": "open",
+        "value": "void"
+      },
+      {
+        "name": "cancel",
+        "value": "void"
+      },
+      {
+        "name": "close",
+        "value": "void"
+      },
+      {
+        "name": "save",
+        "value": "void"
+      }
+    ]
   },
   "v-table-overflow": {
     "props": [],
@@ -1732,12 +1850,9 @@ module.exports = {
   "v-date-picker": {
     "props": [
       {
-        "name": "firstDayOfWeek",
-        "type": [
-          "String",
-          "Number"
-        ],
-        "default": 0,
+        "name": "headerDateFormat",
+        "type": "Function",
+        "default": "null",
         "source": null
       },
       {
@@ -1753,32 +1868,16 @@ module.exports = {
         "source": null
       },
       {
-        "name": "autosave",
-        "type": "Boolean",
-        "default": "false",
-        "source": null
-      },
-      {
         "name": "allowedDates",
-        "type": [
-          "Array",
-          "Object",
-          "Function"
-        ],
-        "default": null,
+        "type": "Function",
+        "default": "null",
         "source": null
       },
       {
-        "name": "locale",
+        "name": "max",
         "type": "String",
-        "default": "en-us",
+        "default": "undefined",
         "source": null
-      },
-      {
-        "name": "noTitle",
-        "type": "Boolean",
-        "default": "false",
-        "source": "picker"
       },
       {
         "name": "headerColor",
@@ -1787,10 +1886,35 @@ module.exports = {
         "source": "picker"
       },
       {
-        "name": "light",
+        "name": "dark",
         "type": "Boolean",
         "default": "false",
         "source": "themeable"
+      },
+      {
+        "name": "firstDayOfWeek",
+        "type": [
+          "String",
+          "Number"
+        ],
+        "default": 0,
+        "source": null
+      },
+      {
+        "name": "fullWidth",
+        "type": "Boolean",
+        "default": "false",
+        "source": "picker"
+      },
+      {
+        "name": "eventColor",
+        "type": [
+          "String",
+          "Function",
+          "Object"
+        ],
+        "default": "warning",
+        "source": null
       },
       {
         "name": "dayFormat",
@@ -1809,22 +1933,16 @@ module.exports = {
         "source": null
       },
       {
-        "name": "eventColor",
+        "name": "prependIcon",
         "type": "String",
-        "default": "warning",
+        "default": "chevron_left",
         "source": null
       },
       {
-        "name": "dark",
+        "name": "light",
         "type": "Boolean",
         "default": "false",
         "source": "themeable"
-      },
-      {
-        "name": "headerDateFormat",
-        "type": "Function",
-        "default": "null",
-        "source": null
       },
       {
         "name": "landscape",
@@ -1833,21 +1951,15 @@ module.exports = {
         "source": "picker"
       },
       {
-        "name": "monthFormat",
-        "type": "Function",
-        "default": "null",
-        "source": null
-      },
-      {
-        "name": "prependIcon",
-        "type": "String",
-        "default": "chevron_left",
-        "source": null
-      },
-      {
         "name": "scrollable",
         "type": "Boolean",
         "default": "false",
+        "source": null
+      },
+      {
+        "name": "locale",
+        "type": "String",
+        "default": "en-us",
         "source": null
       },
       {
@@ -1857,6 +1969,36 @@ module.exports = {
           "String"
         ],
         "default": true,
+        "source": null
+      },
+      {
+        "name": "min",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "monthFormat",
+        "type": "Function",
+        "default": "null",
+        "source": null
+      },
+      {
+        "name": "noTitle",
+        "type": "Boolean",
+        "default": "false",
+        "source": "picker"
+      },
+      {
+        "name": "pickerDate",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "readonly",
+        "type": "Boolean",
+        "default": "false",
         "source": null
       },
       {
@@ -1878,6 +2020,15 @@ module.exports = {
         "source": null
       },
       {
+        "name": "width",
+        "type": [
+          "Number",
+          "String"
+        ],
+        "default": 330,
+        "source": "picker"
+      },
+      {
         "name": "yearFormat",
         "type": "Function",
         "default": "null",
@@ -1894,6 +2045,12 @@ module.exports = {
       "colorable",
       "picker",
       "themeable"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "string"
+      }
     ]
   },
   "v-date-picker-title": {
@@ -1943,6 +2100,12 @@ module.exports = {
         "source": "colorable"
       },
       {
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
         "name": "format",
         "type": "Function",
         "default": "null",
@@ -1952,6 +2115,18 @@ module.exports = {
         "name": "locale",
         "type": "String",
         "default": "en-us",
+        "source": null
+      },
+      {
+        "name": "max",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "min",
+        "type": "String",
+        "default": "undefined",
         "source": null
       },
       {
@@ -1977,7 +2152,7 @@ module.exports = {
   "v-date-picker-date-table": {
     "props": [
       {
-        "name": "tableDate",
+        "name": "max",
         "type": "String",
         "default": "undefined",
         "source": null
@@ -1990,12 +2165,20 @@ module.exports = {
       },
       {
         "name": "allowedDates",
-        "type": [
-          "Array",
-          "Object",
-          "Function"
-        ],
-        "default": null,
+        "type": "Function",
+        "default": "null",
+        "source": null
+      },
+      {
+        "name": "tableDate",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false",
         "source": null
       },
       {
@@ -2046,6 +2229,12 @@ module.exports = {
         "source": null
       },
       {
+        "name": "min",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
         "name": "scrollable",
         "type": "Boolean",
         "default": "false",
@@ -2071,13 +2260,9 @@ module.exports = {
   "v-date-picker-month-table": {
     "props": [
       {
-        "name": "allowedDates",
-        "type": [
-          "Array",
-          "Object",
-          "Function"
-        ],
-        "default": null,
+        "name": "locale",
+        "type": "String",
+        "default": "en-us",
         "source": null
       },
       {
@@ -2087,9 +2272,21 @@ module.exports = {
         "source": "colorable"
       },
       {
+        "name": "allowedDates",
+        "type": "Function",
+        "default": "null",
+        "source": null
+      },
+      {
         "name": "current",
         "type": "String",
         "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false",
         "source": null
       },
       {
@@ -2099,9 +2296,15 @@ module.exports = {
         "source": null
       },
       {
-        "name": "locale",
+        "name": "max",
         "type": "String",
-        "default": "en-us",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "min",
+        "type": "String",
+        "default": "undefined",
         "source": null
       },
       {
@@ -2182,7 +2385,7 @@ module.exports = {
   "v-dialog": {
     "props": [
       {
-        "name": "fullscreen",
+        "name": "persistent",
         "type": "Boolean",
         "default": "false",
         "source": null
@@ -2207,6 +2410,12 @@ module.exports = {
       },
       {
         "name": "fullWidth",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
+        "name": "fullscreen",
         "type": "Boolean",
         "default": "false",
         "source": null
@@ -2243,10 +2452,10 @@ module.exports = {
         "source": null
       },
       {
-        "name": "persistent",
-        "type": "Boolean",
-        "default": "false",
-        "source": null
+        "name": "returnValue",
+        "type": "Any",
+        "default": "undefined",
+        "source": "returnable"
       },
       {
         "name": "scrollable",
@@ -2284,6 +2493,7 @@ module.exports = {
       "dependent",
       "detachable",
       "overlayable",
+      "returnable",
       "stackable",
       "toggleable"
     ],
@@ -2485,6 +2695,22 @@ module.exports = {
     "mixins": [],
     "slots": [
       "default"
+    ],
+    "functions": [
+      {
+        "name": "reset",
+        "signature": "(): void"
+      },
+      {
+        "name": "validate",
+        "signature": "(): boolean"
+      }
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "boolean"
+      }
     ]
   },
   "v-content": {
@@ -3418,7 +3644,7 @@ module.exports = {
   "v-menu": {
     "props": [
       {
-        "name": "nudgeRight",
+        "name": "nudgeTop",
         "type": [
           "Number",
           "String"
@@ -3551,6 +3777,15 @@ module.exports = {
         "source": "menuable"
       },
       {
+        "name": "nudgeRight",
+        "type": [
+          "Number",
+          "String"
+        ],
+        "default": 0,
+        "source": "menuable"
+      },
+      {
         "name": "closeDelay",
         "type": [
           "Number",
@@ -3558,15 +3793,6 @@ module.exports = {
         ],
         "default": 200,
         "source": "delayable"
-      },
-      {
-        "name": "nudgeTop",
-        "type": [
-          "Number",
-          "String"
-        ],
-        "default": 0,
-        "source": "menuable"
       },
       {
         "name": "nudgeWidth",
@@ -3608,52 +3834,16 @@ module.exports = {
         "source": null
       },
       {
-        "name": "auto",
-        "type": "Boolean",
-        "default": "false",
-        "source": null
-      },
-      {
         "name": "closeOnClick",
         "type": "Boolean",
         "default": "true",
         "source": null
       },
       {
-        "name": "openOnClick",
-        "type": "Boolean",
-        "default": "true",
-        "source": null
-      },
-      {
-        "name": "openOnHover",
+        "name": "auto",
         "type": "Boolean",
         "default": "false",
         "source": null
-      },
-      {
-        "name": "origin",
-        "type": "String",
-        "default": "top left",
-        "source": null
-      },
-      {
-        "name": "positionX",
-        "type": "Number",
-        "default": "undefined",
-        "source": "menuable"
-      },
-      {
-        "name": "positionY",
-        "type": "Number",
-        "default": "undefined",
-        "source": "menuable"
-      },
-      {
-        "name": "right",
-        "type": "Boolean",
-        "default": "false",
-        "source": "positionable"
       },
       {
         "name": "top",
@@ -3668,6 +3858,48 @@ module.exports = {
           "String"
         ],
         "default": "menu-transition",
+        "source": null
+      },
+      {
+        "name": "origin",
+        "type": "String",
+        "default": "top left",
+        "source": null
+      },
+      {
+        "name": "positionY",
+        "type": "Number",
+        "default": "undefined",
+        "source": "menuable"
+      },
+      {
+        "name": "positionX",
+        "type": "Number",
+        "default": "undefined",
+        "source": "menuable"
+      },
+      {
+        "name": "returnValue",
+        "type": "Any",
+        "default": "undefined",
+        "source": "returnable"
+      },
+      {
+        "name": "right",
+        "type": "Boolean",
+        "default": "false",
+        "source": "positionable"
+      },
+      {
+        "name": "openOnClick",
+        "type": "Boolean",
+        "default": "true",
+        "source": null
+      },
+      {
+        "name": "openOnHover",
+        "type": "Boolean",
+        "default": "false",
         "source": null
       },
       {
@@ -3693,6 +3925,7 @@ module.exports = {
       "detachable",
       "menuable",
       "positionable",
+      "returnable",
       "stackable",
       "themeable",
       "toggleable"
@@ -3852,6 +4085,16 @@ module.exports = {
     ],
     "slots": [
       "default"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "boolean"
+      },
+      {
+        "name": "update:miniVariant",
+        "value": "boolean"
+      }
     ]
   },
   "v-pagination": {
@@ -3910,6 +4153,20 @@ module.exports = {
     ],
     "mixins": [
       "colorable"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "number"
+      },
+      {
+        "name": "next",
+        "value": "void"
+      },
+      {
+        "name": "right",
+        "value": "void"
+      }
     ]
   },
   "v-parallax": {
@@ -3958,6 +4215,12 @@ module.exports = {
         "source": "themeable"
       },
       {
+        "name": "fullWidth",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
         "name": "landscape",
         "type": "Boolean",
         "default": "false",
@@ -3972,7 +4235,16 @@ module.exports = {
       {
         "name": "transition",
         "type": "String",
-        "default": "picker-transition",
+        "default": "fade-transition",
+        "source": null
+      },
+      {
+        "name": "width",
+        "type": [
+          "Number",
+          "String"
+        ],
+        "default": 330,
         "source": null
       }
     ],
@@ -4292,6 +4564,20 @@ module.exports = {
     ],
     "slots": [
       "label"
+    ],
+    "events": [
+      {
+        "name": "change",
+        "value": "any"
+      },
+      {
+        "name": "blur",
+        "value": "any"
+      },
+      {
+        "name": "update:error",
+        "value": "boolean"
+      }
     ]
   },
   "v-radio": {
@@ -4348,6 +4634,12 @@ module.exports = {
       "rippleable",
       "tab-focusable",
       "themeable"
+    ],
+    "events": [
+      {
+        "name": "change",
+        "value": "any"
+      }
     ]
   },
   "v-select": {
@@ -4361,7 +4653,7 @@ module.exports = {
       {
         "name": "filter",
         "type": "Function",
-        "default": "(item, queryText, itemText) => {}",
+        "default": "(item: object, queryText: string, itemText: string): boolean",
         "source": null
       },
       {
@@ -4743,7 +5035,7 @@ module.exports = {
       {
         "name": "valueComparator",
         "type": "Function",
-        "default": "(a, b) => {}",
+        "default": "(a: any, b: any): boolean",
         "source": null
       }
     ],
@@ -4759,13 +5051,47 @@ module.exports = {
       "validatable"
     ],
     "slots": [
+      "no-data",
       "label",
-      "noData",
       "progress"
     ],
     "scopedSlots": [
-      "item",
-      "selection"
+      {
+        "name": "selection",
+        "props": {
+          "parent": "VueComponent",
+          "item": "object",
+          "index": "number",
+          "selected": "boolean",
+          "disabled": "boolean"
+        }
+      },
+      {
+        "name": "item",
+        "props": {
+          "parent": "VueComponent",
+          "item": "object",
+          "tile": "object"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "any"
+      },
+      {
+        "name": "change",
+        "value": "any"
+      },
+      {
+        "name": "update:searchInput",
+        "value": "string"
+      },
+      {
+        "name": "update:error",
+        "value": "boolean"
+      }
     ]
   },
   "v-slider": {
@@ -4978,6 +5304,16 @@ module.exports = {
       "loadable",
       "themeable",
       "validatable"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "number"
+      },
+      {
+        "name": "update:error",
+        "value": "boolean"
+      }
     ]
   },
   "v-snackbar": {
@@ -5184,6 +5520,12 @@ module.exports = {
     ],
     "slots": [
       "default"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "number"
+      }
     ]
   },
   "v-stepper-content": {
@@ -5689,6 +6031,12 @@ module.exports = {
     ],
     "slots": [
       "default"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "string"
+      }
     ]
   },
   "v-tab": {
@@ -5812,6 +6160,12 @@ module.exports = {
     ],
     "slots": [
       "default"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "string"
+      }
     ]
   },
   "v-tab-item": {
@@ -5871,12 +6225,9 @@ module.exports = {
   "v-text-field": {
     "props": [
       {
-        "name": "toggleKeys",
-        "type": "Array",
-        "default": [
-          13,
-          32
-        ],
+        "name": "value",
+        "type": "Any",
+        "default": "undefined",
         "source": "input"
       },
       {
@@ -5922,10 +6273,10 @@ module.exports = {
         "source": "input"
       },
       {
-        "name": "returnMaskedValue",
+        "name": "flat",
         "type": "Boolean",
         "default": "false",
-        "source": "maskable"
+        "source": "soloable"
       },
       {
         "name": "type",
@@ -6000,6 +6351,15 @@ module.exports = {
         "source": "input"
       },
       {
+        "name": "toggleKeys",
+        "type": "Array",
+        "default": [
+          13,
+          32
+        ],
+        "source": "input"
+      },
+      {
         "name": "loading",
         "type": [
           "Boolean",
@@ -6007,12 +6367,6 @@ module.exports = {
         ],
         "default": false,
         "source": "loadable"
-      },
-      {
-        "name": "textarea",
-        "type": "Boolean",
-        "default": "false",
-        "source": null
       },
       {
         "name": "dontFillMaskBlanks",
@@ -6030,16 +6384,16 @@ module.exports = {
         "source": "maskable"
       },
       {
+        "name": "returnMaskedValue",
+        "type": "Boolean",
+        "default": "false",
+        "source": "maskable"
+      },
+      {
         "name": "rules",
         "type": "Array",
         "default": [],
         "source": "validatable"
-      },
-      {
-        "name": "flat",
-        "type": "Boolean",
-        "default": "false",
-        "source": "soloable"
       },
       {
         "name": "soloInverted",
@@ -6103,14 +6457,32 @@ module.exports = {
         "source": null
       },
       {
+        "name": "noResize",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
         "name": "prefix",
         "type": "String",
         "default": "undefined",
         "source": null
       },
       {
+        "name": "rowHeight",
+        "type": [
+          "Number",
+          "String"
+        ],
+        "default": 24,
+        "source": null
+      },
+      {
         "name": "rows",
-        "type": "Any",
+        "type": [
+          "Number",
+          "String"
+        ],
         "default": 5,
         "source": null
       },
@@ -6127,16 +6499,16 @@ module.exports = {
         "source": null
       },
       {
+        "name": "textarea",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
         "name": "validateOnBlur",
         "type": "Boolean",
         "default": "false",
         "source": "validatable"
-      },
-      {
-        "name": "value",
-        "type": "Any",
-        "default": "undefined",
-        "source": "input"
       }
     ],
     "mixins": [
@@ -6147,19 +6519,32 @@ module.exports = {
       "soloable",
       "themeable",
       "validatable"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "string"
+      },
+      {
+        "name": "change",
+        "value": "string"
+      },
+      {
+        "name": "update:error",
+        "value": "boolean"
+      }
     ]
   },
   "v-time-picker": {
     "props": [
       {
-        "name": "allowedHours",
+        "name": "width",
         "type": [
-          "Array",
-          "Object",
-          "Function"
+          "Number",
+          "String"
         ],
-        "default": null,
-        "source": null
+        "default": 330,
+        "source": "picker"
       },
       {
         "name": "color",
@@ -6168,19 +6553,33 @@ module.exports = {
         "source": "colorable"
       },
       {
-        "name": "autosave",
-        "type": "Boolean",
-        "default": "false",
+        "name": "allowedMinutes",
+        "type": "Function",
+        "default": "null",
         "source": null
       },
       {
-        "name": "allowedMinutes",
-        "type": [
-          "Array",
-          "Object",
-          "Function"
-        ],
-        "default": null,
+        "name": "allowedHours",
+        "type": "Function",
+        "default": "null",
+        "source": null
+      },
+      {
+        "name": "light",
+        "type": "Boolean",
+        "default": "false",
+        "source": "themeable"
+      },
+      {
+        "name": "headerColor",
+        "type": "String",
+        "default": "undefined",
+        "source": "picker"
+      },
+      {
+        "name": "format",
+        "type": "String",
+        "default": "ampm",
         "source": null
       },
       {
@@ -6190,15 +6589,9 @@ module.exports = {
         "source": "themeable"
       },
       {
-        "name": "format",
-        "type": "String",
-        "default": "ampm",
-        "source": null
-      },
-      {
-        "name": "headerColor",
-        "type": "String",
-        "default": "undefined",
+        "name": "fullWidth",
+        "type": "Boolean",
+        "default": "false",
         "source": "picker"
       },
       {
@@ -6208,10 +6601,16 @@ module.exports = {
         "source": "picker"
       },
       {
-        "name": "light",
-        "type": "Boolean",
-        "default": "false",
-        "source": "themeable"
+        "name": "max",
+        "type": "String",
+        "default": "undefined",
+        "source": null
+      },
+      {
+        "name": "min",
+        "type": "String",
+        "default": "undefined",
+        "source": null
       },
       {
         "name": "noTitle",
@@ -6236,6 +6635,12 @@ module.exports = {
       "colorable",
       "picker",
       "themeable"
+    ],
+    "events": [
+      {
+        "name": "input",
+        "value": "string"
+      }
     ]
   },
   "v-time-picker-clock": {
@@ -6254,12 +6659,8 @@ module.exports = {
       },
       {
         "name": "allowedValues",
-        "type": [
-          "Array",
-          "Object",
-          "Function"
-        ],
-        "default": null,
+        "type": "Function",
+        "default": "null",
         "source": null
       },
       {
@@ -6277,7 +6678,7 @@ module.exports = {
       {
         "name": "format",
         "type": "Function",
-        "default": "(val) => {}",
+        "default": "(val: string): string",
         "source": null
       },
       {

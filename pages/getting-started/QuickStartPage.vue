@@ -78,6 +78,10 @@
           | @import '~vuetify/src/stylus/main' // Ensure you are using stylus-loader
 
         section-text(:value="`${namespace}.existingText5`")
+        markup(lang="html")
+          | &lt;head&gt;
+          |   &lt;link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet"&gt;
+          | &lt;/head&gt;
         app-alert(error :value="`${namespace}.alert2`")
 
       section#ie11-support
@@ -111,12 +115,12 @@
 
     data: () => ({
       browsers: [
-        { icon: 'internet-explorer', title: 'IE9 / IE10', supported: false },
-        { icon: ['internet-explorer', 'safari'], title: 'IE11 / Safari 9', supported: 'polyfill' },
-        { icon: 'edge', title: 'Edge', supported: true },
         { icon: 'chrome', title: 'Chrome', supported: true },
         { icon: 'firefox', title: 'Firefox', supported: true },
+        { icon: 'edge', title: 'Edge', supported: true },
         { icon: 'safari', title: 'Safari 10+', supported: true },
+        { icon: ['internet-explorer', 'safari'], title: 'IE11 / Safari 9', supported: 'polyfill' },
+        { icon: 'internet-explorer', title: 'IE9 / IE10', supported: false }
       ]
     }),
 

@@ -21,12 +21,12 @@
             color="grey lighten-3"
             slider-color="primary"
           )
-            v-tab(
-              v-for="(tab, i) in tabs"
-              :href="`#${tab}`"
-              :key="i"
-              v-show="hasTab(tab)"
-            ) {{ tab.replace(/([A-Z])/g, ' $1') }}
+            template(v-for="(tab, i) in tabs")
+              v-tab(
+                :key="i"
+                :href="`#${tab}`"
+                v-if="hasTab(tab)"
+              ) {{ tab.replace(/([A-Z])/g, ' $1') }}
           v-card-title
             v-select(
               label="Component"
@@ -91,52 +91,49 @@
 </template>
 
 <script>
+  import api from '@/api/api'
   // Utilities
-  import { mapState } from 'vuex'
-  import { camel, capitalize, kebab } from '@/util/helpers'
+  import { camel } from '@/util/helpers'
 
   export default {
     inheritAttrs: false,
 
+    props: {
+      data: {
+        type: Object,
+        default: () => ({})
+      }
+    },
+
     data () {
       return {
+        api,
         current: null,
         id: '',
         headers: {
-          params: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.type'), value: 'type', align: 'left' },
-            { text: this.$t('Generic.Pages.default'), value: 'default', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
-          ],
           props: [
-            { text: this.$t('Generic.Pages.options'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.type'), value: 'type', align: 'left' },
-            { text: this.$t('Generic.Pages.default'), value: 'default', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left', size: 3 },
+            { value: 'default', align: 'left', size: 6 },
+            { value: 'type', align: 'right', size: 3 }
           ],
           slots: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left' }
           ],
           scopedSlots: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.props'), value: 'props', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left', size: 3 },
+            { value: 'props', align: 'right', size: 9 }
           ],
           events: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left' },
+            { value: 'value', align: 'right' }
           ],
           functions: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.parameters'), value: 'parameters', align: 'left' },
-            { text: this.$t('Generic.Pages.return'), value: 'return', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left' },
+            { value: 'signature', align: 'right' }
           ],
           functional: [
-            { text: this.$t('Generic.Pages.name'), value: 'name', align: 'left' },
-            { text: this.$t('Generic.Pages.description'), value: 'description', align: 'left' }
+            { value: 'name', align: 'left' },
+            { value: 'description', align: 'left' }
           ]
         },
         search: null,
@@ -145,20 +142,7 @@
       }
     },
 
-    props: {
-      data: Object
-    },
-
-    watch: {
-      currentApi () {
-        if (!this.currentApi.hasOwnProperty(this.tab)) this.tab = 'props'
-      }
-    },
-
     computed: {
-      ...mapState({
-        api: state => state.api
-      }),
       components () {
         let components = (this.data.components || []).slice()
 
@@ -207,6 +191,12 @@
       }
     },
 
+    watch: {
+      currentApi () {
+        if (!this.currentApi.hasOwnProperty(this.tab)) this.tab = 'props'
+      }
+    },
+
     created () {
       if (this.components.length) {
         this.current = this.components[0]
@@ -218,7 +208,7 @@
         return (this.currentApi[tab] || []).length > 0
       },
       camelCaseToDash (str) {
-        return str.replace( /([a-z])([A-Z])/g, '$1-$2' ).toLowerCase()
+        return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
       }
     }
   }

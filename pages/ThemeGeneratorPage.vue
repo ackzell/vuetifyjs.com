@@ -61,25 +61,19 @@
             v-card-text
               kbd {{ themeExport }}
             v-card-actions
-              v-btn(block color="grey white--text" flat @click.native="useNames = !useNames") Use {{ useNames && 'hex codes' || 'names' }} 
+              v-btn(block color="grey white--text" flat @click.native="useNames = !useNames") Use {{ useNames && 'hex codes' || 'names' }}
               v-btn(block color="blue darken-2 white--text" flat @click.native="dialog = false") Close
 
 </template>
 
 <script>
-  import colors from '@/util/colors'
+  import colors from 'vuetify/es5/util/colors'
   import Components from '@/components/generator'
   import { Swatches } from 'vue-color'
 
   export default {
     components: {
-      'swatch-picker': Swatches
-    },
-
-    beforeRouteEnter (to, from, next) {
-      next(vm => {
-        vm.to = from.fullPath
-      })
+      SwatchPicker: Swatches
     },
 
     data () {
@@ -123,12 +117,14 @@
             e[k] = this.findName(this.theme[k])
             return e
           }, {})
-          let str = `import colors from 'vuetify/src/util/colors'\n\n${JSON.stringify(names, null, 2)}`
-          str = str.replace(/(.*)\:\s\"(.*)\"/g, "$1: colors.$2")
+          let str = `import colors from 'vuetify/es5/util/colors'\n\n${JSON.stringify(names, null, 2)}`
+          str = str.replace(/"(.*)":\s"(.*)"/g, '$1: colors.$2')
 
           return str
         } else {
-          return JSON.stringify(this.theme, null, 2)
+          let str = JSON.stringify(this.theme, null, 2)
+          str = str.replace(/"(.*)":\s"(.*)"/g, '$1: "$2"')
+          return str
         }
       }
     },
@@ -148,6 +144,21 @@
       }
     },
 
+    beforeRouteEnter (to, from, next) {
+      next(vm => {
+        vm.to = from.fullPath
+        vm.backupTheme = Object.assign({}, vm.$vuetify.theme)
+        vm.$vuetify.theme = vm.theme
+        setTimeout(() => (vm.drawer = true), 400)
+      })
+    },
+
+    beforeRouteLeave (to, from, next) {
+      this.drawer = false
+      this.$vuetify.theme = this.backupTheme
+      next()
+    },
+
     methods: {
       change (value) {
         this.theme[this.active] = value.hex
@@ -155,25 +166,11 @@
       findName (value) {
         for (const [color, shades] of Object.entries(colors)) {
           for (const [name, hex] of Object.entries(shades)) {
-            if (hex === value) return `${color}.${name}`
+            if (hex === value.toLowerCase()) return `${color}.${name}`
           }
         }
         return value
       }
-    },
-
-    beforeDestroy () {
-      this.drawer = false
-      this.$vuetify.theme = this.backupTheme
-    },
-
-    created () {
-      this.backupTheme = Object.assign({}, this.$vuetify.theme)
-      this.$vuetify.theme = this.theme
-    },
-
-    mounted () {
-      setTimeout(() => (this.drawer = true), 400)
     }
   }
 </script>

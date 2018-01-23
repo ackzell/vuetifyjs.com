@@ -1,20 +1,21 @@
 <template>
   <v-data-table
-      v-bind:headers="headers"
-      v-bind:items="items"
+    :headers="headers"
+    :items="items"
   >
     <template slot="items" slot-scope="props">
       <td>
         <v-edit-dialog
-            lazy
+          :return-value.sync="props.item.name"
+          lazy
         > {{ props.item.name }}
           <v-text-field
-              slot="input"
-              label="Edit"
-              v-model="props.item.name"
-              single-line
-              counter
-              :rules="[max25chars]"
+            slot="input"
+            label="Edit"
+            v-model="props.item.name"
+            single-line
+            counter
+            :rules="[max25chars]"
           ></v-text-field>
         </v-edit-dialog>
       </td>
@@ -26,21 +27,20 @@
       <td class="text-xs-right">{{ props.item.calcium }}</td>
       <td class="text-xs-right">
         <v-edit-dialog
-            @open="tmp = props.item.iron"
-            @save="props.item.iron = tmp || props.item.iron"
-            large
-            lazy
+          :return-value.sync="props.item.iron"
+          large
+          lazy
         >
           <div>{{ props.item.iron }}</div>
           <div slot="input" class="mt-3 title">Update Iron</div>
           <v-text-field
-              slot="input"
-              label="Edit"
-              v-model="tmp"
-              single-line
-              counter
-              autofocus
-              :rules="[max25chars]"
+            slot="input"
+            label="Edit"
+            v-model="props.item.iron"
+            single-line
+            counter
+            autofocus
+            :rules="[max25chars]"
           ></v-text-field>
         </v-edit-dialog>
       </td>
@@ -53,10 +53,9 @@
 
 <script>
   export default {
-    data() {
+    data () {
       return {
         max25chars: (v) => v.length <= 25 || 'Input too long!',
-        tmp: '',
         pagination: {},
         headers: [
           {

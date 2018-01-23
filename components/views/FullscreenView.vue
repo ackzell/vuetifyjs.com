@@ -1,9 +1,8 @@
 <template lang="pug">
   v-container(v-bind="$attrs").page
-    app-back-fab(:to="to" v-if="to && !noBack")
+    app-back-fab(:to="{ name: to }" v-if="to != null && !noBack")
     slot(:namespace="namespace")
 </template>
-
 
 <script>
   // Utilities
@@ -13,32 +12,22 @@
   export default {
     inheritAttrs: false,
 
-    data: () => ({
-      to: null
-    }),
-
     props: {
-      noBack: Boolean
+      noBack: {
+        type: Boolean,
+        default: false
+      }
     },
 
     computed: {
       ...mapState({
-        from: state => state.route.from
+        to: state => state.route.from.name || 'getting-started/QuickStart'
       }),
       namespace () {
-        const route = this.$route.path.slice(1).split('/')
+        const route = this.$route.path.split('/').slice(2)
 
         return route.map(s => camel(s)).join('.')
       }
-    },
-
-    mounted () {
-      this.to = this.from
-      this.$store.commit('app/FULLSCREEN', true)
-    },
-
-    beforeDestroy () {
-      this.$store.commit('app/FULLSCREEN', false)
     }
   }
 </script>
