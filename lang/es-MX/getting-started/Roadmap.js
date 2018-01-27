@@ -1,48 +1,48 @@
 export default {
-  header: `What's coming up`,
-  headerText: 'Vuetify is always under development. We are constantly working towards improving the existing codebase, as well as adding new features and functionality that help make building applications even easier. Below is a tentative list of planned features. This is not an exhaustive list and is subject to change at any time without notice.',
+  header: `Lo que viene`,
+  headerText: 'Vuetify siempre está en desarrollo. Estamos trabajando constantemente hacia la mejora del código existente, así como agregando nuevas características y funcionalidades que ayudan a construir aplicaciones de formas aún más sencillas. A continuación una lista tentativa de características planeadas. No es una lista exhaustiva y está sujeta a cambios en cualquier momento sin previo aviso.',
   roadmap: [
     {
       icon: 'mdi-alert-decagram',
       name: 'Version 1.0',
       date: 'Q4 2017',
-      desc: 'The official release of Vuetify. Will include a full documentation update featuring i18n support, light/dark built in examples and much more!'
+      desc: 'El release oficial de Vuetify. Incluirá una actualización a la documentación completa con soporte para i18n, ejemplos que implementan light/dark y ¡mucho más!'
     },
     {
       icon: 'brush',
       name: 'Alpha theme',
       date: 'Q1 2018',
-      desc: `Vuetify's first theme. A handcrafted Material Design theme with Vuetify at its core. Features custom components.`
+      desc: `El primer tema de Vuetify. Un tema de Material Design hecho a mano con Vuetify en el core. Presenta componentes personalizados.`
     },
     {
       icon: 'error',
       name: 'Version 1.1',
       date: 'Q1 2018',
-      desc: 'All form components will be refactored into more concise abstracted implementations, paving way for numerous improvements, new functionality, and a more streamlined approach to testing.'
+      desc: 'Todos los componentes serán refactorados en implementaciones más concisas y abstractas, preparando el camino para numerosas mejoras, nueva funcionadlidad y un enfoque de pruebas más ágil.'
     },
     {
       icon: 'mdi-package-variant-closed',
       name: 'Front-end pack',
       date: 'Q2 2018',
-      desc: 'Includes 10 new components. Will be **free** to everyone thanks to our Patrons.'
+      desc: 'Incluye 10 componentes nuevos. Será **gratuito** para todos gracias a nuestros patrocinadores de Patreon'
     },
     {
       icon: 'error',
       name: 'Version 1.2',
       date: 'Q2 2018',
-      desc: 'TBD'
+      desc: 'Por definir.'
     },
     {
       icon: 'mdi-package-variant-closed',
       name: 'Back-end pack',
       date: 'Q2 2018',
-      desc: 'Includes 10 new components. Will be **free** to everyone thanks to our Patrons.'
+      desc: 'Incluye 10 componentes nuevos. Será **gratuito** para todos gracias a nuestros patrocinadores de Patreon'
     },
     {
       icon: 'mdi-youtube-play',
       name: 'Vueticasts',
       date: '2018',
-      desc: 'A Video series on Vue and Vuetify. Will be **free** to everyone thanks to our Patrons.'
+      desc: 'Una serie de videos acerca de Vue y Vuetify. Será **gratuito** para todos gracias a nuestros patrocinadores de Patreon'
     }
   ]
 }
