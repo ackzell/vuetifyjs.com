@@ -1,60 +1,60 @@
 export default {
-  header: 'Frequently asked questions',
-  headerText: 'Stuck on a particular problem? Check some of these common gotchas before creating a ticket. If you still cannot find what you are looking for, submit an <a href="https://issues.vuetifyjs.com" target="_blank" rel="noopener">issue</a> on github or ask the community in <a href="https://chat.vuetifyjs.com" target="_blank" rel="noopener">discord</a>.',
-  question: 'Question:',
-  answer: 'Answer',
-  noResultsFound: 'No results found',
-  resetSearch: 'Reset search',
+  header: 'Preguntas Frecuentes',
+  headerText: '¿Bloqueado con algún problema particular? Mira estos problemas comunes antes de levantar un ticket. Si todavía no puedes encontrar lo que estás buscando, crea un <a href="https://issues.vuetifyjs.com" target="_blank" rel="noopener">issue</a> en github o pregunta en la comunidad en <a href="https://chat.vuetifyjs.com" target="_blank" rel="noopener">discord</a>.',
+  question: 'Pregunta:',
+  answer: 'Respuesta',
+  noResultsFound: 'Sin resultados',
+  resetSearch: 'Reiniciar búsqueda',
   gotchas: [
     {
-      q: 'My code doesn\'t work - what should I do?',
-      a: 'First, ensure that you\'re using the latest version of Vue.js and Vuetify. Try to reproduce it in codepen using the following [template](https://template.vuetifyjs.com/). If you are unable to reproduce the issue outside of your environment, this usually means the issue resides locally. If you are still unable to resolve your issue, please provide your codepen and issue in **#need-help** in the [community](https://chat.vuetifyjs.com).'
+      q: 'Mi código no funciona - ¿Qué debería hacer?',
+      a: 'Primero, asegúrate que estás usando las últimas versiones de Vue.js y Vuetify. Trata de reproducir tu error en codepen usando la siguiente plantilla: [template](https://template.vuetifyjs.com/). Si no puedes reproducirlo fuera de tu ambiente, generalmente significa que el problema está localmente. Si aún no puedes resolver tu problema, por favor provee tu codepen y una descripción en el canal **need-help** en la [comunidad](https://chat.vuetifyjs.com).'
     },
     {
-      q: 'Is there a codepen template with router?',
-      a: 'Yes, [right here](https://codepen.io/zikeji/pen/ypeQNm).'
+      q: '¿Hay alguna plantilla de codepen con el router?',
+      a: 'Sí, [justo aquí](https://codepen.io/zikeji/pen/ypeQNm).'
     },
     {
-      q: 'My application does not look correct',
-      a: 'Vuetify requires the use of the `v-app` component. It should wrap your entire application and is the center point for much of the framework functionality. If for whatever reason you cannot use this element, you can mimic it from attributes and classes. Set the `data-app` attribute to true on the highest element available (not including body), and the **application application--{light|dark}** classes.'
+      q: 'Mi aplicación no parece que se ve bien',
+      a: 'Vuetify requiere el uso del componente `v-app`. Éste debe envolver toda la aplicación y es el punto central de una buena parte de la funcionalidad del framework. Si por alguna razón no puedes usar este elemento, puedes imitarlo con atributos y clases. Coloca el atributo `data-app` como true en el elemento más alto disponible (excluyendo body), y las clases **application application--{light|dark}**.'
     },
     {
-      q: 'The Dark or Light theme are not working.',
-      a: 'Vuetify requires a mounting point in order to perform tasks such as theme styling. Ensure that you have a `v-app` wrapping your application. In the event that this is not possible, for whatever reason, you can mimic its behavior by applying **data-app** and **class="application application--light (or dark)** to the highest element that you can within your application.'
+      q: 'Los temas Dark o Light no están funcionando.',
+      a: 'Vuetify requiere un punto de montaje (mounting point) para así poder llevar a cabo tareas como darle estilo a los temas. Asegúrate de que tienes un `v-app` que envuelve a tu aplicación. En el caso de que esto no sea posible por cualquier razón, puedes imitar el comportamiento aplicando **data-app** y **class="application application--light (or dark)** al elemento más alto dentro de tu aplicación.'
     },
     {
-      q: 'Menu/Dialog/Navigation drawer are not opening properly.',
-      a: 'Ensure that your components are wrapped with a `v-app` element. If you are using an element to activate the component that is not placed into the <kbd>activator</kbd> slot, ensure that you stop propagation of the click event. These components utilize the `v-outside-click` directive and will immediately close.'
+      q: 'Los drawers de Menu/Dialog/Navigation no están abriendo correctamente.',
+      a: 'Asegúrate de que tus componentes están envueltos en un elemento `v-app`. Si estás usando un elemento para activar el componente que no está dentro del slot <kbd>activator</kbd>, asegúrate de que detienes la propagación del evento click. Estos componentes utilizan la directiva `v-outside-click` y lo cerrarán de inmediato. '
     },
     {
-      q: 'The scrollbar is showing even though my content is not overflowing vertically.',
-      a: 'Vuetify by default turns on the html scrollbar. This is a design choice and has been debated numerous times. There are pros and cons to having and not having it and as of now, the vote is in favor of leaving it as is. If you wish to disable this functionality, simply add `html { overflow-y: auto }` to your style file.'
+      q: 'Se muestra una barra de desplazamiento aunque mi contenido no desborda (overflow) verticalmente.',
+      a: 'Por default Vuetify coloca una barra de desplazamiento. Esta es una decisión de diseño y ha sido debatida muchas veces. Hay pros y contras de colocarla o no y por ahora, el voto está en favor de dejarla como está. Si quieres deshabilitar esta funcionalidad, simplemente agrega `html { overflow-y: auto }` a tu archivo de estilos.'
     },
     {
-      q: 'How to center vertically?',
-      a: 'Apply the **fill-height** prop to `v-container`. This helper class normally only adds **height: 100%**, but for the container, it also looks for a child `v-layout` and applies the needed classes to vertically center the content.'
+      q: '¿Cómo centro verticalmente?',
+      a: 'Aplica la propiedad **fill-height** a `v-container`. Esta clase auxiliar normalmente sólo agrega **height: 100%**, pero para el container, también busca por un hijo `v-layout` y aplica las clases necesarias para centrar el contenido.'
     },
     {
-      q: 'My _/_ link is active when I\'m on _/home_ page',
-      a: 'Add the **exact** to the link that points to absolute /. For more information on this, you can visit the official Vue router [documentation](https://router.vuejs.org/en/api/router-link.html).'
+      q: 'Mi link _/_ está activo cuando estoy en la página _/home_',
+      a: 'Agrega **exact** al link que apunta al / absoluto. Para más información al respecto, puedes visitar la [documentación](https://router.vuejs.org/en/api/router-link.html) oficial de Vue router.'
     },
     {
-      q: 'My page on mobile is not responsive',
-      a: 'Add the `<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">` to the `<head>` section in your index.html.'
+      q: 'Mi página no es responsiva en móviles.',
+      a: 'Agrega `<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">` al `<head>` en tu index.html.'
     },
     {
-      q: 'How do I use Font Awesome Icons or Material Design Icons (mdi)?',
-      a: 'You must add the fonts to your index.html or otherwise import them into your project<br>**MDI**: [Material Design Icons](https://materialdesignicons.com/getting-started)<br>**FA**: [Font Awesome](http://fontawesome.io/get-started/)'
+      q: '¿Cómo uso Font Awesome Icons o Material Design Icons (mdi)?',
+      a: 'Debes agregar las fuentes a tu index.html o importarlas en tu proyecto <br>**MDI**: [Material Design Icons](https://materialdesignicons.com/getting-started)<br>**FA**: [Font Awesome](http://fontawesome.io/get-started/)'
     },
     {
-      q: 'My dialog closes immediately after clicking the button',
-      a: 'When not using the **activator** slot for `v-menu` and `v-dialog` for example, you must manually stop the _propagation_ of the click event. To do this, simply add the _.stop_ modifier to the click event, `@click.stop="myMethod"`.'
+      q: 'Mi diálogo se cierra inmediatamente después de hacer click en el botón.',
+      a: 'Cuando no usas el slot **activator** para `v-menu` y `v-dialog` por ejemplo, debes detener manualmente la _propagación_ del evento click. Para esto, simplemente agrega el modificador _.stop_ al evento: `@click.stop="myMethod"`.'
     },
     {
-      q: 'Relative images are not working in `v-card` components',
-      a: 'Vue loader converts relative paths into require functions automatically for you. Unfortunately, this is not the case when it comes to custom components. You can circumvent this issue by using `require`.<br><br>`<v-card :src="require(\'path/to/img/img.jpg\')"`'
+      q: 'Las imágenes relativas no funcionan en los componentes `v-card`',
+      a: 'Vue loader convierte los paths relativos en funciones require automáticamente por tí. Desafortunadamente, este no es el caso para los componentes personalizados. Puedes darle la vuelta usando `require`.<br><br>`<v-card :src="require(\'path/to/img/img.jpg\')"`'
     }
   ],
-  questionHeader: 'Have something that you think belongs here?',
-  questionButton: 'Let us know'
+  questionHeader: '¿Crees que hay otra pregunta que pertenece a la lista?',
+  questionButton: 'Háznolo saber'
 }
