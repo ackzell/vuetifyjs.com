@@ -10,7 +10,7 @@ export default {
     'v-list-tile-action',
     'v-list-tile-avatar',
     'v-list-group',
-    'v-list-tile-action-text',
+    'v-list-tile-action-text'
   ],
   examples: [{
     avatarTwoLines: {
@@ -52,12 +52,6 @@ export default {
     expansionLists: {
       header: 'Expansion Lists',
       desc: 'A list can contain a group of items which will display on click. Expansion lists are also used within the `navigation drawer` component.'
-    },
-    dark: {
-      header: 'Dark scheme',
-      desc: 'A list can assume the alternate scheme color of dark.',
-      inverted: true,
-      uninverted: true
     }
   }],
   props: {

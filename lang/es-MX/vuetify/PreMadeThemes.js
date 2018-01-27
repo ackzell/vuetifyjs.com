@@ -17,14 +17,14 @@ export default {
     {
       screenshot: '/static/doc-images/starter/vuetify-parallax-starter.png',
       title: 'Parallax',
-      description:'Esta bella _single page_ con parallax es una gran página de inicio para cualquier aplicación.',
+      description: 'Esta bella _single page_ con parallax es una gran página de inicio para cualquier aplicación.',
       sourceUrl: 'vuetifyjs/parallax-starter',
       demoUrl: '/themes/parallax-starter'
     },
     {
       screenshot: '/static/doc-images/starter/vuetify-blog-starter.png',
       title: 'Blog',
-      description:'Una plantilla simple que lleva una interfaz sencilla para crear un blog o una aplicación similar.',
+      description: 'Una plantilla simple que lleva una interfaz sencilla para crear un blog o una aplicación similar.',
       sourceUrl: 'vuetifyjs/blog-starter',
       demoUrl: '/themes/blog-starter'
     }
