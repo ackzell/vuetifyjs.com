@@ -89,6 +89,12 @@ export default {
     'description': 'Select from a multitude of official material design layouts.',
     'keywords': 'pre-defined layouts, layouts, application layout, material design layouts'
   },
+  'layout/pre-made-themes': {
+    'h1': 'Pre-made themes',
+    'title': 'Free / Premium Themes',
+    'description': 'Vuetify offers numerous pre-build starter and premium themes. Kickstart your next application today, no design skills needed.',
+    'keywords': 'vuetify themes, pre-built material themes, premium themes'
+  },
   'layout/spacing': {
     'h1': 'Spacing',
     'title': 'Spacing helpers',
@@ -281,13 +287,13 @@ export default {
     'description': 'The v-parallax component creates a 3d effect that makes an image appear to scroll slower than the window.',
     'keywords': 'parallax, components'
   },
-  '/components/date-pickers': {
+  'components/date-pickers': {
     'h1': 'Date Pickers',
     'title': 'Date Picker Component',
     'description': 'Date Picker component for the Vuetify framework.',
     'keywords': 'vuetify, picker, date picker, component'
   },
-  '/components/time-pickers': {
+  'components/time-pickers': {
     'h1': 'Time pickers',
     'title': 'Time Picker Component',
     'description': 'Time Picker component for the Vuetify framework.',
@@ -382,12 +388,6 @@ export default {
     'title': 'Touch Support',
     'description': 'Touch directive for the Vuetify framework.',
     'keywords': 'touch, touch directive, mobile touch directive'
-  },
-  'pre-made-themes': {
-    'h1': 'Pre-made themes',
-    'title': 'Free / Premium Themes',
-    'description': 'Vuetify offers numerous pre-build starter and premium themes. Kickstart your next application today, no design skills needed.',
-    'keywords': 'vuetify themes, pre-built material themes, premium themes'
   },
   'examples/layouts/baseline': {
     'h1': 'Baseline',

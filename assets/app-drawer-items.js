@@ -18,7 +18,8 @@ export default [
     group: 'layout',
     icon: 'mdi-page-layout-body',
     items: [
-      { name: 'PreDefined', title: 'Pre-defined', badge: 'updated' },
+      { name: 'PreDefined', title: 'Pre-defined layouts', badge: 'updated' },
+      { name: 'PremadeThemes', title: 'Pre-made themes', badge: 'updated' },
       { name: 'Spacing', title: 'Spacing' },
       { name: 'Alignment', title: 'Text alignment' },
       { name: 'Display', title: 'Display' },
@@ -126,8 +127,7 @@ export default [
       { name: 'touch-support', title: 'Touch support' }
     ]
   },
-  { name: 'PremadeThemes', title: 'Pre-made themes', icon: 'mdi-theme-light-dark' },
-  { name: 'store/Index', title: 'Store', icon: 'mdi-store', badge: 'new' },
+  { name: 'store/Index', title: 'Store', icon: 'mdi-store', badge: 'Sale: 15% - 40% Off', color: 'red lighten-3' },
   { divider: true },
   { header: 'Additional resources' },
   {

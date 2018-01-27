@@ -158,12 +158,17 @@
   // Components
   import HomeFooter from '@/components/misc/HomeFooter'
 
+  // Mixins
+  import Message from '@/mixins/message'
+
   export default {
     name: 'HomePage',
 
     components: {
       HomeFooter
     },
+
+    mixins: [Message],
 
     data: () => ({
       diamond: supporters.diamond,
@@ -205,6 +210,12 @@
         supporters.splice(2, 0, end)
 
         return supporters
+      }
+    },
+
+    methods: {
+      snackHandler () {
+        this.$router.push({ name: 'store/Index' })
       }
     }
   }
