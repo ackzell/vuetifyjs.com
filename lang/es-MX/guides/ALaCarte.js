@@ -1,42 +1,42 @@
 export default {
-  header: 'Overview',
-  headerText: 'Being a component framework, Vuetify will always grow horizontally. Depending on your project, a small **package size** may be a requirement. The A la carte system enables you to pick and choose which components to import, drastically _lowering_ your build size. **If you already have the `a-la-carte` template installed, you can skip to the [guide](/guides/a-la-carte#application)**.',
-  headerText2: 'For a pre-built project demonstrating single component imports, install the **a-la-carte** template from the cli, using the command `vue init vuetifyjs/a-la-carte`. Some of our other templates also include options for enabling a-la-carte components. More information is located in the [Quick start guide](/getting-started/quick-start)',
-  importHeader: 'Importing components',
-  importText1: 'The `transform-imports` package is not necessary to use a-la-carte components, but simplifies the process of importing them, and is therefore **highly** recommended. It allows you to use a more concise syntax when importing components.',
-  alert2: 'Keep in mind, both the `Vuetify` and `VApp` components are required to use Vuetify',
-  alert3: 'The options object that you pass as the second argument to `Vue.use` can also include both a _directives_ and a _transitions_ property.',
-  importText2: 'If you are not using the transform-imports package, you will need to import each component like this:',
-  importText3: 'You can also import components in .vue files, as seen below. When doing so it\'s important that you import all named exports, and then destructure them in components. Otherwise child components such as `v-card-text` or `v-expansion-panel-content` will not be available.',
-  styleHeader: 'Required styles',
-  styleText1: 'In order to obtain all the required styles, we need to import them in stylus. In order for webpack to handle this, you will need to install `stylus` and the `stylus-loader` from **npm**.',
-  alert4: 'For a more detailed explanation on how to setup your application to handle stylus, please navigate to the <a href="/style/themes">theme page</a>.',
-  styleText2: 'Now you will need to require the stylus from the entry point of your application. This is the same place where you\'re importing Vue and Vuetify (usually `main.js` or `app.js`). Keep in mind, requiring this in your main `App.vue` can cause slow load times as it is re-processed when you make updates.',
-  applicationHeader: 'Application',
-  applicationText1: 'Navigate to the **src** folder and open up `main.js`. We see that in the template come some components already configured to load.',
-  applicationText2: 'For example the code below tells the application that you use a `<v-app>`, `<v-navigation-drawer>`, `<v-footer>` and `<v-toolbar>`. Once defined, the markup can be used in any .vue file.',
-  componentNameListHeader: 'UI Component Name List',
-  componentNameListText1: 'Some components such as `VLayout` or `VFlex` are for organizational reasons included in other components, in this case `VGrid`. To know which component to import you can review the following table.',
+  header: 'Información general',
+  headerText: 'Al ser un framework de componentes, Vuetify siempre crecerá horizontalmente. Dependiendo de tu proyecto, un **tamaño de paquete** pequeño podría ser un requerimiento. El sistema A la carta te permite escoger cuáles componentes importar, lo que _reduce_ drásticamente el tamaño de tu proyecto una vez compilado. **Si ya tienes la plantilla `a-la-carte` instalada, puedes ir directo a la [guía](/guides/a-la-carte#application)**.',
+  headerText2: 'Para un proyecto prefabricado que demuestra imports para componentes individuales, instala la plantilla **a-la-carte** desde el cli, usando el comando `vue init vuetifyjs/a-la-carte`. Algunas de las otras plantillas también incluyen opciones para habilitar componentes a-la-carta. Hay más información en la guía de [Inicio rápido](/getting-started/quick-start)',
+  importHeader: 'Importando componentes',
+  importText1: 'El paquete `transform-imports` no es necesario para usar componentes a-la-carta pero simplifica el proceso de importarlos, por lo que es **altamente** recomendado. Te permite utilizar una sintaxis más concisa cuando estás importando los componentes.',
+  alert2: 'Toma en cuenta que ambos `Vuetify` y `VApp` son componentes requeridos para usar Vuetify',
+  alert3: 'El objeto de opciones que puedes pasarle como segundo argumento a `Vue.use` puede también incluir tanto _directivas_ como una propiedad de _transiciones_',
+  importText2: 'Si o estás usando el paquete de transform-impports, deberás importar cada componente así:',
+  importText3: 'También puedes importar componentes en los archivos .vue, como se muestra más abajo. Cuando lo haces es importante que importes todos los named exports y después los destructures en componentes. De otra manera los componentes hijo como `v-card-text` o `v-expansion-panel-content` no estarán disponibles',
+  styleHeader: 'Estilos requeridos',
+  styleText1: 'Para lograr obtener todos los estilos requeridos, necesitamos importarlos en stylus. Y para que webpack pueda manejar esto, deberás instalar `stylus` y el `stylus-loader` desde **npm**',
+  alert4: 'Para una explicación más detallada acerca de cómo preparar tu aplicación para que use stylus, por favor ve a la <a href="/style/themes">página de temas.</a>.',
+  styleText2: 'Ahora necesitarás requerir stylus desde el entry point de tu aplicación. Este es el mismo lugar desde el que estás importando Vue y Vuetify (generalmente `main.js` o `app.js`). Toma en cuenta que requerirlos en tu `App.vue` puede causar tiempos lentos de carga porque estará siendo re-procesado cuando hagas cambios al archivo.',
+  applicationHeader: 'Aplicación',
+  applicationText1: 'Navega al folder **src** y abre `main.js`. Veremos que en la plantilla vienen algunos componentes ya configurados para ser cargados.',
+  applicationText2: 'Por ejemplo el código a continuación le dice a la aplicación que utilizas `<v-app>`, `<v-navigation-drawer>`, `<v-footer>` y `<v-toolbar>`. Una vez definidos, el markup puede ser utilizado en cualquier archivo .vue.',
+  componentNameListHeader: 'Lista de Componentes de UI por Nombre',
+  componentNameListText1: 'Algunos componentes  como `VLayout` o `VFlex` están incluidos dentro de otros componentes por razones de organización, en este caso dentro de `VGrid`. Para saber qué componente importar puedes revisar la siguiente tabla.',
   toc: [
     {
-      text: 'Overview',
-      href: 'introduction'
+      text: 'Información general',
+      href: 'introduccion'
     },
     {
-      text: 'Importing components',
-      href: 'importing-components'
+      text: 'Importando componentes',
+      href: 'importando-componentes'
     },
     {
-      text: 'Required styles',
-      href: 'required-styles'
+      text: 'Estilos requeridos',
+      href: 'estilos-requeridos'
     },
     {
-      text: 'Application',
-      href: 'application'
+      text: 'Aplicación',
+      href: 'aplicacion'
     },
     {
-      text: 'UI Component Name List',
-      href: 'component-name-list'
+      text: 'Lista de Componentes de UI por Nombre',
+      href: 'lista-de-componentes-por-nombre'
     }
   ]
 }
