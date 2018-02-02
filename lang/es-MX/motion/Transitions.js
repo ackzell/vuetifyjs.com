@@ -1,6 +1,6 @@
 export default {
-  header: 'Motion',
-  headerText: 'Smooth animations help make a UI feel great. Using Vue\'s transition system and re-usable functional components, you can easily control the motion of your application. Most components can have their transition altered through the <code>transition</code> prop.',
+  header: 'Movimiento',
+  headerText: 'Las animaciones suaves ayudan a que una UI se sienta genial. Al utilizar el sistema de transiciones y los componentes funcionales reusables de Vue puedes controlar fácilmente el movimiento de tu aplicación. Puedes modificar la mayoría de las transiciones de tus componentes a través de la propiedad <code>transition</code>. ',
   components: [
     'v-fade-transition',
     'v-slide-x-transition',
@@ -11,41 +11,41 @@ export default {
   ],
   examples: [{
     slideXTransitions: {
-      header: 'Slide X transitions',
-      desc: 'Slide x transitions move along the horizontal axis.'
+      header: 'Transiciones Slide X',
+      desc: 'Las transiciones Slide X se mueven en el eje horizontal.'
     },
     slideYTransitions: {
-      header: 'Slide Y transitions',
-      desc: 'Animations use the applications <code>$primary-transition</code>.'
+      header: 'Transiciones Slide Y',
+      desc: 'Estas animaciones utilizan <code>$primary-transition</code>.'
     },
     scaleTransition: {
-      header: 'Scale transition',
-      desc: 'Many of Vuetify\'s components contain a <code>transition</code> prop which allows you to specify your own.'
+      header: 'Transición Scale',
+      desc: 'Muchos de los componentes de Vuetify contienen una propiedad <code>transition</code> que te permite especificar una transición personalizada.'
     },
     fadeTransition: {
-      header: 'Fade transition',
-      desc: 'Another example of the fade transition can be found on the Carousel component.'
+      header: 'Transición Fade',
+      desc: 'Otro ejemplo de la transición fade puedes encontrarlo en el componente Carousel.'
     },
     customOrigin: {
-      header: 'Custom Origin',
-      desc: 'Programmatically control the transition origin with a simple prop.'
+      header: 'Origen personalizado',
+      desc: 'Puedes cambiar el punto de origen de la transición con una simple propiedad.'
     }
   }],
-  createYourOwnHeader: 'Create your own',
-  createYourOwnText1: 'You can use Vuetify\'s transition helper function to easily create your own custom transitions. This function will return an object that you can import into Vue. Using Vue\'s <a href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" target="_blank" rel="noopener">functional component</a> option will make sure your transition is as efficient as possible. Simply import the function:',
-  createYourOwnText2: 'The <code>createSimpleTransition</code> function accepts 1 argument, name. This will be the name that you can hook into with your style. This is an example of what <code>v-fade-transition</code> looks like:',
+  createYourOwnHeader: 'Crea una propia',
+  createYourOwnText1: 'Puedes utilizar la función auxiliar transition de Vuetify para crear fácilmente tus propias transiciones personalizadas. Utilizando una opción <a href="https://vuejs.org/v2/guide/render-function.html#Functional-Components" target="_blank" rel="noopener">componente funcional</a> se asegurará de que tu transición es tan eficiente como sea posible. Simplemente importa la función:',
+  createYourOwnText2: 'La función <code>createSimpleTransition</code> toma 1 argumento: name. Este será el nombre al que puedes ligar tu estilo. Aquí un ejemplo de cómo se ve <code>v-fade-transition</code>:',
   toc: [
     {
-      text: 'Motion',
-      href: 'introduction'
+      text: 'Movimiento',
+      href: 'introduccion'
     },
     {
-      text: 'Examples',
-      href: 'examples'
+      text: 'Ejemplos',
+      href: 'ejemplos'
     },
     {
-      text: 'Create your own',
-      href: 'create-your-own'
+      text: 'Crea una propia',
+      href: 'crea-una-propia'
     }
   ]
 }
