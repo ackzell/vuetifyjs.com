@@ -12,6 +12,10 @@ module.exports = [
     locale: 'zh-Hans'
   },
   {
+    title: '한국어',
+    locale: 'ko'
+  },
+  {
     title: 'Spanish (MX)',
     locale: 'es-MX'
   }
