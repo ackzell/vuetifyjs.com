@@ -1,16 +1,16 @@
 export default {
-  header: 'Scrolling directive',
-  headerText: 'The `v-scroll` directive allows you to provide callbacks when the window or a specifically defined element are scrolled.',
+  header: 'Directiva de desplazamiento (scrolling)',
+  headerText: 'La directiva `v-scroll` te permite proveer callbacks cuando la ventana o un elemento específico son desplazados.',
   components: ['v-scroll'],
   examples: [{
     default: {
       header: 'Default',
-      desc: 'The default behavior is to bind to the window. If no additional configuration options are needed, you can simple pass your callback function.',
+      desc: 'El comportamiento default es asignarla a la ventana. Si no se necesita ninguna configuración adicional, puedes simplemente pasarle una función callback.',
       uninverted: true
     },
     options: {
-      header: 'Scroll with options',
-      desc: 'For a more fine tuned approach, you can designate the target to bind the scroll event listener.',
+      header: 'Desplazamiento con opciones',
+      desc: 'Para una implementación más fina, puedes asignar al objetivo (target) un listener del evento `scroll`',
       uninverted: true
     }
   }],
@@ -25,13 +25,13 @@ export default {
         name: 'target',
         type: 'String',
         default: 'null',
-        desc: 'The DOM element to bind the scroll event listener'
+        desc: 'El elemento del DOM al que se asigna el evento `scroll`'
       },
       {
         name: 'debounce',
         type: 'Object',
         default: '{ _passive_: **true** }',
-        desc: 'The options to be passed to the event listener of the binding target'
+        desc: 'Las opciones que se le deben pasar al event listener del objetivo asignado'
       }
     ]
   }]
