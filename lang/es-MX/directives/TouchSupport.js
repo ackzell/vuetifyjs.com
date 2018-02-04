@@ -1,11 +1,11 @@
 export default {
-  header: 'Touch Support',
-  headerText: 'The <code>v-touch</code> directive allows you to capture swipe gestures and apply directional callbacks.',
+  header: 'Soporte para touch',
+  headerText: 'La directiva <code>v-touch</code> te permite capturar gestos de swipe y aplicar callbacks direccionales.',
   components: ['v-touch'],
   examples: [{
     default: {
       header: 'Default',
-      desc: 'On a mobile device, try swiping in various directions.',
+      desc: 'En un dispositivo móvil, intenta hacer swipe en varias direcciones.',
       uninverted: true
     }
   }],
@@ -15,13 +15,13 @@ export default {
         name: '[up, down, left, right]',
         type: 'Function',
         default: 'null',
-        desc: 'Assign a callback based upon a swipe direction. Pairing x-axis and y-axis callbacks is not recommended at this time'
+        desc: 'Asigna un callback basado en la dirección del swipe. Agregar callbacks en el x-axis y y-axis no se recomienda por el momento.'
       },
       {
         name: '[move, start, end]',
         type: 'Function',
         default: 'null',
-        desc: 'Assign a callback when the touch event starts, ends, and while it is in progress'
+        desc: 'Asigna un callback cuando el evento touch comienza, termina y mientras está en progreso.'
       }
     ]
   }]
