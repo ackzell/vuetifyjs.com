@@ -1,48 +1,48 @@
 export default {
-  header: 'Spacing',
-  headerText: 'Update your layout without creating new classes. Spacing helpers are useful for modifying the padding and margin of an element.',
+  header: 'Espaciado',
+  headerText: 'Actualiza tu distribución sin crear clases nuevas. Los auxiliares de espaciado son útiles para modificar el _padding_ y el _margin_ de un elemento',
   toc: [
     {
-      text: 'Introduction',
-      href: 'introduction'
+      text: 'Introdución',
+      href: 'introduccion'
     },
     {
-      text: 'How it works',
-      href: 'how-it-works'
+      text: 'Cómo funciona',
+      href: 'como-funciona'
     },
     {
-      text: 'Examples',
-      href: 'examples'
+      text: 'Ejemplos',
+      href: 'ejemplos'
     },
     {
-      text: 'Horizontal centering',
-      href: 'horizontal-centering'
+      text: 'Centrar horizontalmente',
+      href: 'centrar-horizontalmente'
     }
   ],
-  howText: 'Apply **margin** or **padding** to an element ranging from _0 to 5_. Each size increment was designed to align with common Material Design spacing. These classes can be applied using the following format `{property}{direction}-{size}`.',
-  propertyText: 'The _property_ applies the type of spacing:',
+  howText: 'Aplica un **margin** o un **pading** a un elemento que va desde _0 hasta 5_. Cada incremento de tamaño fue diseñado para respetar los espaciados comunes ed Material Design. Estas clases pueden ser aplicadas usando el siguiente formato: `{propiedad}{dirección}-{tamaño}`.',
+  propertyText: 'La _propiedad_ aplica el tipo de espaciado:',
   properties: [
-    '`m` - applies `margin`',
-    '`p` - applies `padding`'
+    '`m` - aplica un `margin`',
+    '`p` - aplica un `padding`'
   ],
-  directionText: 'The _direction_ designates the side the property applies to:',
+  directionText: 'La _dirección_ indica de qué lado se aplica el espaciado:',
   directions: [
-    '`t` - applies the property for `margin-top` or `padding-top`',
-    '`b` - applies the property for `margin-bottom` or `padding-bottom`',
-    '`l` - applies the property for `margin-left` or `padding-left`',
-    '`r` - applies the property for `margin-right` or `padding-right`',
-    '`x` - applies the property for both `*-left` and `*-right`',
-    '`y` - applies the property for both `*-top` and `*-bottom`'
+    '`t` - aplica la propiedad de `margin-top` o `padding-top`',
+    '`b` - aplica la propiedad de `margin-bottom` o `padding-bottom`',
+    '`l` - aplica la propiedad de `margin-left` o `padding-left`',
+    '`r` - aplica la propiedad de `margin-right` o `padding-right`',
+    '`x` - aplica ambas propiedades `*-left` y `*-right`',
+    '`y` - aplica ambas propiedades `*-top` y `*-bottom`'
   ],
-  sizeText: 'The _size_ controls the increment of the property:',
+  sizeText: 'El _tamaño_ controla los incrementos de la propiedad:',
   sizes: [
-    '`0` - removes the property for `margin` or `padding` by setting it to `0`',
-    '`1` - sets the `margin` or `padding` property to `$spacer * .25`',
-    '`2` - sets the `margin` or `padding` property to `$spacer * .5`',
-    '`3` - sets the `margin` or `padding` property to `$spacer`',
-    '`4` - sets the `margin` or `padding` property to `$spacer * 1.5`',
-    '`5` - sets the `margin` or `padding` property to `$spacer * 3`'
+    '`0` - quita el `margin` o `padding` asignándoles el valor `0`',
+    '`1` - aplica un `margin` o `padding` con un valor de `$spacer * .25`',
+    '`2` - aplica un `margin` o `padding` con un valor de `$spacer * .5`',
+    '`3` - aplica un `margin` o `padding` con un valor de `$spacer`',
+    '`4` - aplica un `margin` o `padding` con un valor de `$spacer * 1.5`',
+    '`5` - aplica un `margin` o `padding` con un valor de `$spacer * 3`'
   ],
-  horizontalHeader: 'Horizontal centering',
-  horizontalText: 'For block elements with a designated width, you can apply `.mx-auto` to horizontally center the content.'
+  horizontalHeader: 'Centrar horizontalmente',
+  horizontalText: 'Para elementos de bloque (block elements) con un ancho definido, puedes aplicar `.mx-auto` para centrar horizontalmente el contenido.'
 }
