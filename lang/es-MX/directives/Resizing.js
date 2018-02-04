@@ -1,11 +1,11 @@
 export default {
-  header: 'Resize directive',
-  headerText: 'The `v-resize` directive can be used for calling specific functions when the window resizes.',
+  header: 'Directiva resizes',
+  headerText: 'La directiva `v-resize` puede ser utilizada para llamar funciones específicas cuando la ventana cambia de tamaño.',
   components: ['v-resize'],
   examples: [{
     default: {
       header: 'Default',
-      desc: 'Resize your window and observe the values change..',
+      desc: 'Cambia el tamaño de tu ventana y observa cómo cambian los valores...',
       uninverted: true
     }
   }],
@@ -20,7 +20,7 @@ export default {
         name: 'quiet',
         type: 'Boolean',
         default: 'false',
-        desc: 'Do not invoke callback method when directive is bound'
+        desc: 'El método callback no será invocado cuando la directiva esté presente'
       },
       {
         name: 'debounce',
