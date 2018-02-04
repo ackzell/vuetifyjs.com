@@ -1,46 +1,46 @@
 export default {
-  header: 'Ripple directive',
-  headerText: 'The `v-ripple` directive is used to show action from a user. It can be applied to any block level element. Numerous components come with the ripple directive built in, such as the `v-btn`, `v-tabs-item` and many more.',
+  header: 'Directiva ripple (ondulaciones)',
+  headerText: 'La directiva `v-ripple` se usa para mostrar una acción de un usuario. Puede ser aplicada a cualquier elemento de nivel de bloque (block level). Muchos componentes vienen con la directiva ripple integrada. Tal es el caso de `v-btn`, `v-tabs-item` y muchos más.',
   components: ['v-ripple'],
   examples: [{
     buttons: {
       header: 'Default',
-      desc: 'Buttons by default have ripples enabled. This can be removed with the prop `:ripple="false`.',
+      desc: 'Los botones por default tienen las ondulaciones (ripples) habilitadas. Esto puede quitarse con la propiedad `:ripple="false`.',
       uninverted: true
     },
     customColor: {
-      header: 'Custom color',
-      desc: 'Using a helper class, you can change the color of the ripple.',
+      header: 'Color personalizado',
+      desc: 'Usando una clase auxiliar, puedes cambiar el color del ripple.',
       uninverted: true
     },
     tabs: {
       header: 'Tabs',
-      desc: 'Tabs by default have ripples disabled. This can be enabled with the `ripple` prop.',
+      desc: 'Las tabs tienen por default las ondulaciones deshabilitadas. Puedes habilitarlas con la propiedad `ripple`.',
       uninverted: true
     },
     navigationDrawers: {
-      header: 'Navigation drawers',
-      desc: 'List items by default have ripples disabled. This can be enabled with the `ripple` prop',
+      header: 'Cajones de Navegación (Navigation drawers)',
+      desc: 'Las listas tienen por default las ondulaciones deshabilitadas. Puedes habilitarlas con la propiedad `ripple`.',
       uninverted: true
     },
     toolbars: {
-      header: 'Toolbars',
-      desc: 'Toolbar items by default have ripples disabled. This can be enabled with the `ripple` prop.',
+      header: 'Barras de herramientas',
+      desc: 'Los elementos de las barras de herramientas tienen por default las ondulaciones deshabilitadas. Puedes habilitarlas con la propiedad `ripple`.',
       uninverted: true
     },
     expansionPanels: {
-      header: 'Expansion panels',
-      desc: 'Expansion panels by default have ripples disabled. This can be enabled with the `ripple` prop.',
+      header: 'Paneles de expansión',
+      desc: 'Los paneles de expansión tienen por default las ondulaciones deshabilitadas. Puedes habilitarlas con la propiedad `ripple`.',
       uninverted: true
     },
     customRipple: {
-      header: 'Components',
-      desc: 'Several other components have built-in support for ripples. Enable it with the `ripple` prop.',
+      header: 'Componentes',
+      desc: 'Muchos otros componentes tienen soporte integrado para ondulaciones. Habilítalos con la propiedad `ripple`.',
       uninverted: true
     },
     htmlElement: {
-      header: 'Standard HTML element',
-      desc: 'Add the ripple effect to a standard HTML element. This can be enabled with the `v-ripple` directive.',
+      header: 'Elementos estándar de HTML',
+      desc: 'Agrega el efecto de ondulaciones a un elemento estándar de HTML. Puedes habilitarlo con la directiva `v-ripple`.',
       uninverted: true
     }
   }],
@@ -50,13 +50,13 @@ export default {
         name: 'class',
         type: 'String',
         default: 'undefined',
-        desc: 'Applies a custom class to the ripple, used for changing color'
+        desc: 'Aplica una clase personalizada a la ondulación, se usa para cambiar el color'
       },
       {
         name: 'center',
         type: 'Boolean',
         default: 'False',
-        desc: 'Force ripple to originate from the center of the target'
+        desc: 'Obliga a la ondulación a originarse desde el centro del target'
       }
     ]
   }]
