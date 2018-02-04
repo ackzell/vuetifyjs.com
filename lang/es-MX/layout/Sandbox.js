@@ -1,4 +1,4 @@
 export default {
   header: 'Sandbox',
-  headerText: 'This page will allow you to configure the various settings available to you when setting up a layout with Vuetify. Keep in mind, this is _**not**_ an exhaustive list, but a starting point allowing you to understand what is available.'
+  headerText: 'Esta página te permitirá configurar las diferentes opciones que tienes disponibles para crear una distribución (layout) en Vuetify. Toma en cuenta que esta **no es** una lista exhaustiva, pero más bien un punto de partida para permitirte entender qué tienes disponible.'
 }
