@@ -1,26 +1,26 @@
 export default {
-  header: 'Colors',
-  headerText: 'Out of the box you get access to all colors in the [Material Design spec](https://material.io/guidelines/style/color.html) through **stylus** and **javascript**. These values can be used within your style sheets, your component files and on actual components via the **color class** system.',
-  classesHeader: 'Classes',
-  classesText: 'Each color from the spec gets converted to a **background** and **text** variant for styling within your application through a class, e.g. `<div class="red">` or `<span class="red--text">`. These class colors are defined [here](https://github.com/vuetifyjs/vuetify/blob/master/src/stylus/settings/_colors.styl).',
-  classesText2: 'Text colors also support **darken** and **lighten** variants using `text--{lighten|darken}-{n}`',
+  header: 'Colores',
+  headerText: 'Desde el inicio tienes acceso a todos los colores en el [Material Design spec](https://material.io/guidelines/style/color.html) a través de **stylus** y **javascript**. Estos valores pueden ser utilizados dentro de tus hojas de estilo, tus archivos de componentes y los componentes prefabricados usando el sistema de **clases de colores**.',
+  classesHeader: 'Clases',
+  classesText: 'Cada color del spec se convierte en una variante de **background** y **text** para aplicar estilos en tu aplicación a través de una clase, por ejemplo: `<div class="red">` o `<span class="red--text">`. Estas clases de colores están definidas [aquí](https://github.com/vuetifyjs/vuetify/blob/master/src/stylus/settings/_colors.styl).',
+  classesText2: 'El color del texto también tiene soporte para variantes de **darken** y **lighten** si usas `text--{lighten|darken}-{n}`',
   javascriptPackHeader: 'Javascript color pack',
-  javascriptPackText: 'Vuetify has an optional javascript color pack that you can import and use within your application. This can also be used to help define your application\'s theme.',
+  javascriptPackText: 'Vuetify tiene un color pack de javascript que puedes importar y utilizar dentro de tu aplicación. Esto puede también ser usado para ayudarte a definir el tema de tu aplicación.',
   stylusPackHeader: 'Stylus color pack',
-  stylusPackText: 'While convenient, the color pack increases the css export size by ~30kb. Some projects may only require the default provided classes that are created at run-time from the Vuetify bootstrap. To disable this feature, you will have to _manually_ import and build the main **stylus** file. This will require a [stylus loader](https://github.com/shama/stylus-loader) and a `.styl` file entry.',
-  stylusPackText2: 'Your created `main.styl` file will then need to be included in your project.',
-  alert: 'You **must** configure your webpack setup to use `stylus`. If you are using a [pre-made template](/getting-started/quick-start#new-applications) this will already be done for you.',
-  stylusPackText3: 'This can also be done within your main **App.vue** file. Keep in mind, depending on your project setup, this _will_ increase build times as every time your entry file is updated, the stylus files will be re-generated.',
-  colorHeader: 'Material colors',
-  colorText: 'Below is a list of the Material design color palette grouped by primary color',
+  stylusPackText: 'Aunque su uso es conveniente y práctico, el color pack aumenta el tamaño de tu css cerca de ~30kb. Algunos proyectos pueden sólo requerir las clases default que se crean durante el tiempo de ejecución cuando Vuetify arranca. Para deshabilitar esta característica tendrás que importar _manualmente_ y hacer el build del archivo principal **stylus**. Esto requerirá el [stylus loader](https://github.com/shama/stylus-loader) y un archivo `.styl`.',
+  stylusPackText2: 'Tu archivo `main.styl` creado tendrá que estar incluido en tu proyecto..',
+  alert: '**Debes** configurar tu setup de webpack para que utilice `stylus`. Si estás usando una [plantilla prefabricada](/getting-started/quick-start#new-applications) esto ya está hecho por tí.',
+  stylusPackText3: 'Esto también se puede lograr dentro de tu archivo principal **App.vue**. Ten en cuenta que dependiendo del setup de tu proyecto, esto _incrementará_ los tiempos de build porque cada vez que tu archivo sea actualizado, los archivos de stylus tendrán que ser regenerados.',
+  colorHeader: 'Colores Material',
+  colorText: 'A continuación hay una lista de la paleta de colores de MAterial agrupada por color primario',
   toc: [
     {
-      text: 'Introduction',
-      href: 'introduction'
+      text: 'Introducción',
+      href: 'introduccion'
     },
     {
-      text: 'Classes',
-      href: 'classes'
+      text: 'Clases',
+      href: 'clases'
     },
     {
       text: 'Javascript color pack',
@@ -31,8 +31,8 @@ export default {
       href: 'stylus-color-pack'
     },
     {
-      text: 'Material colors',
-      href: 'material-colors'
+      text: 'Colores Material',
+      href: 'colores-material'
     }
   ]
 }
