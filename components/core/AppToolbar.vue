@@ -18,6 +18,7 @@
       img(
         src="/static/v-alt.svg"
         height="38px"
+        width="38px"
       )
 
     v-fade-transition(mode="out-in")
@@ -144,7 +145,11 @@
 
     methods: {
       changeToRelease (release) {
-        window.location.href = `${window.location.origin}/releases/${release}/#${this.$route.fullPath}`
+        // Remove language setting
+        const path = this.$route.fullPath.split('/')
+          .slice(2)
+          .join('/')
+        window.location.href = `${window.location.origin}/releases/${release}/#${path}`
       },
       translateI18n (lang) {
         this.$router.replace({ params: { lang } })
