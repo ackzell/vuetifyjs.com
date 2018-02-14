@@ -1835,6 +1835,12 @@ module.exports = {
         "source": null
       },
       {
+        "name": "persistent",
+        "type": "Boolean",
+        "default": "false",
+        "source": null
+      },
+      {
         "name": "returnValue",
         "type": "Any",
         "default": "undefined",
@@ -1859,24 +1865,6 @@ module.exports = {
     "slots": [
       "default",
       "input"
-    ],
-    "events": [
-      {
-        "name": "open",
-        "value": "void"
-      },
-      {
-        "name": "cancel",
-        "value": "void"
-      },
-      {
-        "name": "close",
-        "value": "void"
-      },
-      {
-        "name": "save",
-        "value": "void"
-      }
     ]
   },
   "v-table-overflow": {
@@ -2665,6 +2653,7 @@ module.exports = {
       "toggleable"
     ],
     "slots": [
+      "actions",
       "default",
       "header"
     ]
@@ -7438,9 +7427,14 @@ module.exports = {
   "v-ripple": {
     "options": [
       {
-        "name": "value",
-        "default": "{}",
-        "type": "Object"
+        "name": "class",
+        "default": "undefined",
+        "type": "String"
+      },
+      {
+        "name": "center",
+        "default": "False",
+        "type": "Boolean"
       }
     ],
     "type": "undefined"
@@ -7478,9 +7472,14 @@ module.exports = {
   "v-touch": {
     "options": [
       {
-        "name": "value",
-        "default": "{}",
-        "type": "Object"
+        "name": "{ move, start, end }",
+        "default": "undefined",
+        "type": "Function"
+      },
+      {
+        "name": "{ up, down, left, right }",
+        "default": "undefined",
+        "type": "Function"
       }
     ],
     "type": "undefined"

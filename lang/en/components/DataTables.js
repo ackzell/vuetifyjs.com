@@ -65,7 +65,7 @@ export default {
     },
     editdialog: {
       header: 'Inline Editing',
-      desc: 'The `v-edit-dialog` component is used for inline-editing within data tables.'
+      desc: 'The `v-edit-dialog` component is used for inline-editing within data tables. You can block closing the dialog when clicked outside by adding the **persistent** prop.'
     },
     crud: {
       header: 'CRUD Actions',
@@ -83,7 +83,10 @@ export default {
     'v-data-table': {
       headerText: 'If using an object, the text value for the header',
       headers: 'An array of objects that each describe a header column. See the example below for a definition of all properties.',
-      hideHeaders: 'Hide the table headers'
+      hideHeaders: 'Hide the table headers',
+      sortIcon: 'Use a custom sort icon, uses the same syntax as `v-icon`',
+      nextIcon: 'Mixins.Input.props.appendIcon',
+      prevIcon: 'Mixins.Input.props.prependIcon'
     }
   },
   scopedSlots: {

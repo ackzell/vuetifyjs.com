@@ -1,22 +1,28 @@
 module.exports = [
   {
     title: 'English',
-    locale: 'en'
+    locale: 'en',
+    country: 'us'
   },
   {
     title: 'Русский',
-    locale: 'ru'
+    locale: 'ru',
+    country: 'ru'
   },
   {
     title: '简体中文',
-    locale: 'zh-Hans'
+    locale: 'zh-Hans',
+    country: 'cn'
   },
   {
     title: '한국어',
-    locale: 'ko'
+    locale: 'ko',
+    country: 'kr'
   },
   {
-    title: 'Spanish (MX)',
-    locale: 'es-MX'
+    title: 'Español',
+    locale: 'es',
+    country: 'mx'
   }
+
 ]
