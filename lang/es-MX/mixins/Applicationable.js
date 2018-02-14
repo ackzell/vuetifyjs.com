@@ -1,5 +1,5 @@
 export default {
   props: {
-    app: 'Designates the component as part of the application layout. Used for dynamically adjusting content sizing'
+    app: 'Indica que el componente es parte del layout de la aplicación. Se utiliza para ajustar dinámicamente el tamaño del contenido.'
   }
 }

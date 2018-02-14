@@ -1,19 +1,19 @@
 export default {
   props: {
-    appendIcon: 'Append an icon to the component, uses same syntax as `v-icon`',
-    appendIconCb: 'Callback for appended icon when clicked',
-    disabled: 'Input is disabled',
-    hideDetails: 'Hides hint, validation errors',
-    hint: 'Hint text',
-    label: 'Sets input label',
-    persistentHint: 'Forces hint to always be visible',
-    placeholder: `Sets the input's placeholder text`,
-    prependIcon: 'Prepend an icon to the component, uses same syntax as `v-icon`',
-    prependIconCb: 'Callback for prepended icon when clicked',
-    readonly: 'Puts input in readonly state',
-    required: 'Designates the input as required. Adds an asertisk to end of label. Does not perform any validation.',
-    tabindex: 'Tabindex of input',
-    toggleKeys: 'Array of key codes that will toggle the input (if it supports toggling)',
-    value: 'Input value'
+    appendIcon: 'Agregar al final un ícono al componente, utiliza la misma sintaxis que `v-icon`',
+    appendIconCb: 'Callback para el click en el ícono que se agregó al final.',
+    disabled: 'El input está deshabilitado.',
+    hideDetails: 'Esconde pistas y errores de validación.',
+    hint: 'Texto de pista.',
+    label: 'Configura la etiqueta del input.',
+    persistentHint: 'Obliga a la pista a estar visible siempre.',
+    placeholder: 'Configura el texto de placeholder del input.',
+    prependIcon: 'Agregar al inicio un ícono al componente, utiliza la misma sintaxis que `v-icon`',
+    prependIconCb: 'Callback para el click en el ícono que se agregó al inicio.',
+    readonly: 'Pone el input en estado de sólo lectura.',
+    required: 'Denota que el input es requerido. Agrega un asterisco al final de la etiqueta. No lleva a cabo ninguna validación.',
+    tabindex: 'Índice de tabulación del input.',
+    toggleKeys: 'Arreglo de códigos de tecla que variarán el valor del input (si soporta variaciones en el valor).',
+    value: 'Valor del input.'
   }
 }

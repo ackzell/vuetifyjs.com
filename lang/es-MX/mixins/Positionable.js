@@ -1,10 +1,10 @@
 export default {
   props: {
-    absolute: 'Position the element absolutely',
-    bottom: 'Align the component towards the bottom',
-    fixed: 'Position the element fixed',
-    left: 'Align the component towards the left',
-    right: 'Align the component towards the right',
-    top: 'Align the content towards the top'
+    absolute: 'Posiciona el elemento como <code>absolute</code>',
+    bottom: 'Alínea el componente hacia abajo',
+    fixed: 'Posiciona el elemento como <code>fixed</code>',
+    left: 'Alínea el componente hacia la izquierda',
+    right: 'Alínea el componente hacia la derecha',
+    top: 'Alínea el componente hacia arriba'
   }
 }

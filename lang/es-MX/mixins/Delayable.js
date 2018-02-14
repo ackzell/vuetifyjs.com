@@ -1,6 +1,6 @@
 export default {
   props: {
-    openDelay: 'Milliseconds to wait before opening component',
-    closeDelay: 'Milliseconds to wait before closing component'
+    openDelay: 'Los milisegundos a esperar antes de abrir el componente.',
+    closeDelay: 'Los milisegundos a esperar antes de cerrar el componente.'
   }
 }

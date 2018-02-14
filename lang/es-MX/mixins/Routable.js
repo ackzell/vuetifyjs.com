@@ -1,15 +1,15 @@
 export default {
   props: {
-    activeClass: `Class bound when component is active. **warning** Depending upon the component, this could cause side effects. If you need to add a custom class on top of a default, just do <code>active-class="default-class your-class"</code>`,
-    append: `Vue Router router-link prop`,
-    disabled: 'Route item is disabled',
-    exact: 'Exactly match the link. Without this, "/" will match every route',
-    exactActiveClass: 'Vue Router router-link prop',
-    href: 'Will designate the component tag to `<a>`',
-    nuxt: 'Specifies the link is a nuxt-link',
-    replace: 'Vue Router router-link prop',
-    to: 'Will designate the component tag to `<router-link>`',
-    tag: 'Specify a custom tag to use on the component',
-    target: 'Specify the target attribute, only works with anchor tag.'
+    activeClass: 'La clase que se aplica cuando el componente está activo. **Advertencia:** Dependiendo del componente, esto puede traer efectos secundarios. Si necesitas agregar una clase personalizada encima de la default, házlo así: <code>active-class="default-class your-class"</code>',
+    append: 'Prop router-link del Vue Router',
+    disabled: 'Route item deshabilitado',
+    exact: 'Coincidir con el link exactamente. Sin esto, "/" coincidirá con todas las rutas',
+    exactActiveClass: 'Prop router-link del Vue Router',
+    href: 'Denotará la etiqueta del componente como `<a>`',
+    nuxt: 'Especifica el link como un nuxt-link',
+    replace: 'Prop router-link del Vue Router',
+    to: 'Denotará la etiqueta del componente como `<router-link>`',
+    tag: 'Especifica una etiqueta personalizada para ser usada en el componente',
+    target: 'Especifica el atributo target, sólo funciona para la etiqueta `<a>`'
   }
 }

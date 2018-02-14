@@ -1,5 +1,5 @@
 export default {
   props: {
-    loading: `Displays linear progress bar. Can either be a String which specifies which color is applied to the progress bar (any material color or theme color - primary, secondary, success, info, warning, error) or a Boolean which uses the component **color** (set by color prop - if it's supported by the component) or the primary color`
+    loading: 'Muestra una barra de progreso linear. Puede ser un String que especifica qué color se aplicará a la barra de progreso (cualquier color de material o color de tema _primary_, _secondary_, _success_, _info_, _warning_, _error_) o un Boolean que utilice el **color** del componente (configurado por la prop _color_ si es soportada por el componente) o el color de tema _primary_.'
   }
 }

@@ -1,8 +1,8 @@
 export default {
   props: {
-    error: 'Puts the input in a manual error state',
-    errorMessages: 'Puts the input in an error state and passes through custom error messsages. Will be combined with any validations that occur from the **rules** prop. This field will not trigger validation',
-    rules: 'Array of functions that return either True or a String with an error message',
-    validateOnBlur: 'Delays validation until blur event'
+    error: 'Pone el input en un estado de error manual',
+    errorMessages: 'Pone el input en un estado de error y pasa los mensajes de error personalizados. Se combinará con cualquier validación que ocurra desde la prop **rules**. Este campo no propicia ninguna validación.',
+    rules: 'Arreglo de funciones que regresa ya sea True o un String con el mensaje de error',
+    validateOnBlur: 'Retrasa la validación hasta el evento blur'
   }
 }

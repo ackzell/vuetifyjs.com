@@ -1,11 +1,11 @@
 export default {
   props: {
-    actions: 'Use this when using actions inside the picker',
-    autosave: 'Automatically save the selected value. This updates the internal previous value so if cancel is clicked, it will not revert the user changes',
-    headerColor: 'Defines the header color. If not specified it will use the color defined by <code>color</code> prop or the default picker color',
-    landscape: 'Orients picker horizontal',
-    noTitle: 'Hide the picker title',
-    scrollable: 'Allows the use of the mousewheel in the picker',
-    value: 'Picker value'
+    actions: 'Utiliza esto cuando uses acciones dentro del picker',
+    autosave: 'Guarda automáticamente el valor seleccionado. Esto actualiza el valor interno previo, así que si se hace click en cancel, no revertirá los cambios del usuario',
+    headerColor: 'Define el color del encabezado. Si no se especifica utilizará el color definido por la prop <code>color</code> o el color default del picker',
+    landscape: 'Orienta el picker horizontalmente',
+    noTitle: 'Esconde el título del picker',
+    scrollable: 'Permite el uso de la rueda del mouse en el picker',
+    value: 'Valor del picker'
   }
 }

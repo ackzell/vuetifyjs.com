@@ -1,5 +1,5 @@
 export default {
-  header: 'Directiva resizes',
+  header: 'Directiva resize',
   headerText: 'La directiva `v-resize` puede ser utilizada para llamar funciones específicas cuando la ventana cambia de tamaño.',
   components: ['v-resize'],
   examples: [{

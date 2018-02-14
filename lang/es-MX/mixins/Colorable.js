@@ -1,5 +1,5 @@
 export default {
   props: {
-    color: 'Applies specified color to the control'
+    color: 'Aplica el color especificado al control.'
   }
 }

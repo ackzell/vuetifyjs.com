@@ -1,5 +1,5 @@
 export default {
   props: {
-    noDataText: 'Display text when there is no data'
+    noDataText: 'El texto a mostrar cuando no hay datos.'
   }
 }

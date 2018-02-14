@@ -1,10 +1,10 @@
 export default {
   props: {
-    activator: 'Designate a custom activator when the activator slot is not used. String can be any valid querySelector and Object can be any valid Node',
-    allowOverflow: 'Removes overflow re-positioning for the content',
-    maxWidth: `Sets the maximum width for the content`,
-    minWidth: `Sets the minimum width for the content`,
-    nudgeBottom: 'Nudge the content to the bottom',
+    activator: 'Denota un activador personalizado para cuando el slot activador no se utiliza. String puede ser cualquier _querySelector_ válido y Object puede ser cualquier Node válido.',
+    allowOverflow: 'Quita el reposicionamiento overflow para el componente.',
+    maxWidth: 'Configura el ancho máximo para el componente.',
+    minWidth: 'Configura el ancho mínimo para el componente.',
+    nudgeBottom: 'Empujar el contenido hasta la parte de abajo.',
     nudgeLeft: 'Nudge the content to the left',
     nudgeRight: 'Nudge the content to the right',
     nudgeTop: 'Nudge the content to the top',
