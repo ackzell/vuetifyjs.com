@@ -21,7 +21,7 @@ module.exports = [
   },
   {
     title: 'Español',
-    locale: 'es',
+    locale: 'es-MX',
     country: 'mx'
   }
 
