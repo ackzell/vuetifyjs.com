@@ -1,25 +1,25 @@
 export default {
   api: 'API',
   default: 'Default',
-  description: 'Description',
-  examples: 'Examples',
-  howItWorks: 'How it works',
-  name: 'Name',
-  openInCodePen: 'Open in Codepen',
-  options: 'Options',
+  description: 'Descripción',
+  examples: 'Ejemplos',
+  howItWorks: 'Cómo funciona',
+  name: 'Nombre',
+  openInCodePen: 'Abrir en Codepen',
+  options: 'Opciones',
   props: 'Props',
-  showExample: 'Show Example',
+  showExample: 'Mostrar Ejemplo',
   slots: 'Slots',
-  supplemental: 'Supplemental',
+  supplemental: 'Suplementos',
   type: 'Type',
   toc: [
     {
-      text: 'Introduction',
-      href: 'introduction'
+      text: 'Introducción',
+      href: 'introduccion'
     },
     {
-      text: 'Usage',
-      href: 'usage'
+      text: 'Uso',
+      href: 'uso'
     },
     {
       text: 'API',
@@ -30,11 +30,11 @@ export default {
       href: 'supplemental'
     },
     {
-      text: 'Examples',
-      href: 'examples'
+      text: 'Ejemplos',
+      href: 'ejemplos'
     }
   ],
-  usage: 'Usage',
-  parameters: 'Parameters',
-  return: 'Returns'
+  usage: 'Uso',
+  parameters: 'Parámetros',
+  return: 'Regresa'
 }

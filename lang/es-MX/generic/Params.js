@@ -1,4 +1,4 @@
 export default {
-  callback: 'The callback function to invoke',
-  debounce: 'Duration to wait before invoking the callback method'
+  callback: 'La función callback a ser invocada',
+  debounce: 'El tiempo de espera antes de invocar al método callback'
 }
