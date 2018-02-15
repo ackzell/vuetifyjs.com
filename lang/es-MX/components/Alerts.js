@@ -1,32 +1,32 @@
 export default {
   header: 'Alert',
-  headerText: 'The `v-alert` component is used to convey important information to the user. It comes in 4 variations, **success**, **info**, **warning** and **error**. These have default icons assigned which can be changed and represent different actions',
+  headerText: 'El componente `v-alert` se utiliza para transmitir información importante al usuario. Viene en 4 variantes: **success**, **info**, **warning** y **error**. Éstas tienen íconos default asignados que pueden ser cambiados y representar diferentes acciones.',
   components: ['v-alert'],
   examples: [{
     contextual: {
       header: 'Contextual'
     },
     closable: {
-      header: 'Closable',
-      desc: 'Using `v-model` you can control the state of the Alert. If you don\'t want to assign a v-model and just display the alert, you can simply assign the prop `value`.'
+      header: 'Cerrable',
+      desc: 'Haciendo uso de `v-model` puedes controlar el estado del Alert. Si no quieres asignar un v-model y sólo mostrar la alerta, puedes simplemente asignar la prop `value`.'
     },
     icon: {
-      header: 'Custom Icon / No Icon',
-      desc: 'You can easily assign a custom icon or remove it all together.'
+      header: 'Ícono personalizado / Sin ícono',
+      desc: 'Puedes fácilmente asignar un ícono personalizado o quitarlo por completo.'
     },
     transition: {
-      header: 'Display transition',
-      desc: 'You can apply a custom transition to the show/hide of the alert.'
+      header: 'Transición al mostrar',
+      desc: 'Puedes aplicar una transición personalizada para cuando se muestra/oculta la alerta.'
     },
     outline: {
-      header: 'Outline',
-      desc: 'Outline alerts inherit their borders from the current color applied.'
+      header: 'Contorno',
+      desc: 'Las alertas _outline_ heredan los bordes del color aplicado actualmente.'
     }
   }],
   props: {
-    dismissible: 'Specifies that the Alert can be closed',
-    icon: 'Designates a specific icon',
-    outline: 'Alert will have an outline',
-    type: 'Specify a **success**, **info**, **warning** or **error** alert. Uses the contextual color and a pre-defined icon.'
+    dismissible: 'Especifica que la alerta puede ser cerrada',
+    icon: 'Asigna un ícono específico',
+    outline: 'La alerta tendrá un contorno ',
+    type: 'Especifica una alerta **success**, **info**, **warning** o **error**. Utiliza el color contextual y el ícono predefinidos.'
   }
 }
