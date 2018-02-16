@@ -1,23 +1,23 @@
 export default {
-  header: 'Bottom nav',
-  headerText: 'The `v-bottom-nav` is an alternative to the sidebar. It is primarily used on mobile and comes in two variants, icons and text, and shift.',
+  header: 'Bottom Nav',
+  headerText: 'El componente `v-bottom-nav` es una alternativa al sidebar. Se usa principalmente en móviles y viene en dos variantes: íconos y texto y _recorrer_',
   components: ['v-bottom-nav'],
   examples: [{
     iconsAndText: {
-      header: 'Icons and text',
-      desc: 'While the bottom nav is meant to be used with the `vue-router`, you can also programmatically control the active state of the buttons by using the `active.sync` prop. You can change a button\'s value by using its `value` attribute.'
+      header: 'Íconos y texto',
+      desc: 'Aunque está pensado para ser utilizado con el `vue-router`, también puedes controlar manualmente el estado activo de los botones al usar la prop `active.sync`. Puedes cambiar el valor de los botones si utilizas su atributo `value`.'
     },
     colorAndShift: {
-      header: 'Color & shift',
-      desc: 'When using a colored background, it is recommended to use the `light` prop. The `shift` prop will hide the button text until active. Keep in mind, `v-btn` text is required to be wrapped in a `<span>` tag.'
+      header: 'Color y "recorrer"',
+      desc: 'Cuando utilizas un fondo de color, se recomienda usar la prop `light`. La prop `shift` esconderá el texto del botón hasta que se active. Ten en cuenta que el texto de `v-btn` debe estar envuelto en una etiqueta `<span>` forzosamente.'
     },
     toggle: {
-      header: 'Toggle',
-      desc: 'As with other Vuetify components, you can control the display state with `v-model`.'
+      header: 'Alternar',
+      desc: 'Como con otros componentes de Vuetify, puedes controlar el estado visible con `v-model`.'
     }
   }],
   props: {
-    active: 'Holds the value of the currently active button. If the button has no value supplied, its index will be used instead. This prop supports the **.sync** modifier.',
+    active: 'El valor del botón activo actual. Si el botón no tiene un valor, su índice será utilizado. Esta prop soporta el modificador **.sync**.',
     absolute: 'Mixins.Positionable.props.absolute',
     fixed: 'Mixins.Positionable.props.fixed'
   }

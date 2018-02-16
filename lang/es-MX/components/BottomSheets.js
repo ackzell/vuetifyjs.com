@@ -1,21 +1,21 @@
 export default {
   header: 'Bottom sheet',
-  headerText: 'The bottom sheet is a modified `v-dialog` that slides from the bottom of the screen, similar to a `v-bottom-nav`. Whereas a bottom navigation component is for buttons and specific application level actions, a bottom sheet can contain anything.',
+  headerText: 'El _bottom sheet_ es un `v-dialog` modificado que aparece desde la parte baja de la pantalla, similar a un `v-bottom-nav`. Mientras que un componente _bottom navigation_ es para los botones y acciones específicas al nivel de la aplicación, un _bottom sheet_ puede contener cualquier cosa.',
   components: ['v-bottom-sheet'],
   examples: [{
     standard: {
-      header: 'Standard display',
-      desc: 'Here we display an example list of actions that could be present in an application.'
+      header: 'Presentación estándar',
+      desc: 'Aquí mostramos una lista de acciones de ejemplo que podría estar presente en una aplicación.'
     },
     inset: {
       header: 'Inset bottom sheets',
-      desc: 'Bottom sheets can be inset, reducing their maximum width on desktop to 70%. This can be further reduced manually using the `width` prop. We also showcase dynamic class binding using the Vuetify breakpoint object.'
+      desc: 'Los _bottom sheets_ pueden quedar "por dentro", lo que reduce su ancho máximo al 70% en resolución de escritorio. Esto puede ser reducido aún más manualmente utilizando la prop `width`. También mostramos _binding_ de clases dinámicas utilizando el objeto `breakpoint` de Vuetify.'
     }
   }],
   props: {
-    disabled: 'Disables the ability to open the dialog',
-    inset: 'Reduces the dialog content maximum width to 70%',
+    disabled: 'Deshabilita abrir el díalogo',
+    inset: 'Reduce el ancho máximo del contenido del diálogo a 70%',
     lazy: 'Mixins.Bootable.props.lazy',
-    maxWidth: 'Specify the maximum width of the sheet\'s container'
+    maxWidth: 'Especifica el ancho máximo del contenedor del _bottom sheet_.'
   }
 }

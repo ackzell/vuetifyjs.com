@@ -1,27 +1,27 @@
 export default {
-  header: 'Badge',
-  headerText: 'The `v-badge` component can wrap any type of content to highlight information to a user or to just draw attention to a specific element.',
+  header: 'Badge (insignia)',
+  headerText: 'El componente `v-badge` puede envolver cualquier tipo de contenido para resaltar información al usuario o sólo para llamar su atención a un elemento específico.',
   components: ['v-badge'],
   examples: [{
     character: {
-      header: 'Character',
-      desc: 'Any element can be used with a badge.'
+      header: 'Caracter',
+      desc: 'Cualquier elemento puede ser utilizado con una insignia.'
     },
     overlap: {
-      header: 'Overlap',
-      desc: 'The badge will overlap its content when using the `overlap` prop'
+      header: 'Traslape',
+      desc: 'La insignia traslapará su contenido cuando se utilice la prop `overlap`'
     },
     inline: {
-      header: 'Inline',
-      desc: 'Badges can also be placed inline with text.'
+      header: 'En línea',
+      desc: 'Las insignias pueden ser colocadas en línea con el texto.'
     },
     icon: {
-      header: 'Icon',
-      desc: 'The badge can use all of the currently supported icon sets.'
+      header: 'Ícono',
+      desc: 'La insignia puede utilizar cualquiera de los íconos soportados actualmente.'
     },
     visibility: {
-      header: 'Visibility',
-      desc: 'The visibility of badges can be controlled using `v-model`.'
+      header: 'Visibilidad',
+      desc: 'La visibilidad de las insignias puede ser controlada usando `v-model`.'
     }
   }],
   props: {
