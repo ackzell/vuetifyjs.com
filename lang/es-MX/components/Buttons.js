@@ -1,76 +1,76 @@
 export default {
   header: 'Button',
-  headerText: 'The `v-btn` component replaces the standard html button with a material design theme and a multitude of options. Any color helper class can be used to alter the background or text color.',
+  headerText: 'El componente `v-btn` reemplaza el botón html estándar con un diseño de material design y una multitud de opciones. Cualquier clase auxiliar de color puede ser utilizada para alterar el color del texto o del fondo.',
   components: ['v-btn'],
   examples: [{
     usage: {
-      header: 'Usage',
+      header: 'Uso',
       desc: ''
     },
     flat: {
       header: 'Flat',
-      desc: 'Flat buttons have no box shadow and no background. Only on hover is the container for the button shown.'
+      desc: 'Los botones _flat_ no tienen sombra ni color de fondo. Sólo cuando se pasa el mouse por encima de ellos es que se muestra el contenedor del botón.'
     },
     raised: {
       header: 'Raised',
-      desc: 'Raised buttons have a box shadow that increases when clicked. This is the default style.'
+      desc: 'Los botones _raised_ tienen una sombra que incrementa cuando se hace click en ellos. Este es el estilo por default.'
     },
     depressed: {
       header: 'Depressed',
-      desc: 'Depressed buttons still maintain their background color, but have no box shadow.'
+      desc: 'Los botones _depressed_ mantienen su color de fondo, pero no tienen sombra.'
     },
     dropdown: {
-      header: 'Button Dropdown Variants',
-      desc: 'Button dropdowns are regular selects with additional styling.',
+      header: 'Variantes de Button Dropdown',
+      desc: 'Los _button dropdowns_ son selects regulares con estilos adicionales.',
       uninverted: true
     },
     toggle: {
       header: 'Button Toggle',
-      desc: 'Toggle buttons are essentially styled radio or checkboxes, depending on the properties selected. This component is compatible with the `v-toolbar` component.'
+      desc: 'Los _toggle buttons_ son escencialmente radio o checkboxes estilizados, dependiendo de las propiedades selecionadas. Este componente es compatible con el componente `v-toolbar`.'
     },
     icon: {
-      header: 'Icon',
-      desc: 'Icons can be used for the primary content of a button.'
+      header: 'Ícono',
+      desc: 'Los íconos pueden ser usados como el contenido principal de un botón.'
     },
     floating: {
       header: 'Floating',
-      desc: 'Floating buttons are round and usually contain an icon.'
+      desc: 'Los _floating buttons_ son redondos y generalmente contienen un ícono.'
     },
     loaders: {
       header: 'Loaders',
-      desc: 'Using the loading prop, you can notify a user that there is processing taking place. The default behavior is to use a `v-progress-circular` component but this can be customized.'
+      desc: 'Al utilizar la prop `loading` puedes notificar al usuario que hay una actividad en proceso. El comportamiento default es que se aplica un componente `v-progress-circular` pero esto puede ser personalizado.'
     },
     sizing: {
-      header: 'Sizing',
-      desc: 'Buttons can be given different sizing options to fit a multitude of scenarios.'
+      header: 'Tamaños',
+      desc: 'Los botones pueden obtener diferentes tamaños para poder ser usados en una multitud de escenarios.'
     },
     outline: {
       header: 'Outline',
-      desc: 'Outline buttons inherit their borders from the current color applied.'
+      desc: 'Los _outline buttons_ heredan sus bordes del color aplicado actual.'
     },
     round: {
       header: 'Round',
-      desc: 'Rounded buttons behave the same as regular buttons but have rounded edges.'
+      desc: 'Los _rounded buttons_ se comportan de la misma forma que los botones regulares pero tienen bordes redondeados. '
     },
     block: {
       header: 'Block',
-      desc: 'Block buttons extend the full available width.'
+      desc: 'Los _block butons_ se extienden hasta abarcar el ancho total disponible.'
     }
   }],
   props: {
     'v-btn': {
-      block: 'Expands the button to 100% of available space',
-      depressed: 'Removes the button box shadow',
-      fab: 'Makes button round',
-      flat: 'Removes the button background color',
-      icon: 'Designates the button as icon - round and flat',
-      inputValue: 'Controls the button active state',
-      large: 'Large size button',
-      loading: 'Adds a loading icon animation',
-      outline: 'Button will have an outline',
-      round: 'Button will be round on the sides',
-      small: 'Small size button',
-      type: 'Set the button\'s type attribute'
+      block: 'Expande el botón al 100% del espacio disponible',
+      depressed: 'Quita la sombra al botón',
+      fab: 'Hace el botón redondo',
+      flat: 'Quita el color del fondo del botón',
+      icon: 'Denota al botón como un ícono, redondo y plano',
+      inputValue: 'Controla el estado activo del botón',
+      large: 'Botón de tamaño grande',
+      loading: 'Agrega un ícono animado "loading"',
+      outline: 'El botón tendrá un contorno',
+      round: 'El botón será redondeado de los lados',
+      small: 'Botón de tamaño pequeño',
+      type: 'Configura el atributo _type_ del botón'
     }
   }
 }

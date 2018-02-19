@@ -1,22 +1,22 @@
 export default {
   header: 'Breadcrumbs',
-  headerText: 'The `v-breadcrumbs` component is a navigational helper for pages. It can accept a **Material Icons** icon or characters as a divider. An array of objects containing the fields _href_, _text_ and optional _disabled_ can be passed to the **items** property of the component.  Additionally, a regular slot exists for more control of the breadcrumbs, either utilizing `v-breadcrumbs-item` or other custom markup.',
+  headerText: 'El componente`v-breadcrumbs` es un auxiliar para navegar páginas. Puede aceptar un ícono de **Material icons** o caracteres como un divisor. Un arreglo de objetos que contenga los campos _href_, text y opcionalmente un _disabled_ puede pasarse a la propiedad **items** del componente. Adicionalmente, existe un slot regular para mayor control de los breadcrumbs, ya sea utilizando `v-breadcrumbs-item` u otro markup personalizado',
   components: ['v-breadcrumbs', 'v-breadcrumbs-items'],
   examples: [{
     textDividers: {
-      header: 'Text dividers',
-      desc: 'By default, breadcrumbs use a text divider. This can be any string.'
+      header: 'Divisores de texto',
+      desc: 'Por default, los breadcrumbs usan un divisor de texto. Este puede ser cualquier cadena.'
     },
     iconDividers: {
-      header: 'Icon dividers',
-      desc: 'For the icon variant, breadcrumbs can use any icon in Material Design Icons.'
+      header: 'Divisores de íconos',
+      desc: 'Para la variante de íconos, los breadcrumbs pueden ser utilizados con cualquier ícono de Material Design.'
     }
   }],
   props: {
-    divider: 'Specifies the dividing character',
-    icons: 'Specifies that the dividers are icons',
-    justifyCenter: 'Align the breadcrumbs center',
-    justifyEnd: 'Align the breadcrumbs at the end',
-    large: 'Increase the font-size of the breadcrumb item text'
+    divider: 'Especifica el caracter que divide',
+    icons: 'Especifica que los divisores son íconos',
+    justifyCenter: 'Alínea los divisores al centro',
+    justifyEnd: 'Alínea los divisores al final',
+    large: 'Incrementa el tamaño de la fuente del texto en el breadcrumb'
   }
 }
