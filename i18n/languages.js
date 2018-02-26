@@ -20,6 +20,11 @@ module.exports = [
     country: 'kr'
   },
   {
+    title: '日本語',
+    locale: 'ja',
+    country: 'jp'
+  },
+  {
     title: 'Español',
     locale: 'es-MX',
     country: 'mx'
