@@ -1,39 +1,39 @@
 export default {
   header: 'Carousel',
-  headerText: 'The `v-carousel` component is used to display large numbers of visual content on a rotating timer.',
+  headerText: 'El componente `v-carousel` se utiliza para mostrar grandes cantidades de contenido visual en un timer rotativo.',
   components: ['v-carousel', 'v-carousel-item'],
   examples: [{
     default: {
       header: 'Default',
-      desc: 'A carousel by default has a slide transition.',
+      desc: 'Un carrusel por default tiene la transición slide.',
       uninverted: true
     },
     customTransition: {
-      header: 'Custom transition',
-      desc: 'You can also apply your own custom transition.',
+      header: 'Transición personalizada',
+      desc: 'También puedes aplicar tu propia transición personalizada.',
       uninverted: true
     },
     customDelimiter: {
-      header: 'Custom delimiter',
-      desc: 'You can also change the icon for the carousel delimiter.',
+      header: 'Delimitador personalizado',
+      desc: 'También puedes cambiar el ícono del delimitador del carrusel.',
       uninverted: true
     },
     hideControls: {
-      header: 'Hide controls',
-      desc: 'You can hide the bottom controls with the `hide-controls` prop.',
+      header: 'Esconder los controles',
+      desc: 'Puedes esconder los controles de la parte inferior con la prop `hide-controls`.',
       uninverted: true
     }
   }],
   props: {
     appendIcon: 'Mixins.Input.props.appendIcon',
     prependIcon: 'Mixins.Input.props.prependIcon',
-    cycle: 'Determines if carousel should cycle through images',
-    delimiterIcon: 'Sets icon for carousel delimiter',
-    hideControls: 'Hides the navigation controls',
-    hideDelimiters: 'Hides the panel with carousel delimiters',
-    interval: 'The duration between image cycles',
-    reverseTransition: 'Sets the reverse transition',
-    src: 'The image src',
+    cycle: 'Determina si el carrusel debe hacer mostrar las imágenes en un ciclo',
+    delimiterIcon: 'Configura el ícono para el delimitador del carrusel',
+    hideControls: 'Esconde los controles de navegación',
+    hideDelimiters: 'Esconde el panel con los delimitadores del carrusel',
+    interval: 'La duración entre imágenes en el ciclo',
+    reverseTransition: 'Configura la transición reversa',
+    src: 'La ruta a la imagen',
     transition: 'Mixins.Transitionable.props.transition'
   }
 }

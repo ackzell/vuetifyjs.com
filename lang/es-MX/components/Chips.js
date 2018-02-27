@@ -1,46 +1,46 @@
 export default {
   header: 'Chip',
-  headerText: 'The `v-chip` component is used to convey small pieces of information. Using the `close` property, the chip becomes interactive, allowing user interaction.',
+  headerText: 'El componente `v-chip` se utiliza para transmitir pequeñas porciones de información. Al utilizar la prop `close`, el chip se vuelve interactivo, permitiendo que el usuario interactúe con él..',
   components: ['v-chip'],
   examples: [{
     default: {
       header: 'Default',
-      desc: 'Chips come in 4 primary variations. Regular, with icon, with portrait and closeable.',
+      desc: 'Los chips vienen en 4 variaciones principales. Regular, con ícono, con retrato y cerrable.',
       uninverted: true
     },
     colored: {
-      header: 'Colored',
-      desc: 'Any color from the Material Design palette can be used to change a chips color.'
+      header: 'Coloreado',
+      desc: 'Cualquier color de la paleta de Material Design puede ser utilizado para cambiar el color de un chip.'
     },
     icon: {
-      header: 'Icon',
-      desc: 'Chips can use text or any icon available in the Material Icons font library.'
+      header: 'Ícono',
+      desc: 'Los chips pueden usar texto o cualquier ícono disponible en la librería de Material Icons..'
     },
     outline: {
-      header: 'Outline',
-      desc: 'Outlined chips inherit their border color from the current text color.'
+      header: 'Contorno',
+      desc: 'El color de contorno de los chips se hereda del color de texto actual.'
     },
     label: {
-      header: 'Label',
-      desc: 'Label chips use the `v-card` border-radius.'
+      header: 'Etiqueta',
+      desc: 'Las etiquetas de los chips utilizan el border-radius de `v-card`.'
     },
     closable: {
-      header: 'Closable',
-      desc: 'Closable chips can be controlled with a v-model. Listen to the `input` event if you want to know when a chip has been closed.',
+      header: 'Cerrable',
+      desc: 'Los chips cerrables pueden ser controlados con un v-model. Agrega un _listener_ al evento `input` si quieres saber cuando un chip ha sido cerrado.',
       uninverted: true
     },
     inSelects: {
-      header: 'In selects',
-      desc: 'Selects can use chips to display the selected data.',
+      header: 'Uso en selects',
+      desc: 'Los _selects_ pueden usar chips para mostrar selecciones de datos.',
       uninverted: true
     }
   }],
   props: {
-    close: 'Adds remove button',
-    disabled: 'Disables the chip, making it un-selectable',
-    label: 'Removes circle edges',
-    outline: 'Removes background and applies border and text color',
-    selected: 'Applies a selection color to the chip. Primarily used for displaying highlight context in `v-select`',
-    small: 'Decreases the chip size'
+    close: 'Agrega el botón _quitar_',
+    disabled: 'Deshabilita el chip, haciéndolo no-seleccionable',
+    label: 'Quita los círculos en los extremos',
+    outline: 'Quita el fondo y aplica un color de borde y de texto',
+    selected: 'Aplica un color de selección al chip. Principalmente utilizado para resaltar texto en un `v-select`',
+    small: 'Disminuye el tamaño del chip'
   }
 }

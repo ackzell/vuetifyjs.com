@@ -1,6 +1,6 @@
 export default {
   header: 'Card',
-  headerText: 'The `v-card` component is a versatile component that can be used for anything from a panel to a static image. The **card** component has numerous helper components to make markup as easy as possible. Components that have no listed options use **Vue\'s** functional component option for faster rendering and serve as markup sugar to make building easier.',
+  headerText: 'El componente `v-card` es un componente versátil que puede ser usado desde un panel hasta para una imagen estática. El componente **card** tiene numerosos componentes auxiliares para hacer el markup tan sencillo como sea posible. Los componentes que no tienen opciones listadas utilizan la opción de componente funcional de **Vue** para hacer un render más rápido y sirven como _markup sugar_ para construir más fácilmente.',
   components: [
     'v-card',
     'v-card-media',
@@ -9,35 +9,35 @@ export default {
   ],
   examples: [{
     components: {
-      header: 'Components',
-      desc: 'A card has 4 basic components, `v-card-media`, `v-card-title`, `v-card-text` and `v-card-actions`.'
+      header: 'Componentes',
+      desc: 'Un _card_ tiene 4 componentes básicos: `v-card-media`, `v-card-title`, `v-card-text` and `v-card-actions`.'
     },
     mediaWithText: {
-      header: 'Media with text',
-      desc: 'Using the layout system, we can add custom text anywhere within the background.'
+      header: 'Contenido con texto',
+      desc: 'Al hacer uso del sistema de _layout_, podemos agregar un texto personalizado en cualquier parte del fondo.'
     },
     horizontal: {
-      header: 'Horizontal cards',
-      desc: 'Using `v-flex`, you can create customized horizontal cards. Use the `contain` property to shrink the `v-card-media` to fit inside the container, instead of covering.'
+      header: 'Cards horizontales',
+      desc: 'Usando `v-flex`, puedes crear cards personalizadas horizontales. Utiliza la propiedad `contain` para hacer que `v-card-media` se encoja y quepa en el contenedor, en lugar de cubrirlo..'
     },
     grids: {
       header: 'Grids',
-      desc: 'Using grid lists, you can create beautiful layouts.'
+      desc: 'Al utilizar grid lists puedes crear distribuciones bellas.'
     },
     customActions: {
-      header: 'Custom actions',
-      desc: 'With a simple conditional, you can easily add supplementary text that is hidden until opened.'
+      header: 'Acciones personalizadas',
+      desc: 'Con una simple condición puedes agregar texto que permanece oculto hasta que se abre.'
     }
   }],
   props: {
-    contain: 'Change the background-size to contain.',
-    flat: 'Removes card box shadow',
-    height: 'Manually define the height of the card',
-    hover: 'Apply a higher elevation on hover',
-    img: 'Specifies an image background',
-    primaryTitle: 'Applies primary title specific padding.',
-    raised: 'Specifies a higher default elevation',
-    src: 'The image to display as a background.',
-    tile: 'Turn the card into a tile by removing the border radius'
+    contain: 'Cambiar `background-size` al valor `contain`',
+    flat: 'Quitar la sombra de la tarjeta',
+    height: 'Define manualmente la altura de la tarjeta',
+    hover: 'Aplicar una elevación más alta al pasar el puntero por encima',
+    img: 'Especifica una imagen de fondo',
+    primaryTitle: 'Aplica un padding al título principal',
+    raised: 'Especifica una elevación más alta por default',
+    src: 'La imagen que se desplegará como fondo',
+    tile: 'Convierte el _card_ en un _tile_ al quitar el redondeo del borde'
   }
 }

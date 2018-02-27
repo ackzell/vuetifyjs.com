@@ -1,16 +1,16 @@
 export default {
   header: 'Data iterator',
-  headerText: 'The `v-data-iterator` component is used for displaying data, and shares a majority of its functionality with the `v-data-table` component. Features include sorting, searching, pagination, and selection.',
+  headerText: 'El componente `v-data-iterator` se utiliza para mostrar datos, y comparte la mayor parte de su funcionalidad con el componente `v-data-table`. Algunas características incluyen ordenamiento, búsqueda, paginación y selección.',
   components: ['v-data-iterator'],
   examples: [{
     simple: {
       header: 'Simple',
-      desc: 'The `v-data-iterator` allows you to customize exactly how to display your data. In this example we are using a grid list with cards. We can use the `content-tag` prop (along with `content-class` and `content-props`) to specify what the wrapper element around the items should look like.'
+      desc: '`v-data-iterator` te permite personalizar exactamente cómo quieres mostrar tus datos. En este ejemplo estamos usando un grid list con cards. Podemos usar la prop `content-tag` (junto con `content-class` y `content-props`) para especificar cómo se debería ver el componente que envuelve a los elementos de la lista.'
     }
   }],
   props: {
-    contentClass: 'Applies a custom class to the wrapper element around items',
-    contentProps: 'Applies custom props to the wrapper element around items',
-    contentTag: 'Specified what tag should be used for the wrapper element around items'
+    contentClass: 'Aplica una clase personalizada al elemento que envuelve a loss elementos de la lista',
+    contentProps: 'Aplica props personalizadas al elemento que envuelve a los elementos de la lista',
+    contentTag: 'Especifica qué etiqueta debe ser utilizada por el elemento que envuelve a los elementos de la lista'
   }
 }
