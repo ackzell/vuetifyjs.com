@@ -1,37 +1,37 @@
 export default {
   header: 'Expansion Panel',
-  headerText: 'The `v-expansion-panel` component is useful for reducing vertical space with large amounts of information. The default functionality of the component is to only display one expansion-panel body at a time, however, with the `expandable` property, the expansion-panel can remain open until explicitly closed.',
+  headerText: 'El componente `v-expansion-panel` es útil para reducir el espacio vertical cuando hay grandes cantidades de información. La funcionalidad default es que el componente sólo despliega un contenido de _expansion-panel_ a la vez. Sin embargo, con la prop `expandable`, el _expansion-panel_ puede permanecer abierto hasta que sea explicitamente cerrado por el usuario.',
   components: ['v-expansion-panel', 'v-expansion-panel-content'],
   examples: [{
     accordion: {
-      header: 'Accordion',
-      desc: 'Accordion expansion panels can only have 1 panel open at a time.'
+      header: 'Acordeón',
+      desc: 'Los _expansion panels_ de acordeón pueden tener sólo 1 panel abierto a la vez.'
     },
     expand: {
-      header: 'Expand',
-      desc: 'Expand expansion panels will stay open until closed.',
+      header: '_Expand_',
+      desc: 'Los paneles _expand_ permanecerán abiertos hasta ser cerrados por el usuario..',
       uninverted: true
     },
     popout: {
-      header: 'Popout & Inset',
-      desc: 'The expansion panel also has two alternative designs you can activate with the props `popout` and `inset`.',
+      header: '_Popout & Inset_',
+      desc: 'El _expansion panel_ también tiene dos alternativas de diseño que puedes activar con las props `popout` and `inset`.',
       inverted: true
     },
     focusable: {
-      header: 'Focusable',
-      desc: 'The expansion panel headers can be made focusable with the prop `focusable`.',
+      header: 'Enfocable',
+      desc: 'Los encabezados de _expansion panel_ pueden ser enfocables al usar la prop `focusable`.',
       uninverted: true
     }
   }],
   props: {
     'v-expansion-panel': {
-      expand: 'Leaves expansion-panel open when selecting another',
-      focusable: 'Makes the expansion panel headers focusable',
-      inset: 'Makes the expansion panel open with a inset style',
-      popout: 'Makes the expansion panel open with an popout style'
+      expand: 'Mantiene el _expansion-panel_ abierto cuando se selecciona algún otro',
+      focusable: 'Hace que los headers del _expansion panel_ sean enfocables',
+      inset: 'Hace que el _expansion panel_ abra con un estilo _inset_',
+      popout: 'Hace que el _expansion panel_ abra con un estilo _popup_'
     },
     'v-expansion-panel-content': {
-      hideActions: 'Hide the expand icon in the content header'
+      hideActions: 'Esconde el ícono _expand_ en el encabezado del contenido'
     }
   }
 }

@@ -1,27 +1,35 @@
 export default {
   header: 'Divider',
-  headerText: 'The `v-divider` component is used to separate sections of lists.',
+  headerText: 'El componente `v-divider` se usa para separar secciones de las listas.',
   components: ['v-divider'],
   examples: [{
     fullBleed: {
-      header: 'Full bleed',
-      desc: 'Full bleed dividers extend the entire content width.'
+      header: 'Sangrado completo',
+      desc: 'Los _dividers_ de sangrado completo se extienden a todo el ancho del contenido. '
     },
     lightAndDark: {
-      header: 'Light and dark',
-      desc: 'Dividers have light and dark variants.',
+      header: 'Claro y oscuro',
+      desc: 'Los Dividers tienen variantes _light_ y _dark_.',
       uninverted: true
     },
     inset: {
       header: 'Inset dividers',
-      desc: 'Inset dividers are moved 72px to the right. This will cause them to line up with list items.'
+      desc: 'Los _inset dividers_ se mueven 72px hacia la derecha arriba. Esto causará que se alineen con los items de la lista..'
     },
     subheaders: {
-      header: 'Subheaders and dividers',
-      desc: 'Subheaders can be lined up with inset dividers by using the same prop.'
+      header: '_Subheaders_ y _dividers_',
+      desc: 'Los subheaders pueden alinearse con los _inset dividers_ usando la misma prop..'
+    },
+    dividerList: {
+      header: '_List dividers_',
+      desc: 'Los _inset dividers_ y los _subheaders_ pueden ayudar a separar el contenido.'
+    },
+    dividerListPortrait: {
+      header: '_Dividers_ en modo vertical',
+      desc: 'Crea _cards_ personalizadas para que se ajusten a cualquier caso de uso'
     }
   }],
   props: {
-    inset: 'Adds indentation (72px)'
+    inset: 'Agrega indentación (72px)'
   }
 }

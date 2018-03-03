@@ -1,54 +1,55 @@
 export default {
   header: 'Dialog',
-  headerText: 'The `v-dialog` component inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks. Use dialogs sparingly because they are interruptive.',
+  headerText: 'El componente `v-dialog` informa a los usuarios acerca de una tarea específica y puede contener información crítica, requerir decisiones o involucrar múltiples tareas. Utiliza los diálogos muy esporádicamente porque interrumpen.',
   components: ['v-dialog'],
   examples: [{
     simple: {
-      header: 'Simple dialogs',
-      desc: 'Choosing an option immediately commits the option and closes the menu. Touching outside of the dialog, or pressing Back, cancels the action and closes the dialog.',
+      header: 'Diálogos simples',
+      desc: 'Al escoger una opción ésta se atrapa inmediatamente y el menú se cierra. Al tocar un área fuera del diálogo o presionar Atrás, se cancela la acción y el diálogo se cierra.',
       uninverted: true
     },
     withoutActivator: {
-      header: 'Without activator',
-      desc: 'If for some reason you are unable to use the activator slot, be sure to add the `.stop` modifier to the event that triggers the dialog.',
+      header: 'Sin _activator_',
+      desc: 'Si por alguna razón no puedes utilizar el slot _activator_, asegúrate de agregar el modificador `.stop`al evento que acciona el diálogo.',
       uninverted: true
     },
     modal: {
       header: 'Modal',
-      desc: 'Similar to a Simple Dialog, except that it\'s not dismissed when touching outside.',
+      desc: 'Similar a un Diálogo Simple, excepto porque no se cierra cuando tocas afuera del mismo..',
       uninverted: true
     },
     fullscreen: {
-      header: 'Fullscreen',
-      desc: 'Due to limited space, full-screen dialogs may be more appropriate for mobile devices than dialogs used on devices with larger screens.',
+      header: 'Pantalla completa',
+      desc: 'Debido al espacio limitado, los diálogos en pantalla completa pueden ser más apropiados para dispositivos móviles que los diálogos que se usan en dispositivos con pantallas más grandes.',
       uninverted: true
     },
     form: {
-      header: 'Form',
-      desc: 'Just a simple example of a form in a dialog.',
+      header: 'Formularios',
+      desc: 'Un ejemplo simple de un formulario dentro de un diálogo..',
       uninverted: true
     },
     scrollable: {
-      header: 'Scrollable',
-      desc: 'Example of a dialog with scrollable content.',
+      header: '_Scrollable_',
+      desc: 'Ejemplo de un diálogo con contenido que puede ser desplazado.',
       uninverted: true
     },
     overflowed: {
-      header: 'Overflowed',
-      desc: 'Modals that do not fit within the available window space will scroll the container.',
+      header: '_Overflowed_',
+      desc: 'Los modales que no caben dentro del espacio disponible en la ventana harán que el contenedor pueda ser desplazado.',
       uninverted: true
     }
   }],
   props: {
-    disabled: 'Disabled the ability to open the dialog',
-    fullWidth: 'Specifies the modal to force 100% width',
-    fullscreen: 'Changes layout for fullscreen display',
-    hideOverlay: 'Hide the display of the overlay',
+    disabled: 'Deshabilita la posibilidad de abrir el diálogo.',
+    fullWidth: 'Especifica que el modal será forzado a 100% del ancho',
+    fullscreen: 'Cambia la distribución para ser mostrada en pantalla completa',
+    hideOverlay: 'Esconde el _overlay_',
     lazy: 'Mixins.Bootable.props.lazy',
-    maxWidth: 'The maximum width the content',
+    maxWidth: 'El ancho máximo del contenido',
     origin: 'Mixins.Transitionable.props.origin',
-    persistent: 'Clicking outside will not dismiss the dialog',
-    scrollable: 'When set to true, expects a card, card-title, card-text and card-actions. Additionally card-text should have specified height. Will set card-text to overflow-y',
-    width: 'Sets the dialog width'
+    persistent: 'Hacer click fuera no cerrará el diálogo',
+    scrollable: 'Cuando se asigna el valor `true`, espera un `card`, `card-title`, `card-text` y `card-actions`. Adicionalmente `card-text` debe tener una altura específica. Colocará `overflow-y` en el `card-text`.',
+    transition: 'Mixins.Transitionable.props.transition',
+    width: 'Configura el ancho del diálogo'
   }
 }
