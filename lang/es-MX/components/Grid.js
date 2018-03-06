@@ -1,88 +1,88 @@
 export default {
   header: 'Grid system',
-  headerText: 'Vuetify has a 12 point grid system. Built using <kbd>flex-box</kbd>, the grid is used to layout an application\'s content.  It contains 5 types of media breakpoints that are used for targeting specific screen sizes or orientations. The props for grid components are actually classes that are derived from their defined properties. This allows you to easily specify these helper classes as props, while still providing the classes to be used anywhere.',
+  headerText: 'Vuetify tiene un sistema de _grid_ de 12 puntos. Construido usando <kbd>flex-box</kbd>, el grid se utiliza para la distribución del contenido de la aplicación. Contiene 5 tipos de _media breakpoints_ que se usan para tamaños de pantalla u orientaciones específicas. Las props para los componentes _grid_ son en realidad clases que se derivan de sus propiedades definidas. Esto te permite especificar fácilmente las clases auxiliares como props, manteniendo la posibilidad de usar clases en cualquier parte.',
   components: ['v-container', 'v-layout', 'v-flex', 'v-spacer'],
   examples: [{
     grid: {
-      header: 'Usage',
-      desc: 'The `v-container` can be used for a center focused page, or given the `fluid` prop to extend its full width. `v-layout` is used for separating sections and contains the `v-flex`. The structure of your layout will be as follows, **v-container** &raquo; **v-layout** &raquo; **v-flex**. Each part of the grid chain is a flex-box element. The final, `v-flex`, automatically sets its children to have <kbd>flex: 1 1 auto</kbd>.',
+      header: 'Uso',
+      desc: 'El `v-container` puede ser usado para una página enfocada en el centro, o se le puede agregar la prop `fluid` para que se exitienda a todo el ancho. `v-layout` se usa para separar secciones y contiene `v-flex`. La estructura de tu distribución (layout) se describe a continuación: **v-container** &raquo; **v-layout** &raquo; **v-flex**. Cada parte de la cadena del grid es un elemento flex-box. El último `v-flex` automáticamente hace que sus hijos sean <kbd>flex: 1 1 auto</kbd>.',
       uninverted: true
     },
     offset: {
-      header: 'Offset',
-      desc: 'Offsets are useful for compensating for elements that may not be visible yet, or to control the position of content. Just as with breakpoints, you can set an offset for any available sizes. This allows you to fine tune your application layout precisely to your needs.',
+      header: 'Desplazamiento',
+      desc: 'Los desplazamientos son útiles para compensar el espacio de elementos que no son visibles aún, o para controlar la posición del contenido. Al igual que con los _breakpoints_, puedes configurar un desplazamiento para cualquiera de los tamaños disponibles. Esto te permite modificar de manera precisa la distribución de tu aplicación para que cumpla con tus necesidades.',
       uninverted: true
     },
     order: {
-      header: 'Order',
-      desc: 'You can control the ordering of grid items. As with offsets, you can set different orders for different sizes. Design specialized screen layouts that accommodate to any application.',
+      header: 'Orden',
+      desc: 'Puedes controlar el orden de los elementos del grid. Como con los desplazamientos, puedes configurar diferente orden para diferentes tamaños. Diseña distribuciones de pantalla especializadas para cada pantalla en cualquier aplicación.',
       uninverted: true
     },
     directionAndAlign: {
-      header: 'Direction and Align',
-      desc: 'Designate the direction and alignment in a variety of ways. All of the available <kbd>flex-box</kbd> api is available through intuitive helper props.',
+      header: 'Dirección y Alineación',
+      desc: 'Indica la dirección y la alineación de diferentes maneras. Todas las opciones de la api de <kbd>flex-box</kbd> está disponible a través de props auxiliares intuitivas.',
       uninverted: true
     },
     rowColumnBreakpoint: {
-      header: 'Row and column breakpoints',
-      desc: 'Dynamically change your layout based upon resolution. **(resize your screen and watch the layout change to a `row` on small breakpoints)**',
+      header: 'Breakpoints para fila y columna',
+      desc: 'Cambia dinámicamente tu distribución dependiendo de la resolución. **(cambia el tamaño de la ventana y mira cómo cambia la distribución a `row` para breakpoints más pequeños)**',
       uninverted: true
     },
     nestedGrid: {
-      header: 'Nested grid',
-      desc: 'Grids can be nested, similar to other frameworks, in order to achieve very custom layouts.',
+      header: 'Grid anidado',
+      desc: 'Los grids pueden anidarse, tal como en otros frameworks, para poder lograr distribuciones muy personalizadas.',
       uninverted: true
     },
     uniqueLayouts: {
-      header: 'Unique layouts',
-      desc: 'The power and flexibility of the Vuetify grid system allows you to create amazing user interfaces.',
+      header: 'Distribuciones únicas',
+      desc: 'El poder y la flexibilidad del sistema de grid de Vuetify te permite crear interfaces de usuario asombrosas.',
       uninverted: true
     },
     spacer: {
       header: 'v-spacer',
-      desc: 'The `v-spacer` component is useful when you want to fill available space or make space between two components.'
+      desc: 'El componente `v-spacer` es útil cuando quieres llenar el espacio disponible o crear espacio entre dos componentes.'
     },
     tags: {
-      header: 'Html tags',
-      desc: 'Sometimes you will want to specify a layout item as a specific tag, such as a `section` or `li` element.'
+      header: 'Etiquetas HTML',
+      desc: 'A veces querrás definir un elemento de distribución tan específico como una etiqueta, tal como `section` o `li`.'
     }
   }],
   props: {
     tag: 'Mixins.Routable.props.tag',
-    alignBaseline: 'Align items to the baseline.',
-    alignCenter: 'Align items to the center.',
-    alignContentCenter: 'Align content to the center.',
-    alignContentEnd: 'Align content to the end.',
-    alignContentSpaceAround: 'Align content to the space around.',
-    alignContentSpaceBetween: 'Align content to the space between.',
-    alignContentStart: 'Align content to the start.',
-    alignEnd: 'Align items to the end.',
-    alignStart: 'Align items to the start.',
-    'd-{type}': 'Specify to display an element as flex/inline-flex/block etc. Syntax is `d-{type}`. For example `d-flex`.',
-    fillHeight: 'Make sure that col element height is filled with parent and child. Important for Safari/Firefox if children is column element.',
+    alignBaseline: 'Alinear los elmentos a la línea base.',
+    alignCenter: 'Alinear los elementos al centro.',
+    alignContentCenter: 'Alinear el contenido al centro.',
+    alignContentEnd: 'Alinear los contenidos al final.',
+    alignContentSpaceAround: 'Alinear el contenido al espacio alrededor.',
+    alignContentSpaceBetween: 'Alinear el contenido al espacio en medio.',
+    alignContentStart: 'Alinear el contenido al inicio.',
+    alignEnd: 'Alinear los elementos al final.',
+    alignStart: 'Alinear los elementos al principio.',
+    'd-{type}': 'Especifica que un elemento se muestra como flex/inline-flex/block, etc. La sintaxis es `d-{type}`. Por ejemplo `d-flex`.',
+    fillHeight: 'Asegura que la altura del elemento _col_ se rellena con el padre e hijo. Importante para Safari/Firefox si el hijo es un elemento columna.',
     justifyCenter: 'Justify content to the center.',
-    justifyEnd: 'Justify content to the end.',
-    justifySpaceAround: 'Justify content to the space around.',
-    justifySpaceBetween: 'Justify content to the space between.',
-    justifyStart: 'Justify content to the start.',
-    reverse: 'Reverses the currently selected direction (column, row).',
-    wrap: 'Allows children to wrap within the container if the elements use more than 100%.',
+    justifyEnd: 'Justificar el contenido al final.',
+    justifySpaceAround: 'Justificar el contenido al espacio alrededor.',
+    justifySpaceBetween: 'Justificar el contenido al espacio en medio.',
+    justifyStart: 'Justificar el contenido al principio.',
+    reverse: 'Invierte la dirección seleccionada actual (column, row).',
+    wrap: 'Permite que los hijos "salten de línea" dentro del contenedor si los elementos ocupan más del 100%.',
     'v-container': {
-      'grid-list-{xs through xl}': 'Sets the gutter between grid list items ranging from 2px to 24px',
-      fluid: 'Removes viewport size breakpoints'
+      'grid-list-{xs through xl}': 'Configura el espacio entre elementos del grid list en un rango de 2px to 24px',
+      fluid: 'Quita los breakpoints de tamaño del viewport'
     },
     'v-flex': {
-      'offset-(size)(1-12)': 'offset-xs: extra small, offset-sm: small, offset-md: medium, offset-lg: large, offset-xl: extra large. Example: offset-xs3',
-      'order-(size)(1-12)': 'order-xs: extra small, order-sm: small, order-md: medium, order-lg: large, order-xl: extra large. Example: order-xs3',
-      '(size)(1-12)': 'xs: extra small, sm: small, md: medium, lg: large, xl: extra large - 1 through 12'
+      'offset-(size)(1-12)': 'offset-xs: extra pequeño, offset-sm: pequeño, offset-md: mediano, offset-lg: grande, offset-xl: extra grande. Ejemplo: offset-xs3',
+      'order-(size)(1-12)': 'order-xs: extra pequeño, order-sm: pequeño, order-md: mediano, order-lg: grande, order-xl: extra grande. Ejemplo: order-xs3',
+      '(size)(1-12)': 'xs: extra pequeño, sm: pequeño, md: mediano, lg: grande, xl: extra grande - 1 hasta 12'
     },
     'v-layout': {
-      row: 'Sets flex direction to row',
-      column: 'Sets flex direction to column'
+      row: 'Configura la dirección de flex a _row_',
+      column: 'Configura la dirección de flex a _column_'
     }
   },
-  breakpointHeader: 'Breakpoint object',
-  breakpointText1: 'Vuetify converts the available breakpoints into an accessible object from within your application. This will allow you to assign/apply specific properties and attributes based upon viewport size. The object can be accessed from:',
-  breakpointText2: 'This object contains the same semantic properties that you are already used to using from the grid system. Let\'s try a real world example. You have a `v-dialog` component that you want to convert to a **full-screen** dialog on mobile devices. Normally you would need to bind watchers for the viewport size, and/or check whenever the page loads.',
-  breakpointText3: 'That\'s a lot of boilerplate to write. Even if you opt to use the built in <a href="/directives/resizing">v-resize</a> directive, you are still going to have to define a resize method. With the **breakpoint** object you can completely skip this logic and get back to building your application.'
+  breakpointHeader: 'Objeto _breakpoint_',
+  breakpointText1: 'Vuetify convierte los _breakpoints_ disponibles en un objeto accesible desde tu aplicación. Esto permitirá que asignes/apliques propiedades específicas y atributos basados en el tamaño del _viewport_. El objeto puede ser accesado desde:',
+  breakpointText2: 'Este objeto contiene las mismas propiedades semánticas a las que estás acostumbrado a usar en el sistema del grid. Intentemos con un ejemplo del mundo real. Tienes un componente `v-dialog` que quieres convertir en un diálogo de **pantalla completa** en dispositivos móviles. Normalmente tendrías que agregar _watchers_ para el tamaño del viewport y/o revisar cuando la página cargue.',
+  breakpointText3: 'Eso es mucho código sólo para el comienzo. Aún si decidieras usar la directiva <a href="/directives/resizing">v-resize</a>, tendrías que definir de todos modos un método para el cambio de tamaño. Con el objeto **breakpoint** puedes brincarte por completo esta lógica y dedicarte a construir tu aplicación..'
 }

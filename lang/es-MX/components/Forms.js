@@ -1,15 +1,15 @@
 export default {
   header: 'Form',
-  headerText: 'When it comes to form validation, Vuetify has a multitude of integrations and baked in functionality. Want to use a 3rd party validation plugin? Out of the box you can use [Vee-validate](https://github.com/baianat/Vee-validate) and [vuelidate](https://github.com/monterail/vuelidate).',
+  headerText: 'En cuanto a validación, Vuetify tiene una multitud de integraciones y funcionalidad prefabricada. ¿Quieres usar un plugin de terceros para tu validación? Desde el inicio puedes usar [Vee-validate](https://github.com/baianat/Vee-validate) y [vuelidate](https://github.com/monterail/vuelidate).',
   components: ['v-form'],
   examples: [{
     basicValidation: {
-      header: 'VForm - Basic validation',
-      desc: 'The internal `v-form` component makes it easy to add validation to form inputs. All input components have a `rules` prop which takes an array of functions. Whenever the value of an input is changed, each function in the array will receive the new value. If a function returns false or a string, validation has failed.'
+      header: 'VForm - Validación básica',
+      desc: 'El componente interno `v-form` facilita agregar validación a los _inputs_ del formulario. Todos los componentes _input_ tienen una prop `rules` que toma un arreglo de funciones. Cuando el valor del input cambia, cada función en el arreglo recibirá el nuevo valor. Si la función regresa _false_ o una cadena, la validación ha fallado.'
     },
     validationWithSubmitAndClear: {
-      header: 'Validation with submit & clear',
-      desc: 'The `v-form` component has two functions that can be accessed by setting a ref on the component. `validate()` will validate all inputs and return if they are all valid or not. `reset()` will clear validation errors from all inputs.'
+      header: 'Validación con _submit_ y _clear_',
+      desc: 'El componente `v-form` tiene dos funciones que pueden ser accesadas al poner un _ref_ en el componente. `validate()` validará todos los inputs y regresará si son válidos o no. `reset()` limpiará los errores de validación de todos los inputs.'
     },
     vuelidate: {
       header: 'Vuelidate',
@@ -17,14 +17,14 @@ export default {
     },
     veeValidate: {
       header: 'Vee-validate',
-      desc: 'Vee-validate is another validation plugin that allows you to check your forms. One caveat is that you must add the **type="checkbox"** to properly validate a `v-checkbox` when using the **value** prop.'
+      desc: 'Vee-validate es otro plugin de validación que te permite checar tus formularios. Algo a considerar es que debes agregar **type="checkbox"** para validar apropiadamente un `v-checkbox` cuando utilizas la prop **value**'
     }
   }],
   props: {
-    lazyValidation: 'If enabled, **value** will always be _true_ unless there are visible validation errors. You can still call `validate()` to manually trigger validation'
+    lazyValidation: 'Si se habilita, **value** siempre será _true_ a menos que haya errores de validación visibles. Puedes llamar `validate()` para ejecutar manualmente la validación'
   },
   functions: {
-    reset: 'Resets validation for all inputs',
-    validate: 'Validates all inputs and returns result'
+    reset: 'Reinicia la validación para todos los inputs',
+    validate: 'Valida todos los inputs y regresa un resultado'
   }
 }

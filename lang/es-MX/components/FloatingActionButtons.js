@@ -1,47 +1,47 @@
 export default {
-  header: 'Buttons: Floating Action Button',
-  headerText: 'The `v-btn` component can be used as a Floating action button. This provides an application a main point of action. Combined with the `v-speed-dial` component, you can create a diverse set of functions available for your users.',
+  header: 'Botones: Floating Action Button',
+  headerText: 'El componente `v-btn`  puede ser usado como un FAB. Esto provee a la aplicación de un punto de acción principal. Combinado con el componente `v-speed-dial` puedes crear una variedad de funciones disponibles para tus usuarios.',
   components: ['v-speed-dial', 'v-btn'],
   examples: [{
     promotedAction: {
-      header: 'Promoted action',
-      desc: 'Floating action buttons can be attached to material to signify a promoted action in your application. The default size will be used in most cases, whereas the `small` variant can be used to maintain continuity with similar sized elements.'
+      header: '_Promoted action_',
+      desc: 'Los FAB pueden ser usados para agregar una acción especial a tu aplicación. El tamaño default será usado en la mayoría de los casos, mientras que la variante de tamaño `small` puede ser usada para mantener continuidad con elementos de tamaño similar.'
     },
     small: {
-      header: 'Small variant',
-      desc: 'For better visual appeal, we use a small button to match our list avatars.'
+      header: 'Variante _small_',
+      desc: 'Para una mejor apariencia, usamos un botón pequeño para que combine con nuestra lista de _avatars_.'
     },
     displayAnimation: {
-      header: 'Display animation',
-      desc: 'When displaying for the first time, a floating action button should animate onto the screen. Here we use the `v-fab-transition` with v-show. You can also use any custom transition provided by Vuetify or your own.'
+      header: 'Animados',
+      desc: 'Al ser mostrados por primera vez, los FAB deben animarse en la pantalla. Aquí usamos `v-fab-transition` con v-show. Puedes también usar cualquier transición personalizada ya sea de Vuetify o una hecha por tí.'
     },
     lateralScreens: {
-      header: 'Lateral screens',
-      desc: 'When changing the default action of your button, it is recommended that you display a transition to signify a change. We do this by binding the `key` prop to a piece of data that can properly signal a change in action to the Vue transition system. While you can use a custom transition for this, ensure that you set the `mode` prop to **out-in**.'
+      header: 'Pantallas laterales',
+      desc: 'Cuando cambias la acción default de tu botóm, se recomienda que muestres una tansición que represente un cambio. Hacemos esto mediante un _binding_ de la prop `key` a un dato que puede mandar una señal apropiada de un cambio al sistema de transición de Vue. Aunque puedes usar una transición personalizada para esto, asegúrate de que la prop `mode` sea **out-in**.'
     },
     speedDial: {
-      header: 'FAB with speed-dial',
-      desc: 'The speed-dial component has an very robust api for customizing your FAB experience exactly how you want.'
+      header: 'FAB con _speed-dial_',
+      desc: 'El componente _speed-dial_ tiene una api muy robusta para personalizar la experiencia con FAB exactamente de la forma que tú quieras.'
     }
   }],
   props: {
     'v-btn': {
-      block: 'Expands the button to 100% of available space',
-      depressed: 'Removes the button box shadow',
-      fab: 'Makes button round',
-      flat: 'Removes the button background color',
-      icon: 'Designates the button as icon - round and flat',
-      inputValue: 'Controls the button active state',
-      large: 'Large size button',
-      loading: 'Adds a loading icon animation',
-      outline: 'Button will have an outline',
-      round: 'Button will be round on the sides',
-      small: 'Small size button',
-      type: 'Set the button\'s type attribute'
+      block: 'Expande el botón al 100% del espacio disponible',
+      depressed: 'Quita la sombra al botón',
+      fab: 'Hace el botón redondo',
+      flat: 'Quita el color de fondo del botón ',
+      icon: 'Indica que el botón es un ícono - redondo y plano',
+      inputValue: 'Controla el estado activo del botón',
+      large: 'Botón de tamaño grande',
+      loading: 'Agrega una ícono animado de "cargando"',
+      outline: 'El botón tendrá un contorno',
+      round: 'El botón será redondeado a los ladoss',
+      small: 'Botón de tamaño pequeño',
+      type: 'Configura el atributo _type_ del botón'
     },
     'v-speed-dial': {
-      direction: 'Direction in which speed-dial content will show. Possible values are `top`, `bottom`, `left`, `right`.',
-      openOnHover: 'Opens speed-dial on hover'
+      direction: 'La dirección en la cual el contenido del _speed-dial_ se mostrará. Los valores posibles son `top`, `bottom`, `left`, `right`.',
+      openOnHover: 'Abre el _speed-dial_ al pasar el puntero por encima'
     }
   }
 }
