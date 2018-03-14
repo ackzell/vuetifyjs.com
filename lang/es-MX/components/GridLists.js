@@ -1,15 +1,15 @@
 export default {
   header: 'Grid list',
-  headerText: 'Grid lists are an addon for the `v-container` component that add gutter control between items.',
+  headerText: 'Las _Grid lists_ son un aditamento del componente `v-container` que agregan espacios de control entre los elementos que las componen.',
   components: ['v-container', 'v-layout', 'v-flex', 'v-spacer'],
   examples: [{
     default: {
       header: 'Grid lists',
-      desc: 'Grid lists augment the `v-container` component to allow for greater flexibility with gutters. It comes in 5 variants, from xs to xl and can be dynamically changed.'
+      desc: 'Estas listas enriquecen el componente `v-container` para permitir mayor flexibilidad con los espacios. Viene en 5 variantes, desde xs hasta xl y puede cambiarse dinámicamente.'
     },
     subheader: {
       header: 'Grid lists',
-      desc: 'Grid lists will work seamlessly with your current grid implementation and allow you to create amazing user interfaces.'
+      desc: 'Las _grid lists_ trabajarán sin problema con tu implementación de grid actual y te permitirán crear interfaces de usuario asombrosas.'
     }
   }],
   props: {

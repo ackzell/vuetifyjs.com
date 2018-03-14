@@ -1,36 +1,36 @@
 export default {
   header: 'Icon',
-  headerText: 'The `v-icon` component provides a large set of glyphs to provide context to various aspects of your application. Vuetify icons utilize Google\'s Material Icons font library. For a list of all available icons, visit the official <a href="https://material.io/icons/" target="_blank" rel="noopener">Material Icons</a> page.',
+  headerText: 'El componente `v-icon` provee de una gran colección de símbolos que dan contexto a varios aspectos de tu aplicación. Los íconos de vuetify utilizan la librería de fuentes Material Icons. Para ver la lista de todos los íconos disponibles, visita la página oficial de <a href="https://material.io/icons/" target="_blank" rel="noopener">Material Icons</a>.',
   components: ['v-icon'],
   examples: [{
     standard: {
       header: 'Standard',
-      desc: 'Icons come in two themes (light and dark), and four different sizes (standard, medium, large, and x-large).'
+      desc: 'Los íconos vienen en dos temas (light y dark) así como cuatro tamaños diferentes (standard, medium, large y x-large).'
     },
     fontAwesome: {
       header: 'Font Awesome',
-      desc: '[Font Awesome](http://fontawesome.io/icons/) is also supported. Simply use the `fa-` prefixed icon name. Please note that you still need to include the Font Awesome icons in your project.'
+      desc: '[Font Awesome](http://fontawesome.io/icons/) también tiene soporte. Simplemente utiliza el prefijo `fa-` para el nombre del ícono. Considera que de todos modos necesitas incluir los íconos de Font Awesome en tu proyecto.'
     },
     mdi: {
       header: 'Material Design Icons',
-      desc: '[Material Design Icons](https://materialdesignicons.com/) is also supported. Simply use the `mdi-` prefixed icon name. Please note that you still need to include the MDI icons in your project.'
+      desc: '[Material Design Icons](https://materialdesignicons.com/) también tiene soporte. Simplemente utiliza el prefijo `mdi-` para el nombre del ícono. Considera que de todos modos necesitas incluir los íconos de MDI en tu proyecto.'
     },
     color: {
       header: 'Color',
-      desc: 'Using color helpers you can change the color of an icon from the standard dark and light themes.'
+      desc: 'Al usar auxiliares de color puedes cambiar el color de un ícono de los temas estándar dark y light.'
     },
     buttons: {
       header: 'Buttons',
-      desc: 'Icons can be used inside of buttons to add emphasis to the action.'
+      desc: 'Los íconos pueden ser usados dentro de los botones para enfatizar una acción..'
     }
   }],
   props: {
     disabled: 'Mixins.Input.props.disabled',
-    large: 'Makes the icon large **(36px)**',
-    left: 'Places icon on the left, when used inside a button',
-    medium: 'Makes the icon medium **(28px)**',
-    right: 'Places icon on the right, when used inside a button',
-    small: 'Makes the icon small **(16px)**',
-    xLarge: 'Makes the icon extra large **(40px)**'
+    large: 'Hace que el ícono sea grande **(36px)**',
+    left: 'Coloca el ícono a la izquierda, cuando se usa dentro de un botón',
+    medium: 'Hace el ícono mediano  **(28px)**',
+    right: 'Coloca el ícono a la derecha, cuando se usa dentro de un botón',
+    small: 'Hace el ícono pequeño **(16px)**',
+    xLarge: 'Hace el ícono extra grande **(40px)**'
   }
 }
