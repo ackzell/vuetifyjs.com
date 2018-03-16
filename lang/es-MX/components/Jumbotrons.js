@@ -1,29 +1,29 @@
 export default {
   header: 'Jumbotron',
-  headerText: 'Soon...',
+  headerText: 'El _jumbotron_ es un componente flexible para llamar a la acción. Tiene soporte para imágenes de fondo, _overlays_ con degradado y mucho más.',
   components: [
     'v-jumbotron'
   ],
   examples: [{
     usage: {
-      header: 'Usage',
-      desc: 'Soon..'
+      header: 'Uso',
+      desc: ''
     },
     color: {
-      header: 'Custom color',
-      desc: 'Soon...'
+      header: 'Color personalizado',
+      desc: 'Aplica un background-color personalizado.'
     },
     gradient: {
-      header: 'Gradient',
-      desc: 'More information on writing gradients can be found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)'
+      header: 'Degradado',
+      desc: 'Puedes encontrar más información acerca de los degradados [aquí](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)'
     },
     gradientWithImage: {
-      header: 'Gradient with image',
-      desc: 'More information on writing gradients can be found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)'
+      header: 'Degradado con imagen',
+      desc: 'Puedes encontrar más información acerca de escribir degradados [aquí](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)'
     }
   }],
   props: {
-    gradient: 'Apply a gradient background. If used with the **src** prop, will overlay it',
-    src: 'The img src'
+    gradient: 'Aplica un fondo de degradado. Si se utiliza con la prop *src*, lo colocará por encima',
+    src: 'El src de la imagen'
   }
 }

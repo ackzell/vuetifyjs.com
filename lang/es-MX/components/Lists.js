@@ -1,6 +1,6 @@
 export default {
   header: 'List',
-  headerText: 'The `v-list` component is used to display information. It can contain an avatar, content, actions, subheaders and much more. Lists can contain children and are used in the sidebar.',
+  headerText: 'El componente `v-list` se utiliza para mostrar información. Puede contener un avatar, contenido, acciones, subheaders y mucho más. Las listas pueden contener componentes hijos y se usan en el sidebar.',
   components: [
     'v-list',
     'v-list-tile',
@@ -14,53 +14,53 @@ export default {
   ],
   examples: [{
     avatarTwoLines: {
-      header: 'Avatar with 2 lines',
-      desc: 'Lists can take an array of list items. When given an array, the list component will figure out the classes that are needed depending on what it was given. You can also define headers or dividers within the items array.'
+      header: 'Avatar con 2 líneas',
+      desc: 'Las listas pueden tomar un arreglo con una lista de elementos. Cuando se provee un arreglo, el componente _list_ encontrará las clases que sean necesarias dependiendo de qué fue proporcionado. También puedes definir encabezados o divisores dentro del arreglo de elementos.'
     },
     avatarTitleAndAction: {
-      header: 'Avatar with title and action',
-      desc: 'Lists also contain slots for a more explicit approach. If you choose this approach, remember you must provide additional props for correct spacing. In this example, we have a tile with an avatar, so we must provide an `avatar` property.'
+      header: 'Avatar con título y acción',
+      desc: 'Las listas también contienen _slots_ para una implementación más directa. Si escoges esta manera, recuerda que debes proveer props adicionales para el espaciado correcto. En este ejemplo, tenemos un _tile_ con un avatar, así que debemos proveer una propiedad `avatar`.'
     },
     iconTwoLinesAndAction: {
-      header: 'Icon with 2 lines and action',
-      desc: 'Lists can contain subheaders, dividers, and can contain 1 or more lines. The subtitle will overflow with ellipsis if it extends past one line.'
+      header: 'Ícono con 2 líneas y acción',
+      desc: 'Las listas pueden contener _subheaders_, divisores y pueden contener 1 o más líneas. El subtítulo será cortado con una _ellipsis (...)_ si su longitud se extiende más allá de una línea. '
     },
     avatarThreeLines: {
-      header: 'Avatar with 3 lines',
-      desc: 'For three line lists, the subtitle will clamp vertically at 2 lines and then ellipsis. If you need more than 3 lines, it is advised to use a [card](/components/cards).'
+      header: 'Avatar con 3 líneas',
+      desc: 'Para listas con tres líneas, el subtítulo se extenderá 2 líneas y después creará una _ellipsis (...)_. Si requieres más de tres líneas, se aconseja utilizar un componente [card](/components/cards).'
     },
     avatarSubheaderTitleAndAction: {
-      header: 'Avatar with title and action',
-      desc: 'When a lists slot is used, you must manually define whether it contains headers, or if the items contain an avatar. This is required to maintain proper spacing.'
+      header: 'Avatar con un título y una acción.',
+      desc: 'Cuando un _slot_ de lista es utilizado, debes manualmente definir si es que contiene encabezados, o si los elementos contienen un avatar. Esto es requerido para mantener el espaciado apropiado.'
     },
     subheadingsAndDividers: {
-      header: 'Subheadings and dividers',
-      desc: 'Lists can contain multiple subheaders and dividers.'
+      header: 'Subheadings y divisores',
+      desc: 'Las listas pueden contener smúltiples _subheaders_ y _dividers_.'
     },
     cardList: {
-      header: 'Card image with toolbar and list',
-      desc: 'A list can be combined with a card.'
+      header: 'Imagen en _card_ con _toolbar_ y una lista',
+      desc: 'Una lista puede ser combinada con una _Card_.'
     },
     titleSubtitleActionsAndActionText: {
-      header: 'Title with sub-title, actions and action-text',
-      desc: 'A list can contain a stack within an action. Ripple and router props can be passed through the main v-list, to the v-list-tile or as a property in the items array.'
+      header: 'Título y subtítulo, acciones y un _action-text_',
+      desc: 'Una lista puede contener una pila dentro de una acción. _Ripple_ y las props del _router_ pueden pasarse al componente principal v-list, al v-list-tile o como una propiedad en el arreglo de elementos que compondrán la lista.'
     },
     actionTitleAndSubtitle: {
-      header: 'Action with title and sub-title',
-      desc: 'A list can contain up to 3 lines.'
+      header: 'Acción con título y subtítulo',
+      desc: 'Una lista puede contener hasta 3 líneas..'
     },
     expansionLists: {
-      header: 'Expansion Lists',
-      desc: 'A list can contain a group of items which will display on click. Expansion lists are also used within the `navigation drawer` component.'
+      header: 'Listas de expansión',
+      desc: 'Una lista puede contener un grupo de elementos que se mostrarán al hacer click. Las listas de expansión también se usan en el componente de `navigation drawer`.'
     }
   }],
   props: {
-    avatar: 'Used to set minimum tile height on a single-line list item',
-    dense: 'Lowers max height of list tiles',
-    expand: 'Will only collapse when explicitly closed',
-    subheader: 'Removes top padding. Used when previous sibling is a header',
-    threeLine: 'Increases list-tile height for three lines',
-    twoLine: 'Increases list-tile height for two lines',
-    inactive: 'If set, the list tile will not be rendered as a link even if it has to/href prop or @click handler'
+    avatar: 'Se usa para configurar la altura mínima del _tile_ en un elemento de lista de una sola línea',
+    dense: 'Reduce la altura máxima de los _list tiles_',
+    expand: 'Sólo colapsará cuando explícitamente se cierre',
+    subheader: 'Quita el _padding_ de arriba. Utilizado cuando el hermano anterior es un encabezado',
+    threeLine: 'Incrementa el alto del _list-tile_ para cuando hay tres líneas',
+    twoLine: 'Incrementa el alto del _list-tile_ para cuando hay dos líneas',
+    inactive: 'Si se especifica, el _list tile_ no será desplegado como un link incluso si tiene las props to/href o un @click'
   }
 }
