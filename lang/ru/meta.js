@@ -101,18 +101,6 @@ export default {
     'description': 'Vuetify offers numerous pre-build starter and premium themes. Kickstart your next application today, no design skills needed.',
     'keywords': 'vuetify themes, pre-built material themes, premium themes'
   },
-  'layout/grid': {
-    'h1': 'Grid',
-    'title': 'Layout grid system',
-    'description': 'Vuetify supports the material design 12 point grid for laying out your application.',
-    'keywords': 'grid, layout, flex'
-  },
-  'layout/grid-lists': {
-    'h1': 'Grid lists',
-    'title': 'Grid List Component',
-    'description': 'Grid list component for Vuetify Framework',
-    'keywords': 'grid lists, grid'
-  },
   'layout/spacing': {
     'h1': 'Spacing',
     'title': 'Spacing helpers',
@@ -142,12 +130,6 @@ export default {
     'title': 'Sandbox',
     'description': 'Play around with the available configuring options for your next application.',
     'keywords': 'sandbox, vuetify, layout sandbox'
-  },
-  'components/api-explorer': {
-    'h1': 'API Explorer',
-    'title': 'API Explorer',
-    'description': 'Search the API of all Vuetify components.',
-    'keywords': 'material design components, components api, vuetify api'
   },
   'components/alerts': {
     'h1': 'Alerts',
@@ -256,6 +238,18 @@ export default {
     'title': 'Form Component',
     'description': 'Form component for Vuetify Framework',
     'keywords': 'form'
+  },
+  'components/grid': {
+    'h1': 'Grid',
+    'title': 'Layout grid system',
+    'description': 'Vuetify supports the material design 12 point grid for laying out your application.',
+    'keywords': 'grid, layout, flex'
+  },
+  'components/grid-lists': {
+    'h1': 'Grid lists',
+    'title': 'Grid List Component',
+    'description': 'Grid list component for Vuetify Framework',
+    'keywords': 'grid lists, grid'
   },
   'components/icons': {
     'h1': 'Icons',
