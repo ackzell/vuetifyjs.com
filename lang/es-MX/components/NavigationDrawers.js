@@ -1,52 +1,52 @@
 export default {
   header: 'Navigation drawer',
-  headerText: 'The `v-navigation-drawer` component is what your users will utilize to navigate through the application. The navigation-drawer is pre-configured to work with or without **vue-router** right out the box.',
+  headerText: 'El componente `v-navigation-drawer` es lo que quieres que tus usuarios utilicen para navegar la aplicación. El _navigation-drawer_ está preconfigurado para funcionar con o sin **vue-router** desde el inicio.',
   components: ['v-navigation-drawer'],
   examples: [{
     permanent: {
       header: 'Default',
-      desc: 'The navigation drawer is primarily used to house links to the pages in your application'
+      desc: 'El _navigation drawer_ es usado principalmente para contener links a las páginas de tu aplicación'
     },
     permanentClipped: {
       header: 'Colored drawer',
-      desc: 'Navigation drawers can be customized to fit any application\'s design. While any component can be used within a drawer, the primary ones you will use are `v-list`, all of the **list** children components and `v-divider`'
+      desc: 'Los _navigation drawers_ pueden ser personalizados para que encajen en el diseño de tu aplicación. Aunque cualquier componente puede ser utilizado dentro de un _drawer_, los que usarás principalmente son `v-list`, todos sus componentes hijos y `v-divider`'
     },
     permanentFloating: {
       header: 'Permanent floating drawer',
-      desc: 'A navigation drawer can be placed inside of a card and float over the content background.'
+      desc: 'Puedes colocar un _navigation drawer_ dentro de un _card_ y flotarlo sobre el contenido..'
     },
     persistent: {
       header: 'Avatars',
-      desc: 'Since drawers support the `v-list` component, you can easily create customized dashboard solutions.'
+      desc: 'Como los _drawers_ tienen soporte para componentes `v-list`, puedes crear fácilmente soluciones personalizadas en tus _dashboards_.'
     },
     mini: {
       header: 'Mini',
-      desc: 'The navigation drawer also has a mini-variant which can be controlled using the prop `mini-variant.sync`.'
+      desc: 'El _navigation drawer_ también tiene una variación _mini_ que puede ser controlada utilizando la prop `mini-variant.sync`.'
     },
     temporary: {
       header: 'Temporary',
-      desc: 'A temporary drawer sits above its application and uses a scrim (overlay) to darken the background. This drawer behavior is mimicked on the persistent drawer when on mobile. Clicking outside of the drawer will cause it to close.'
+      desc: 'Un _drawer_ temporal se coloca encima de la aplicación y utiliza un _overlay_ para oscurecer el fondo. El comportamiento de este _drawer_ se puede reproducir en el _persisten drawer_ cuando tu app corre en un móvil. Hacer click afuera del drawer causará que se cierre.'
     },
     dark: {
       header: 'Dark theme',
-      desc: 'Vuetify also supports the dark application theme. This will not override components that have default themes so in some cases it will be necessary to manually set the dark theme accents.',
+      desc: 'Vuetify también soporta un tema oscuro para la aplicación. Esto no sobreescribirá los componentes que tengan temas default, así que en algunos casos será necesario colocar manualmente los _dark theme accents_.',
       uninverted: true
     }
   }],
   props: {
     absolute: 'Mixins.Positionable.props.absolute',
-    clipped: 'A clipped drawer rests under the application toolbar',
-    disableResizeWatcher: 'Will automatically open/close drawer when resized depending if mobile or desktop.',
-    disableRouteWatcher: 'Disables opening of navigation drawer when route changes',
+    clipped: 'El _drawer_ queda debajo de la barra de herramientas de la aplicación',
+    disableResizeWatcher: 'Automáticamente abrirá/cerrará el _drawer_ cuando la pantalla cambie de tamaño dependiendo de si está en móvil o escritorio',
+    disableRouteWatcher: 'Deshabilita abrir la navegación cuando la ruta cambia',
     fixed: 'Mixins.Positionable.props.fixed',
-    floating: 'A floating drawer has no visible container (no border-right)',
-    hideOverlay: 'Hide the display of the overlay',
-    miniVariantWidth: 'Designates the width assigned when the `mini` prop is turned on',
-    miniVariant: 'Condenses navigation drawer width, also accepts the **.sync** modifier. With this, the drawer will re-open when clicking it',
-    permanent: 'The drawer remains visible regardless of screen size',
-    right: 'Places the navigation drawer on the right',
-    stateless: 'Remove all automated state functionality (resize, mobile, route) and manually control the drawer state',
-    temporary: 'A temporary drawer sits above its application and uses a scrim (overlay) to darken the background',
-    touchless: 'Disable mobile touch functionality'
+    floating: 'Un _drawer_ flotante no tiene un contenedor visible (no hay border-right)',
+    hideOverlay: 'Oculta el _overlay_',
+    miniVariantWidth: 'Indica el ancho asignado cuando la prop `mini` está activa',
+    miniVariant: 'Condensa el ancho del _navigation drawer_. También acepta el modificador **.sync**. Con esto, el _drawer_ re-abrirá cuando se haga click en él',
+    permanent: 'El _drawer_ permanece visible independientemente del tamaño de la pantalla',
+    right: 'Coloca el _navigation drawer_ a la derecha',
+    stateless: 'Quita toda la funcionalidad del estado automatizado (_resize_, _mobile_, _route_) y manualmente controla el estado del _drawer_',
+    temporary: 'Un _drawer_ temporal se muestra sobre la aplicación y utiliza un _overlay_ para oscurecer el fondo',
+    touchless: 'Deshabilita la funcionalidad de touch en móviles'
   }
 }
