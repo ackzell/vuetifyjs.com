@@ -1,52 +1,52 @@
 export default {
   header: 'Menu',
-  headerText: 'The `v-menu` component shows a menu at the position of the element used to activate it.',
+  headerText: 'El componente `v-menu`muestra un menú en la posición del elemento que se usa para activarlo.',
   components: ['v-menu'],
   examples: [{
     activator: {
       header: 'Activator',
-      desc: 'Remember to put the element that activates the menu in the `activator` slot.',
+      desc: 'Recuerda poner el elemento que activa el menú en el slot `activator`.',
       uninverted: true
     },
     absolute: {
-      header: 'Absolute position',
-      desc: 'Menus can also be placed absolutely on top of the activator element using the `absolute` prop. Try clicking anywhere on the image.',
+      header: 'Posición _absolute_',
+      desc: 'Los menús también pueden ser posicionados _absolute_ encima del elemento _activator_ usando la prop `absolute`. Trata haciendo click en cualquier parte de la imagen.',
       uninverted: true
     },
     absoluteWithoutActivator: {
-      header: 'Absolute position without activator',
-      desc: 'Menus can also be used without an activator by using `absolute` together with the props `position-x` and `position-y`. Try right-clicking anywhere on the image.',
+      header: 'Posición _absolute_ sin un _activator_',
+      desc: 'Los menús también pueden ser usados sin un _activador_ al hacer uso de `absolute` junto con las props `position-x` y `position-y`. Intenta haciendo click derecho en cualquier parte de la imagen..',
       uninverted: true
     },
     hover: {
       header: 'Hover',
-      desc: 'Menus can be accessed using hover instead of clicking with the `open-on-hover` prop.',
+      desc: 'Los menús pueden ser accesados pasando el mouse por encima con la prop `open-on-hover`.',
       uninverted: true
     },
     menus: {
       header: 'Menus',
-      desc: 'Menus can be placed within almost any component.',
+      desc: 'Los menús pueden ser colocados dentro de casi cualquier componente.',
       uninverted: true
     },
     customTransition: {
-      header: 'Custom transitions',
-      desc: 'Vuetify comes with 3 standard transitions, **scale**, **slide-x** and **slide-y**. You can also create your own and pass it as the transition argument. For an example of how the stock transitions are constructed, visit <a href="https://github.com/vuetifyjs/vuetify/blob/master/src/util/helpers.js#L13" target="_blank" rel="noopener">here</a>.',
+      header: 'Transiciones personalizadas',
+      desc: 'Vuetify viene con 3 transiciones estándar: **scale**, **slide-x** y **slide-y**. Puedes también crear tus propias transiciones y pasarlas en el argumento _transition_. Para ver un ejemplo de cómo están elaboradas las transiciones de Vuetify, visita <a href="https://github.com/vuetifyjs/vuetify/blob/master/src/util/helpers.js#L13" target="_blank" rel="noopener">este link</a>.',
       uninverted: true
     },
     popover: {
       header: 'Popover menu',
-      desc: 'A menu can be configured to be static when opened, allowing it to function as a popover. This can be useful when there are multiple interactive items within the menu contents.',
+      desc: 'Un menú puede ser configurado para ser estático al ser abierto, permitiéndole funcionar como un _popover_. Esto puede ser útil cuando hay múltiples elementos interactivos dentro de los contenidos del menú.',
       uninverted: true
     }
   }],
   props: {
-    closeOnClick: 'Designates if menu should close on outside-activator click',
-    closeOnContentClick: 'Designates if menu should close when its content is clicked',
-    disabled: 'Disables the menu',
-    offsetX: 'Offset the menu on the x-axis. Works in conjunction with direction left/right',
-    offsetY: 'Offset the menu on the y-axis. Works in conjunction with direction top/bottom',
-    openOnClick: 'Designates whether menu should open on activator click',
-    openOnHover: 'Designates whether menu should open on activator hover',
+    closeOnClick: 'Indica si el menú debe cerrar al hacer click afuera del _activator_',
+    closeOnContentClick: 'Indica si el menú debe cerrarse cuando se hace click en su contenido',
+    disabled: 'Deshabilita el menú',
+    offsetX: 'Desplaza el menú en el eje x. Funciona en conjunto con la dirección _left/right_',
+    offsetY: 'Desplaza el menú en el eje y. Funciona en conjunto con la dirección _top/bottom/',
+    openOnClick: 'Indica si el menú debe abrirse al hacer click en el _activator_',
+    openOnHover: 'Indica si el menú debe abrirse al pasar el mouse por encima del _activator_',
     origin: 'Mixins.Transitionable.props.origin',
     transition: 'Mixins.Transitionable.props.transition'
   }
