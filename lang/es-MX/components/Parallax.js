@@ -1,27 +1,27 @@
 export default {
   header: 'Parallax',
-  headerText: 'The `v-parallax` component creates a 3d effect that makes an image appear to scroll slower than the window.',
+  headerText: 'El componente `v-parallax` crea un efecto 3D que hace que la imagen parezca deslizarse más lento que la ventana.',
   components: ['v-parallax'],
   examples: [{
     default: {
       header: 'Default',
-      desc: 'A parallax causes a shift in a background image when the user scrolls the page.'
+      desc: 'Un parallax causa un cambio en la imagen del fondo cuando el usuario se desplaza hacia arriba o abajo en la pantalla.'
     },
     content: {
-      header: 'With content',
-      desc: 'You can also place any content inside of the parallax. This allows you to use the parallax as a hero image.'
+      header: 'Con contenido',
+      desc: 'También puedes colocar cualquier contenido dentro del parallax. Esto te permite utilizarlo como un _hero image_.'
     },
     customHeight: {
-      header: 'Custom height',
-      desc: 'You can specify a custom height on a parallax. Keep in mind this can break the parallax if your image is not sized properly'
+      header: 'Altura personalizada',
+      desc: 'Puedes especificar una altura personalizada en un parallax. Toma en cuenta que podrías romper el efecto si la imagen no tiene el tamaño adecuado.'
     },
     jumbotron: {
       header: 'Jumbotron',
-      desc: 'The parallax can have its effect disabled to be used as a standard **jumbotron**'
+      desc: 'El parallax puede tener el efecto deshabilitado para ser usado como un **jumbotron** estándar.'
     }
   }],
   props: {
-    alt: 'Attaches an alt property to the parallax image',
-    src: 'The image to parallax'
+    alt: 'Agrega una propiedad _alt_ a la imagen en el parallax',
+    src: 'La imagen parallax'
   }
 }

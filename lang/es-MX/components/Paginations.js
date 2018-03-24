@@ -1,36 +1,36 @@
 export default {
   header: 'Pagination',
-  headerText: 'The `v-pagination` component is used to separate long sets of data so that it is easier for a user to consume information. Depending on the length provided, the pagination component will automatically scale. To maintain the current page, simply supply a `v-model` attribute.',
+  headerText: 'El componente `v-pagination` es utilizado para separar grandes conjuntos de datos de maner que sea más fácil para el usuario consumir la información. Dependiendo de la longitud que sea proveída, el componente de paginación escalará automáticamente. Para mantener la página actual, simplemente agrega un atributo `v-model`.',
   components: ['v-pagination'],
   examples: [{
     short: {
-      header: 'Short',
-      desc: 'Pagination displays all pages if parent container is big enough.'
+      header: 'Corto',
+      desc: 'La paginación muestra todas las páginas si el contenedor padre es lo suficientemente grande..'
     },
     long: {
-      header: 'Long',
-      desc: 'When the number of page buttons exceeds the parent container, the component will truncate the list.'
+      header: 'Largo',
+      desc: 'Cuando el número de botones de páginas excede el contenedor padre, el componente truncará la lista.'
     },
     limit: {
-      header: 'Limit',
-      desc: 'You can also manually set the maximum number of visible page buttons with the `total-visible` prop.'
+      header: 'Límite',
+      desc: 'También puedes configurar manualmente el número máximo de botones de páginas visibles con la prop `total-visible`.'
     },
     round: {
-      header: 'Round',
-      desc: 'The alternate style for pagination is circle pages.'
+      header: 'Redondo',
+      desc: 'El estilo alterno para paginación es circular.'
     },
     disabled: {
-      header: 'Disabled',
-      desc: 'Pagination items can be manually deactivated.'
+      header: 'Deshabilitado',
+      desc: 'Los elementos de paginación pueden ser desactivados manualmente.'
     }
   }],
   props: {
-    circle: 'Shape pagination elements as circles',
-    disabled: 'Disables component',
-    length: 'The length of the paginator',
-    nextIcon: 'Specify the icon to use for the next icon',
-    prevIcon: 'Specify the icon to use for the prev icon',
-    totalVisible: 'Specify the max total visible pagination numbers',
-    value: 'Current selected page'
+    circle: 'Los elementos de paginación son de forma circular',
+    disabled: 'Deshabilita el componente',
+    length: 'La longitud del paginador',
+    nextIcon: 'Especifica el ícono para _siguiente_',
+    prevIcon: 'Especifica el ícono para _anterior_',
+    totalVisible: 'Especifica el máximo total visible de números de paginación',
+    value: 'La página seleccionada actual'
   }
 }

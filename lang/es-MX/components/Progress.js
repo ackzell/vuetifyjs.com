@@ -1,51 +1,51 @@
 export default {
   header: 'Progress',
-  headerText: 'The `v-progress-circular` and `v-progress-linear` components are used to convey data visually to users. They can also represent an indeterminate amount, such as loading or processing. These components contains a slot that is centered within the component container.',
+  headerText: 'Los componentes `v-progress-circular` y `v-progress-linear` se usan para transmitir datos visualmente a los usuarios. Pueden también representar una cantidad indeterminada, como un procesamiento o una carga (loading). Estos componentes contienen un slot que está centrado dentro del componente que lo contiene.',
   components: ['v-progress-circular', 'v-progress-linear'],
   examples: [{
     circularDefault: {
       header: 'Default',
-      desc: 'By default, progress circular uses the applications secondary color.'
+      desc: 'Por default, el progreso circular utiliza el _secondary color_ de la aplicación..'
     },
     circularColored: {
-      header: 'Colored',
-      desc: 'Alternate colors can be applied.'
+      header: 'Coloreado',
+      desc: 'Puedes aplicar colores alternativos.'
     },
     circularIndeterminate: {
-      header: 'Indeterminate',
-      desc: 'An indeterminate progress circular animates forever.'
+      header: 'Indeterminado',
+      desc: 'Un _progress circular_ está animado continuamente.'
     },
     circularSizeAndWidth: {
-      header: 'Size & Width',
-      desc: 'The progress circular component can have an altered width and size.'
+      header: 'Tamaño y ancho',
+      desc: 'El componente _progress circular_ puede variar en tamaño y ancho.'
     },
     circularRotate: {
-      header: 'Rotate',
-      desc: 'The progress origin can be rotated.'
+      header: 'Rotado',
+      desc: 'El origen del _progress_ puede ser rotado..'
     },
     linearDeterminate: {
-      header: 'Determinate',
-      desc: 'The progress linear component can have a determinate state modified by `v-model`.'
+      header: 'Determinado',
+      desc: 'El _progress linear_ puede tener un estado determinado modificado por `v-model`.'
     },
     linearIndeterminate: {
-      header: 'Indeterminate',
-      desc: 'Just as with the progress circular component, progress linear has an indeterminate state.'
+      header: 'Indeterminado',
+      desc: 'Al igual que con el componente circular, el _progress linear_ tiene un estado indeterminado.'
     },
     linearBuffer: {
       header: 'Buffer',
-      desc: 'A buffer state represents two values simultaneously. The primary value is controled by the model, whereas the buffer is controlled by the `buffer-value` prop.'
+      desc: 'Un estado _buffer_ representa dos valores simultáneamente. El valor principal es controlado por el modelo, mientras que el buffer es controlado por una prop `buffer-value`.'
     },
     linearQueryIndeterminateAndDeterminate: {
-      header: 'Query Indeterminate and Determinate',
-      desc: 'To query state is controlled by the truthiness of indeterminate with the query prop set to true.'
+      header: 'Query Indeterminado y Determinado',
+      desc: 'El estado _query_ es controlado por un valor _truthy_ de `indeterminate` con la prop `query` en verdadero.'
     },
     linearCustomHeightAndContextualColors: {
-      header: 'Custom height and contextual colors',
-      desc: 'A custom height or contextual color can be applied to a progress bar. The bars primary color is your applications primary color.'
+      header: 'Altura personalizada y colores contextuales',
+      desc: 'Una altura personalizada o un color contextual pueden ser aplicados a una barra de progreso. EL color principal de la barra es el color principal de tu aplicación.'
     },
     linearCustomColors: {
-      header: 'Custom colors',
-      desc: 'You can also set the color using the props `color` and `background-color`.'
+      header: 'Colores personalizados',
+      desc: 'También puedes configurar el color usando las props `color` y `background-color`.'
     }
   }]
 }

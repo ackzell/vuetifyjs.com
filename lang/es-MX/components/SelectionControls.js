@@ -1,10 +1,10 @@
 export default {
   header: 'Selection controls',
-  headerText: 'Selection control components allow a user to select options. These components **must** be used with the `v-model` prop as they do not maintain their own state.',
+  headerText: 'Los componentes _selection control_ permiten que un usuario seleccione opciones. Estos componentes **deben** ser utilizados con la prop `v-model` porque no mantienen su propio estado.',
   components: ['v-radio-group', 'v-radio', 'v-checkbox', 'v-switch'],
   examples: [{
     example: {
-      header: 'Default examples',
+      header: 'Ejemplos default',
       desc: ''
     },
     checkboxesBoolean: {
@@ -21,23 +21,23 @@ export default {
     },
     checkboxesColors: {
       header: 'Checkboxes - Colors',
-      desc: 'Checkboxes can be colored by using any of the builtin colors and contextual names using the `color` prop.'
+      desc: 'Puedes cambiar el color de los checkboxes si usas cualquiera de los colores prefabricados y los nombres contextuales en la prop `color`.'
     },
     checkboxesInlineTexfield: {
-      header: 'Checkboxes - Inline with a textfield',
+      header: 'Checkboxes - En línea con un campo de texto',
       desc: ''
     },
     radiosDefault: {
       header: 'Radios - Default',
-      desc: 'Radio-groups are by default mandatory. This can be changed with the `mandatory` prop.'
+      desc: 'Los Radio-groups son obligatorios por default. Puedes cambiar esto con la prop `mandatory`.'
     },
     radiosDirection: {
-      header: 'Radios - Direction',
-      desc: 'Radio-groups can be presented either as a row or a column, using their respective props. The default is as a column.'
+      header: 'Radios - Dirección',
+      desc: 'Los radio-groups pueden ser representados ya sea en una fila o una columna, utilizando sus props respectivas. El default es columna'
     },
     radiosColors: {
       header: 'Radios - Colors',
-      desc: 'Radios can be colored by using any of the builtin colors and contextual names using the `color` prop.'
+      desc: 'Puedes cambiar el color de los radios si usas cualquiera de los colores prefabricados y los nombres contextuales en la prop `color`.'
     },
     switchesBoolean: {
       header: 'Switches - Boolean',
@@ -53,18 +53,18 @@ export default {
     },
     switchesColors: {
       header: 'Switches - Colors',
-      desc: 'Switches can be colored by using any of the builtin colors and contextual names using the `color` prop.'
+      desc: 'Puedes cambiar el color de los switches si usas cualquiera de los colores prefabricados y los nombres contextuales en la prop `color`.'
     }
   }],
   props: {
-    column: 'Displays radio buttons in column',
+    column: 'Muestra los radio buttons en una columna',
     disabled: 'Mixins.Input.props.disabled',
     label: 'Mixins.Input.props.label',
-    mandatory: 'Forces a selection on a `v-radio` child',
-    name: 'Sets the component\'s name attribute',
-    row: 'Displays radio buttons in row',
-    indeterminate: 'Sets an indeterminate state for the checkbox',
-    inputValue: 'The **v-model** bound value',
-    value: 'Sets the value of the selection control component'
+    mandatory: 'Obliga la selección de un `v-radio`',
+    name: 'Configura el atributo _name_ del componente',
+    row: 'Muestra los radio buttons en una columna',
+    indeterminate: 'Configura un estado indeterminado para el checkbox',
+    inputValue: 'El valor referenciado en **v-model**',
+    value: 'Configura el valor de la selección en el componente'
   }
 }
