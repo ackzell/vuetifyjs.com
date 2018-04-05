@@ -1,6 +1,6 @@
 export default {
   header: 'Stepper',
-  headerText: 'The `v-stepper` component displays progress through numbered steps.',
+  headerText: 'El componente `v-stepper` muestra el progreso en pasos numerados.',
   components: [
     'v-stepper',
     'v-stepper-step',
@@ -9,72 +9,72 @@ export default {
   ],
   examples: [{
     example: {
-      header: 'Example',
-      desc: 'A stepper can be used for a multitude of scenarios, including shopping carts, record creation and more.'
+      header: 'Ejemplo',
+      desc: 'Un stepper puede ser utilizado para una multitud de escenarios, incluyendo carritos de compras, creación de registros y más..'
     },
     editable: {
-      header: 'Editable steps',
-      desc: 'An editable step can be selected by a user at any point and will navigate them to that step.'
+      header: 'Pasos editables',
+      desc: 'Un paso editable puede ser seleccionado por un usuario en cualquier punto y lo llevará hasta ese paso.'
     },
     nonEditable: {
-      header: 'Non-editable steps',
-      desc: 'Non-editable steps force a user to process linearly through your process.'
+      header: 'Pasos no editables',
+      desc: 'Los pasos no editables obligan al usuario a llevar un proceso lineal.'
     },
     optional: {
-      header: 'Optional steps',
-      desc: 'An optional step can be called out with sub-text.'
+      header: 'Pasos opcionales',
+      desc: 'Un paso opcional puede ser llamado con un sub-texto.'
     },
     horizontal: {
-      header: 'Horizontal steps',
-      desc: 'Horizontal steppers move users along the x-axis through the defined steps.'
+      header: 'Pasos horizontales',
+      desc: 'Los steppers horizontales mueven al usuario en el eje X a través de los pasos definidos..'
     },
     vertical: {
-      header: 'Vertical steppers',
-      desc: 'Vertical steppers move users along the y-axis and otherwise work exactly the same as their horizontal counterpart.'
+      header: 'Steppers verticales',
+      desc: 'Los steppers verticales mueven al usuario en el eje Y, y trabajan exactamente de la misma forma que su contraparte horizontal.'
     },
     linear: {
-      header: 'Linear steppers',
-      desc: 'Linear steppers will always move a user through your defined path.'
+      header: 'Steppers lineales',
+      desc: 'Los steppers lineales siempre moverán al usuario a través del camino que tú decidas.'
     },
     nonLinear: {
-      header: 'Non-linear steppers',
-      desc: 'Non-linear steppers allow the user to move through your process in whatever way they choose.'
+      header: 'Steppers no lineales',
+      desc: 'Los steppers no lineales permitirán al usuario que se mueva en tu proceso de cualquier manera que ellos elijan.'
     },
     alternateLabels: {
-      header: 'Alternate labels',
-      desc: 'Steppers also have an alternative label style which places the title under the step itself.'
+      header: 'Etiquetas alternativas',
+      desc: 'Los steppers también tienen un estilo de etiqueta alternativa que coloca el título debajo del paso mismo.'
     },
     error: {
-      header: 'Multi-line error state',
-      desc: 'An error state can be displayed to notify the user of some action that must be taken.'
+      header: 'Estado de error multi línea',
+      desc: 'Un estado de error puede ser mostrado para notificar al usuario de alguna acción que debe llevarse a cabo.'
     },
     alternateError: {
-      header: 'Alternative label multi-line error state',
-      desc: 'The error state can also be applied to the alternative label style.'
+      header: 'Estado de error multi línea con etiqueta alternativa',
+      desc: 'El estado de error también puede ser aplicado al estilo de la etiqueta alternativa.'
     },
     verticalError: {
-      header: 'Vertical multi-line error state',
-      desc: 'The same state also applies to Vertical steppers.'
+      header: 'Estado de error multi línea vertical',
+      desc: 'El mismo estado también aplica para los steppers verticales.'
     },
     dynamic: {
-      header: 'Dynamic steps',
-      desc: 'Steppers can have their steps dynamically added or removed. If a currently active step is removed, be sure to account for this by changing the applied model.'
+      header: 'Pasos dinámicos',
+      desc: 'Los steppers pueden tener sus pasos dinámicamente agregados o quitados. Si un paso actualmente activo es removido, asegúrate de tomar esto en cuenta haciendo el cambio en el modelo.'
     }
   }],
   props: {
-    altLabels: 'Places the labels beneath the step',
-    complete: 'Marks step as complete',
-    completeIcon: 'Icon to display when step is marked as completed',
-    editable: 'Marks step as editable',
-    editIcon: 'Icon to display when step is editable',
-    errorIcon: 'Icon to display when step has an error',
-    nonLinear: 'Allow user to jump to any step',
-    vertical: 'Display steps vertically',
+    altLabels: 'Coloca las etiquetas debajo del paso',
+    complete: 'Marca el paso como completo',
+    completeIcon: 'Ícono para mostrar cuando el paso se marca como completo',
+    editable: 'Marca el paso como editable',
+    editIcon: 'Ícono a mostrar cuando el paso es editable',
+    errorIcon: 'Ícono a mostrar cuando el paso contiene un error',
+    nonLinear: 'Permitir que el usuario brinque a cualquier paso',
+    vertical: 'Muestra el paso verticalmente',
     'v-stepper-step': {
-      step: 'Content to display inside step circle'
+      step: 'El contenido a mostrar dentro del círculo del paso'
     },
     'v-stepper-content': {
-      step: 'Sets step to associate the content to'
+      step: 'Configura el paso al que se asociará el contenido'
     }
   }
 }
