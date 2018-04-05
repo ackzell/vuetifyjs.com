@@ -1,39 +1,39 @@
 export default {
   header: 'Slider',
-  headerText: 'The `v-slider` component is a better visualization of the number input. It is used for gathering numerical user data.',
+  headerText: 'El componente `v-slider` es una mejor visualización para el input de números. Se utiliza para recolectar datos numéricos del usuario.',
   components: ['v-slider'],
   examples: [{
     continuous: {
-      header: 'Continuous',
-      desc: 'Continuous sliders should be used when precision is not a concern.'
+      header: 'Continuo',
+      desc: 'Los sliders continuos deben ser utilizados cuando la precisión no es un problema.'
     },
     discrete: {
-      header: 'Discrete',
-      desc: 'Discrete sliders offer a thumb label that displays the exact current amount. Using the `step` prop you can disallow selecting values outside of steps.'
+      header: 'Discretos',
+      desc: 'Los sliders discretos ofrecen un marcador que muestra la cantidad exacta actual. Al utilizar la prop `step` puedes quitar el uso de valores que estén fuera de los pasos (steps).'
     },
     icons: {
-      header: 'Icons',
-      desc: 'You can add icons to the slider with the `append-icon` and `prepend-icon` props.'
+      header: 'Íconos',
+      desc: 'Puedes agregar íconos al slider con las props `append-icon` y `prepend-icon`.'
     },
     editableNumericValue: {
-      header: 'With an editable numeric value',
-      desc: 'Sliders can be combined with other components for a better display.'
+      header: 'Con un valor numérico editable',
+      desc: 'Los sliders pueden ser combinados con otros componentes para una mejor presentación.'
     },
     dark: {
       header: 'Dark theme',
-      desc: 'Sliders also support theming.',
+      desc: 'Los sliders también tienen soporte para temas.',
       uninverted: true
     },
     customColors: {
-      header: 'Custom colors',
-      desc: 'You can set the colors of the slider using the props `color`, `track-color` and `thumb-color`.'
+      header: 'Colores personalizados',
+      desc: 'Puedes configurar los colores del slider usando las props `color`, `track-color` y `thumb-color`.'
     }
   }],
   props: {
-    step: 'If greater than 0, sets step interval for ticks',
-    thumbColor: 'Sets the thumb and thumb label color',
-    thumbLabel: 'Show thumb label',
+    step: 'Si es mayor que 0, configura los tamaños de intervalos para los pasos.',
+    thumbColor: 'Configura la etiqueta y su color',
+    thumbLabel: 'Mostrar el marcador',
     ticks: '',
-    trackColor: 'Sets the track fill color'
+    trackColor: 'Configura el color de la barra'
   }
 }
