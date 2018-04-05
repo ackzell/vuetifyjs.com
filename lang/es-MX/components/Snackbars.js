@@ -1,20 +1,20 @@
 export default {
   header: 'Snackbar',
-  headerText: 'The `v-snackbar` component is used to display a quick message to a user. Snackbars support positioning, removal delay and callbacks.',
+  headerText: 'El componente `v-snackbar` se utiliza para mostrar un mensaje rápido al usuario. Los snackbars tienen soporte para posicionamiento, tiempo de espera antes de quitarse y _callbacks_',
   components: ['v-snackbar'],
   examples: [{
     position: {
-      header: 'Position',
-      desc: 'The standard snackbar is useful for calling attention to some function that has just happened.'
+      header: 'Posición',
+      desc: 'El snackbar estándar es útil para llamar la atención hacia alguna función que acaba de suceder.'
     },
     contextual: {
       header: 'Contextual',
-      desc: 'You can also apply a color to the snackbar to better fit your implementation.'
+      desc: 'Puedes también aplicar un color al snackbar para que vaya mejor con tu implementación.'
     }
   }],
   props: {
-    multiLine: 'Makes the snackbar higher (mobile)',
-    timeout: 'Time to wait until snackbar is automatically hidden',
-    vertical: 'Stacks snackbar content vertically (mobile)'
+    multiLine: 'Hace que el snackbar aparezca más alto (móviles)',
+    timeout: 'El tiempo de espera hasta que el snackbar se haga completamente invisible',
+    vertical: 'Apila los snackbars verticalmente (móviles)'
   }
 }
