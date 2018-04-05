@@ -1,22 +1,22 @@
 export default {
   header: 'Subheaders',
-  headerText: 'The `v-subheader` component is used to separate sections of lists.',
+  headerText: 'El componente `v-subheader` se usa para separar secciones de listas.',
   components: ['v-subheader'],
   examples: [{
     list: {
-      header: 'List subheaders',
-      desc: 'Subheaders work great with lists for describing the information below.'
+      header: 'Subheaders de listas',
+      desc: 'Los subheaders funcionan genial con las listas para describir la información que hay debajo.'
     },
     grid: {
-      header: 'Grid subheaders',
-      desc: 'A subheader can add context to what a user is looking at.'
+      header: 'Subheaders de grids',
+      desc: 'Un subheader puede agregar contexto a lo que el usuario está viendo.'
     },
     menu: {
-      header: 'Menu subheaders',
-      desc: 'Using a subheader can help separate different types of actions.'
+      header: 'Subheaders de menús',
+      desc: 'Utilizar un subheader puede ayudar a separar los diferentes tipos de acciones.'
     }
   }],
   props: {
-    inset: 'Adds identation (72px)'
+    inset: 'Añade indentación (72px)'
   }
 }
