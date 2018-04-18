@@ -1,6 +1,6 @@
 export default {
   header: 'Tab',
-  headerText: 'The `v-tabs` component is used for hiding content behind a selectable item. This can also be used as a pseudo-navigation for a page, where the tabs are links and the tab-items are the content.',
+  headerText: 'El componente `v-tabs` se usa para esconder contenido detrás de un item seleccionable. También puede usarse como pseudo-navegación para una página, donde los tabs son links y los _tab-items_ son el contenido.',
   components: [
     'v-tabs',
     'v-tab',
@@ -14,54 +14,54 @@ export default {
       desc: ''
     },
     fixedTabs: {
-      header: 'Fixed tabs',
-      desc: 'The **fixed-tabs** prop sets a higher minimum width and applies a new maximum width to `v-tabs-items`. On desktop screens, the tab items will be centered within the `v-tabs` component and switch to evenly fill on mobile.'
+      header: 'Tabs fijos',
+      desc: 'La prop **fixed-tabs** configura un mínimo de ancho más grande y aplica un nuevo máximo de ancho a los `v-tabs-items`. En pantallas de escritorio, los tab items serán centrados dentro del componente `v-tabs` y cambiarán para llenar el espacio disponible en móviles.'
     },
     // right: {
     //   header: 'Right aligned tabs',
     //   desc: 'The **right** prop aligns the tabs to the right'
     // },
     content: {
-      header: 'Content',
-      desc: 'Tabs are not the only thing you can put inside the `v-tabs` component. In this example we\'ve also added a toolbar.'
+      header: 'Contenido',
+      desc: 'Los tabs no son la única cosa que puedes poner dentro del componente `v-tabs`. En este ejemplo hemos agregado también un toolbar.'
     },
     search: {
-      header: 'With search',
-      desc: 'Here is another example of additional content inside the `v-tabs` component.'
+      header: 'Con búsqueda',
+      desc: 'Aquí hay otro ejemplo de contenido adicional dentro del componente `v-tabs`.'
     },
     iconsAndText: {
-      header: 'Icons and text',
-      desc: 'By using the **icons-and-text** prop you can add icons to each tab item.'
+      header: 'Íconos y texto',
+      desc: 'Al utilizar la prop **icons-and-text** puedes agregar íconos a cada elemento _tab_.'
     },
     desktop: {
-      header: 'Desktop tabs',
+      header: 'Tabs de escritorio',
       desc: ''
     },
     alignWithTitle: {
-      header: 'Align tabs with toolbar title',
-      desc: 'Make `v-tabs` lined up with the `v-toolbar-title` component (`v-toolbar-side-icon` or `v-btn` must be used in `v-toolbar`). May not work if the tab text is wrapped.'
+      header: 'Alinear tabs con el título del toolbar',
+      desc: 'Hace que los `v-tabs` se alineen con el componente `v-toolbar-title` (`v-toolbar-side-icon` o `v-btn` deben utilizarse en un `v-toolbar`). Tal vez no funcione si el texto del tab se salta a la siguiente línea (_wrapped_).'
     },
     grow: {
       header: 'Grow',
-      desc: 'The **grow** prop will make the tab items take up all available space.'
+      desc: 'La prop **grow** hará que todos los elementos tab abarquen el alto disponible.'
     },
     overflowToMenu: {
-      header: 'With menu',
-      desc: 'You can use a menu to hold additional tabs, swapping them out on the fly'
+      header: 'Con menu',
+      desc: 'Puedes usar un menú para que contenga tabs adicionales, cambiándolos al vuelo'
     },
     pagination: {
-      header: 'Pagination',
-      desc: 'If the tab items overflow their container, pagination controls will appear.'
+      header: 'Paginación',
+      desc: 'Si los items de tabs sobrepasan a su contenedor (_overflow_), los controles de paginación aparecerán.'
     },
     icons: {
-      header: 'Custom icons',
-      desc: '**prepend-icon** and **append-icon** can be used for applying custom pagination icons.'
+      header: 'Íconos personalizados',
+      desc: '**prepend-icon** y **append-icon** pueden ser usadas para aplicar íconos personalizados de paginación.'
     }
   }],
   props: {
-    alignWithTitle: 'Make `v-tabs` lined up with the toolbar title',
-    prependIcon: 'Left pagination icon',
-    appendIcon: 'Right pagination icon',
-    right: 'Aligns tabs to the right'
+    alignWithTitle: 'Hace que `v-tabs` se alineen con el título del toolbar',
+    prependIcon: 'Ícono de paginación izquierdo',
+    appendIcon: 'Ícono de paginación derecho',
+    right: 'Alinear tabs a la derecha'
   }
 }
