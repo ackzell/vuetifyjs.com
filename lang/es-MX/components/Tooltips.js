@@ -1,24 +1,24 @@
 export default {
   header: 'Tooltip',
-  headerText: 'The `v-tooltip` component is useful for conveying information when a user hovers over an element. You can also programmatically control the display of tooltips through a **v-model**',
+  headerText: 'El componente `v-tooltip` resulta útil para transmitir información cuando un usuario pasa el mouse por encima de un elemento. Puedes también controlar el despliegue de los tooltips programáticamente a través del uso de **v-model**',
   components: ['v-tooltip'],
   examples: [{
     default: {
       header: 'Default',
-      desc: 'Tooltips can wrap any element.'
+      desc: 'Los tooltips pueden envolver a cualquier elemento.'
     },
     alignment: {
-      header: 'Alignment',
-      desc: 'Tooltip can be aligned to any of the four sides of the activator element'
+      header: 'Alineación',
+      desc: 'Un tooltip puede ser alineado a cualquier de los cuatrto lados del elemento activador (_activator_)'
     },
     visibility: {
-      header: 'Visibility',
-      desc: 'Tooltip visibility can be programmatically changed using `v-model`.'
+      header: 'Visibilidad',
+      desc: 'La visibilidad del tooltip puede ser cambiada programáticamente a través del uso de `v-model`.'
     }
   }],
   props: {
-    closeDelay: 'Delay (in ms) after which menu closes (when open-on-hover prop is set to true)',
-    debounce: 'Duration before tooltip is shown and hidden when hovered',
-    openDelay: 'Delay (in ms) after which menu opens (when open-on-hover prop is set to true)'
+    closeDelay: 'Tiempo de espera (en ms) después del cual el menú se cierra (cuando la prop **open-on-hover** está puesta en true)',
+    debounce: 'Tiempo de duración antes de que el tooltip se muestre y esconda cuando se pasa el mouse por enicma',
+    openDelay: 'Tiempo de espera (en ms) después del cual el menú se abre (cuando la prop **open-on-hover** está puesta en true)'
   }
 }
