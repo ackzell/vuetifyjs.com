@@ -31,6 +31,14 @@ export default {
       header: 'Dark theme',
       desc: 'Vuetify also supports the dark application theme. This will not override components that have default themes so in some cases it will be necessary to manually set the dark theme accents.',
       uninverted: true
+    },
+    combined: {
+      header: 'Combined drawers',
+      desc: 'Drawers are flexible and are easily adapted to any use-case.'
+    },
+    nested: {
+      header: 'Nested lists',
+      desc: 'List tiles can be nested a second level for even more options for your navigation'
     }
   }],
   props: {

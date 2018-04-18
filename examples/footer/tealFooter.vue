@@ -1,6 +1,6 @@
 <template>
   <v-footer height="auto">
-    <v-card flat tile>
+    <v-card flat tile class="flex">
       <v-card-title class="teal white--text">
         <strong class="subheading">Get connected with us on social networks!</strong>
         <v-spacer></v-spacer>
@@ -21,12 +21,12 @@
             :key="i"
             xs3
           >
-            <span class="body-2" v-text="col.title.toUpperCase()"/>
+            <span class="body-2" v-text="col.title.toUpperCase()"></span>
             <div
               v-for="(child, i) in col.children"
               :key="i"
               v-text="child"
-            />
+            ></div>
           </v-flex>
           <v-flex xs3 layout column>
             <span class="body-2">CONTACT</span>
