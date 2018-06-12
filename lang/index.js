@@ -3,11 +3,13 @@ import ru from './ru'
 import ko from './ko'
 import zhHans from './zhHans'
 import ja from './ja'
+import esMx from './es-MX'
 
 export {
   en,
   ru,
   ko,
   zhHans,
-  ja
+  ja,
+  esMx
 }
