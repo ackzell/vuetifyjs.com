@@ -23,5 +23,10 @@
     "name": "日本語",
     "locale": "ja",
     "country": "jp"
+  },
+  {
+    "name": "Español",
+    "locale": "es-MX",
+    "country": "mx"
   }
 ]
