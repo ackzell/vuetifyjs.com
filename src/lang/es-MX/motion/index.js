@@ -1,7 +1,7 @@
-import Scrolling from './Scrolling'
+// import Scrolling from './Scrolling'
 import Transitions from './Transitions'
 
 export default {
-  Scrolling,
+  // Scrolling,
   Transitions
 }

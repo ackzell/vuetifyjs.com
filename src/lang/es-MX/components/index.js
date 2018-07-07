@@ -1,6 +1,6 @@
-import Alerts from './Alerts'
-import ApiExplorer from './ApiExplorer'
-import Autocompletes from './Autocompletes'
+// import Alerts from './Alerts'
+// import ApiExplorer from './ApiExplorer'
+// import Autocompletes from './Autocompletes'
 import Avatars from './Avatars'
 import Badges from './Badges'
 import BottomNavigation from './BottomNavigation'
@@ -12,16 +12,16 @@ import Carousels from './Carousels'
 import Chips from './Chips'
 import DataIterator from './DataIterator'
 import DataTables from './DataTables'
-import DatePickers from './DatePickers'
+// import DatePickers from './DatePickers'
 import Dialogs from './Dialogs'
 import Dividers from './Dividers'
 import ExpansionPanels from './ExpansionPanels'
 import FloatingActionButtons from './FloatingActionButtons'
 import Footer from './Footer'
 import Forms from './Forms'
-import HelpMeChoose from './HelpMeChoose'
+// import HelpMeChoose from './HelpMeChoose'
 import Icons from './Icons'
-import Inputs from './Inputs'
+// import Inputs from './Inputs'
 import Lists from './Lists'
 import Jumbotrons from './Jumbotrons'
 import Menus from './Menus'
@@ -37,17 +37,17 @@ import Snackbars from './Snackbars'
 import Steppers from './Steppers'
 import Subheaders from './Subheaders'
 import Tabs from './Tabs'
-import TemplateList from './TemplateList'
-import Textarea from './Textarea'
+// import TemplateList from './TemplateList'
+// import Textarea from './Textarea'
 import TextFields from './TextFields'
-import TimePickers from './TimePickers'
-import Toolbars from './Toolbars'
+// import TimePickers from './TimePickers'
+// import Toolbars from './Toolbars'
 import Tooltips from './Tooltips'
 
 export default {
-  Alerts,
-  ApiExplorer,
-  Autocompletes,
+  // Alerts,
+  // ApiExplorer,
+  // Autocompletes,
   Avatars,
   Badges,
   BottomNavigation,
@@ -59,16 +59,16 @@ export default {
   Chips,
   DataIterator,
   DataTables,
-  DatePickers,
+  // DatePickers,
   Dialogs,
   Dividers,
   ExpansionPanels,
   FloatingActionButtons,
   Footer,
   Forms,
-  HelpMeChoose,
+  // HelpMeChoose,
   Icons,
-  Inputs,
+  // Inputs,
   Lists,
   Jumbotrons,
   Menus,
@@ -84,10 +84,10 @@ export default {
   Steppers,
   Subheaders,
   Tabs,
-  TemplateList,
-  Textarea,
+  // TemplateList,
+  // Textarea,
   TextFields,
-  TimePickers,
-  Toolbars,
+  // TimePickers,
+  // Toolbars,
   Tooltips
 }

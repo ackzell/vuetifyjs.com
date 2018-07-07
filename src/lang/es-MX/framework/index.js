@@ -1,5 +1,5 @@
-import Internationalization from './Internationalization.json'
+// import Internationalization from './Internationalization.json'
 
 export default {
-  Internationalization
+  // Internationalization
 }

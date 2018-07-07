@@ -1,7 +1,7 @@
 import Applicationable from './Applicationable'
 import Bootable from './Bootable'
 import Colorable from './Colorable'
-import Comparable from './Comparable'
+// import Comparable from './Comparable'
 import DataIterable from './DataIterable'
 import Delayable from './Delayable'
 import Detachable from './Detachable'
@@ -21,7 +21,7 @@ export default {
   Applicationable,
   Bootable,
   Colorable,
-  Comparable,
+  // Comparable,
   DataIterable,
   Delayable,
   Detachable,
