@@ -1,5 +1,7 @@
 import components from '@/data/components'
+import deprecatedIn from '@/data/deprecatedIn'
 import newIn from '@/data/newIn'
+import removed from '@/data/removed'
 
 export default () => ({
   appDrawer: null,
@@ -15,10 +17,12 @@ export default () => ({
   appToolbar: null,
   components,
   currentVersion: null,
+  deprecatedIn,
   isFullscreen: false,
   loadedLangs: [],
   newIn,
   releases: [],
+  removed,
   stateless: false,
   tablesOfContents: {
     Components: [
@@ -90,6 +94,64 @@ export default () => ({
         {
           text: 'GettingStarted.WhyVuetify.comparisonHeader',
           href: 'framework-comparison'
+        }
+      ]
+    },
+    Framework: {
+      Icons: [
+        {
+          text: 'Generic.Pages.introduction',
+          href: 'introduction'
+        },
+        {
+          text: 'Generic.Pages.usage',
+          href: 'usage'
+        },
+        {
+          text: 'Framework.Icons.installHeader',
+          href: 'installing-fonts'
+        },
+        {
+          text: 'Framework.Icons.customIconsHeader',
+          href: 'using-custom-icons'
+        },
+        {
+          text: 'Framework.Icons.reusableHeader',
+          href: 'reusable-custom-icons'
+        },
+        {
+          text: 'Framework.Icons.customComponentHeader',
+          href: 'custom-components'
+        }
+      ],
+      Internationalization: [
+        {
+          text: 'Generic.Pages.introduction',
+          href: 'introduction'
+        },
+        {
+          text: 'Generic.Pages.api',
+          href: 'api'
+        },
+        {
+          text: 'Framework.Internationalization.gettingStarted',
+          href: 'getting-started'
+        },
+        {
+          text: 'Framework.Internationalization.createTranslation',
+          href: 'create-translation'
+        },
+        {
+          text: 'Framework.Internationalization.customComponents',
+          href: 'custom-components'
+        },
+        {
+          text: 'Framework.Internationalization.vueI18nHeader',
+          href: 'vue-i18n'
+        },
+        {
+          text: 'Framework.Internationalization.rtlHeader',
+          href: 'rtl'
         }
       ]
     },
@@ -178,16 +240,12 @@ export default () => ({
           href: 'introduction'
         },
         {
+          text: 'Layout.Spacing.playgroundHeader',
+          href: 'playground'
+        },
+        {
           text: 'Generic.Pages.howItWorks',
           href: 'how-it-works'
-        },
-        {
-          text: 'Generic.Pages.examples',
-          href: 'examples'
-        },
-        {
-          text: 'Layout.Spacing.horizontalHeader',
-          href: 'horizontal-centering'
         }
       ]
     },

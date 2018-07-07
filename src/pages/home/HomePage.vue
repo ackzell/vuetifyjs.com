@@ -6,8 +6,9 @@
         v-layout
           v-flex(xs12)
             h2.text-xs-center.headline.mb-3.grey--text
-              translatable(i18n="Vuetify.Home.proudlySponsoredBy")
+              translation-translatable(i18n="Vuetify.Home.proudlySponsoredBy")
                 span {{ $t('Vuetify.Home.proudlySponsoredBy') }}
+
             v-layout(row wrap justify-center align-center)
               template(v-for="(supporter, i) in parsedSupporters")
                 v-flex(
@@ -26,12 +27,33 @@
                   v-else
                 )
                   img(
-                    :src="`/doc-images/${supporter.logo}`"
+                    :src="`https://cdn.vuetifyjs.com/images/${supporter.logo}`"
                     :height="supporter.size || 'auto'"
                     :style="{ maxHeight: `${supporter.size}px` }"
                   )
-              v-flex(xs12).text-xs-center.mt-3
-                translatable(i18n="Vuetify.Home.becomeSponsor")
+
+              v-flex(xs12).my-3
+                h3.text-xs-center.headline.mb-3.grey--text
+                  translation-translatable(i18n="Vuetify.Home.specialSponsors")
+                    span {{ $t('Vuetify.Home.specialSponsors') }}
+
+              v-flex(xs12).text-xs-center.mb-5
+                a(
+                  target="_blank"
+                  rel="noopener"
+                  class="ma-3"
+                  href="https://haloplatform.tech?ref=vuetifyjs.com"
+                  title="HALO Platform"
+                  @click="$ga.event('home sponsor click', 'click', 'HALO Platform')"
+                )
+                  img(
+                    src="https://cdn.vuetifyjs.com/images/special/halo.png"
+                    height="120"
+                    style="{ maxHeight: '120px' }"
+                  )
+
+              v-flex(xs12).text-xs-center
+                translation-translatable(i18n="Vuetify.Home.becomeSponsor")
                 v-btn(
                   :to="{ name: 'getting-started/SponsorsAndBackers' }"
                   color="primary"
@@ -43,9 +65,9 @@
     section#checked-features.mb-5
       v-container
         h2.text-xs-center.headline.mb-5.grey--text
-          translatable(i18n="Vuetify.Home.checkFeaturesTitle")
+          translation-translatable(i18n="Vuetify.Home.checkFeaturesTitle")
           span {{ $t("Vuetify.Home.checkFeaturesTitle") }}
-          translatable(i18n="Vuetify.Home.checkFeaturesTitleCtd")
+          translation-translatable(i18n="Vuetify.Home.checkFeaturesTitleCtd")
             span {{ $t("Vuetify.Home.checkFeaturesTitleCtd") }}
         v-layout(row wrap justify-center)
           v-flex(
@@ -62,7 +84,7 @@
                 color="green"
                 size="36px"
               ).mr-3 check
-              translatable(:i18n="`Vuetify.Home.checkFeatures[${i}]`")
+              translation-translatable(:i18n="`Vuetify.Home.checkFeatures[${i}]`")
                 span.subheading {{ $t(`Vuetify.Home.checkFeatures[${i}]`) }}
           v-flex(
             mx-3
@@ -78,13 +100,13 @@
                 color="green"
                 size="36px"
               ).mr-3 check
-              translatable(:i18n="`Vuetify.Home.checkFeaturesCtd[${i}]`")
+              translation-translatable(:i18n="`Vuetify.Home.checkFeaturesCtd[${i}]`")
                 span.subheading {{ $t(`Vuetify.Home.checkFeaturesCtd[${i}]`) }}
 
     section#using-vuetify.mb-5
       v-container(grid-list-xl)
         h2.text-xs-center.headline.mb-5.grey--text
-          translatable(i18n="Vuetify.Home.madeWithVuetify")
+          translation-translatable(i18n="Vuetify.Home.madeWithVuetify")
           span {{ $t("Vuetify.Home.madeWithVuetify") }}
         v-layout(wrap)
           v-flex(
@@ -113,7 +135,7 @@
             @click="$ga.event('home mwvjs click', 'click', 'madewithvuejs')"
           )
             img(
-              src="/doc-images/powered-by-madewithvue-1.svg"
+              src="https://cdn.vuetifyjs.com/images/home/powered-by-madewithvue-1.svg"
               height="65px"
             )
 
@@ -129,41 +151,39 @@
               h5.mb-3
                 v-layout(align-center justify-center column)
                   img(
-                    src="/v-alt.svg"
+                    src="https://cdn.vuetifyjs.com/images/logos/v-alt.svg"
                     height="64px"
                     width="64px"
                   ).mb-2
-                  translatable(i18n="Vuetify.Home.callout")
+                  translation-translatable(i18n="Vuetify.Home.callout")
                     span(v-text="$t('Vuetify.Home.callout')").subheading
 
-            v-layout(justify-center).mb-3
-              a(
-                v-for="(social, i) in socials"
-                :href="social.href"
-                :key="i"
-                :title="social.title"
-                target="_blank"
-                rel="noopener"
-              ).social.mx-3
-                v-icon(v-text="social.icon")
-
-            v-layout(column text-xs-center)
-              div Released under the&nbsp;
+            v-flex(xs12)
+              v-layout(justify-center).mb-3
                 a(
-                  href="https://opensource.org/licenses/MIT"
-                  rel="noopener"
-                  style="text-decoration: none;"
+                  v-for="(social, i) in socials"
+                  :href="social.href"
+                  :key="i"
+                  :title="social.title"
                   target="_blank"
-                  v-text="$t('Vuetify.Home.mit')"
-                ).body-2.white--text
-              div Copyright &copy; 2016-{{ (new Date()).getFullYear() }} Vuetify, LLC
+                  rel="noopener"
+                ).social.mx-3
+                  v-icon(v-text="social.icon")
+
+            v-flex(xs12)
+              v-layout(column text-xs-center)
+                div Released under the&nbsp;
+                  a(
+                    href="https://opensource.org/licenses/MIT"
+                    rel="noopener"
+                    style="text-decoration: none;"
+                    target="_blank"
+                    v-text="$t('Vuetify.Home.mit')"
+                  ).body-2.white--text
+                div Copyright &copy; 2016-{{ (new Date()).getFullYear() }} Vuetify, LLC
 </template>
 
 <script>
-  // Components
-  import HomeCta from './HomeCta'
-  import HomeSponsors from './HomeSponsors'
-
   // Mixins
   import Message from '@/mixins/message'
 
@@ -174,8 +194,7 @@
 
   export default {
     components: {
-      HomeCta,
-      HomeSponsors
+      HomeCta: () => import('./Cta')
     },
 
     mixins: [Message],
@@ -298,7 +317,7 @@
         return array
       },
       snackHandler () {
-        this.$router.push({ name: 'store/Index' })
+        this.$router.push({ name: 'store/Front' })
       }
     }
   }

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import VueAnalytics from 'vue-analytics'
 import Routes from '@/data/routes.json'
 import scrollBehavior from './scroll-behavior'
+import Root from '@/components/views/Root'
 
 Vue.use(Router)
 
@@ -19,37 +20,44 @@ function getLanguageCookie () {
 }
 
 export function createRouter (store) {
-  function route (path, view, fullscreen, props) {
+  function route (path, view, fullscreen, props, children) {
+    const hasChildren = Array.isArray(children)
+
     return {
       path: path,
       meta: { fullscreen },
-      name: view,
+      name: hasChildren ? undefined : view,
       props,
-      component: () => import(`@/pages/${view}Page.vue`)
+      component: () => import(`@/pages/${view}Page.vue`),
+      children: hasChildren
+        ? children.map(r => route(
+          r.route,
+          r.page,
+          r.fullscreen,
+          r.props,
+          r.children
+        ))
+        : []
     }
   }
 
-  const routes = [
-    // Temp until I figure out a way
-    // to implement this into admin
-    route(
-      'store/product/:id',
-      'store/Product',
-      null,
-      r => ({ id: r.params.id })
-    )
-  ]
+  const routes = Routes.map(r => route(
+    r.route,
+    r.page,
+    r.fullscreen,
+    r.props,
+    r.children
+  ))
 
-  routes.push(
-    ...Routes.map(r => {
-      return route(
-        r.route,
-        r.page,
-        r.fullscreen,
-        r.props
-      )
-    })
-  )
+  routes.unshift({
+    path: '/',
+    name: 'home/Home',
+    meta: { fullscreen: true },
+    component: () => import(
+      /* webpackChunkName: "home" */
+      '@/pages/home/HomePage.vue'
+    )
+  })
 
   const router = new Router({
     base: release ? `/releases/${release}` : __dirname,
@@ -58,7 +66,7 @@ export function createRouter (store) {
     routes: [
       {
         path: '/:lang([a-z]{2,3}|[a-z]{2,3}-[a-zA-Z]{4}|[a-z]{2,3}-[A-Z]{2,3})',
-        component: () => import(/* webpackChunkName: "routes" */'@/components/views/RootView.vue'),
+        component: Root,
         props: route => ({ lang: route.params.lang }),
         children: routes
       },
@@ -84,7 +92,8 @@ export function createRouter (store) {
     id: 'UA-75262397-3',
     router,
     autoTracking: {
-      page: process.env.NODE_ENV !== 'development'
+      page: process.env.NODE_ENV !== 'development',
+      pageviewOnLoad: false
     },
     debug: process.env.DEBUG ? {
       enabled: true,

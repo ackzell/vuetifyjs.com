@@ -18,7 +18,7 @@
         <v-list>
           <v-list-tile avatar>
             <v-list-tile-avatar>
-              <img src="/doc-images/john.jpg" alt="John">
+              <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John">
             </v-list-tile-avatar>
 
             <v-list-tile-content>

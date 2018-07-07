@@ -10,16 +10,16 @@
         v-btn(
           large
           color="primary"
-          :to="{ name: 'store/Index' }"
+          :to="{ name: 'store/Front' }"
         ).mb-4.px-5
           span {{ $t('Vuetify.Store.backToStore') }}
           v-icon(right) mdi-arrow-right
-        markdown(:source="$t('Vuetify.Store.thankYouBack')").caption
+        helpers-markdown(:source="$t('Vuetify.Store.thankYouBack')").caption
 </template>
 
 <script>
   // Components
-  import StoreHeader from '@/components/store/StoreHeader'
+  import StoreHeader from '@/components/store/Header'
 
   export default {
     components: {

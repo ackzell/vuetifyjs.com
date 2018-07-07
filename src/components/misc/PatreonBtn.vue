@@ -1,5 +1,5 @@
 <template lang="pug">
-  translatable(i18n="Vuetify.AppDrawer.becomeASponsor")
+  translation-translatable(i18n="Vuetify.AppDrawer.becomeASponsor")
     v-btn(
       dark
       style="background-color: #F96854 !important;"
@@ -9,7 +9,7 @@
       rel="noopener"
       small
     )
-      img(src="/doc-images/patreon-dark.png" width="24px").mr-2
+      img(src="https://cdn.vuetifyjs.com/images/social/patreon-dark.png" width="24px").mr-2
       span(v-text="$t('Vuetify.AppDrawer.becomeASponsor')").caption
 </template>
 

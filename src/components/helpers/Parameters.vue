@@ -17,6 +17,12 @@
         >
           New in — v{{ item.newIn }}
         </div>
+        <div
+          v-else-if="item.deprecatedIn"
+          class="pt-2 pl-2 grey lighten-4 caption font-weight-bold error--text"
+        >
+          Deprecated in — v{{ item.deprecatedIn }}
+        </div>
         <div class="pa-2 grey lighten-4 d-flex align-top">
           <v-flex
             v-for="header in headers"
@@ -35,15 +41,15 @@
         </div>
         <div class="pa-2 grey lighten-3 grey--text text--darken-2 d-flex">
           <v-flex>
-            <markdown
+            <helpers-markdown
               :source="item.description"
               class="justify"
             />
-            <kbd
+            <helpers-markup
               v-if="item.example"
-              class="pa-2 d-flex mt-2 grey darken-2"
-              v-text="genTypescriptDef(item.example)"
-            />
+              class="mt-2 mb-0"
+              lang="ts"
+            >{{ genTypescriptDef(item.example) }}</helpers-markup>
           </v-flex>
         </div>
       </div>
@@ -94,10 +100,19 @@
     }),
 
     computed: {
-      ...mapState('app', ['newIn']),
+      ...mapState('app', ['deprecatedIn', 'newIn', 'removed']),
       computedItems () {
-        return this.items.map(item => {
-          const newItem = item !== Object(item) ? { name: item } : Object.assign({}, item)
+        const items = []
+
+        for (const item of this.items) {
+          const newItem = item !== Object(item)
+            ? { name: item }
+            : Object.assign({}, item)
+
+          if (getObjectValueByPath(
+            this.removed,
+            `${this.type}.${this.target}.${newItem.name}`
+          )) continue
 
           const keys = Object.keys(newItem)
           for (let i = 0; i < keys.length; i++) {
@@ -110,14 +125,34 @@
           }
 
           newItem.description = this.genDescription(item.name || item, item)
-          newItem.newIn = getObjectValueByPath(this.newIn, `${this.type}.${this.target}.${newItem.name}`)
+          newItem.newIn = getObjectValueByPath(
+            this.newIn,
+            `${this.type}.${this.target}.${newItem.name}`
+          )
+
+          newItem.deprecatedIn = getObjectValueByPath(
+            this.deprecatedIn,
+            `${this.type}.${this.target}.${newItem.name}`
+          )
 
           if (!newItem.newIn && newItem.source) {
-            newItem.newIn = getObjectValueByPath(this.newIn, `${this.type}.${newItem.source}.${newItem.name}`)
+            newItem.newIn = getObjectValueByPath(
+              this.newIn,
+              `${this.type}.${newItem.source}.${newItem.name}`
+            )
           }
 
-          return newItem
-        })
+          if (!newItem.deprecatedIn && newItem.source) {
+            newItem.deprecatedIn = getObjectValueByPath(
+              this.deprecatedIn,
+              `${this.type}.${newItem.source}.${newItem.name}`
+            )
+          }
+
+          items.push(newItem)
+        }
+
+        return items
       }
     },
 
@@ -144,7 +179,9 @@
         } else if (this.$te(selfDesc)) {
           description = this.$t(selfDesc)
 
-          if (description.indexOf('Mixins.') > -1) {
+          if (description.indexOf('Mixins.') > -1 ||
+            description.indexOf('Components.') > -1
+          ) {
             description = this.$t(description)
           }
 

@@ -17,15 +17,20 @@
       "desc": "You can also change the icon for the carousel delimiter and previous/next icons.",
       "uninverted": true
     },
+    "hideDelimiters": {
+      "header": "Hide delimiters",
+      "desc": "You can hide the bottom controls with the `hide-delimiters` prop.",
+      "uninverted": true
+    },
     "hideControls": {
       "header": "Hide controls",
-      "desc": "You can hide the bottom controls with the `hide-controls` prop.",
+      "desc": "You can hide the navigtion controls with the `hide-controls` prop.",
       "uninverted": true
     }
   },
   "props": {
-    "nextIcon": "Mixins.Input.props.appendIcon",
-    "prevIcon": "Mixins.Input.props.prependIcon",
+    "nextIcon": "The displayed icon for forcing pagination to the next item",
+    "prevIcon": "The displayed icon for forcing pagination to the previous item",
     "cycle": "Determines if carousel should cycle through images",
     "delimiterIcon": "Sets icon for carousel delimiter",
     "hideControls": "Hides the navigation controls",

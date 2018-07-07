@@ -1,6 +1,6 @@
 <template>
   <v-parallax
-    src="/doc-images/bg.jpg"
+    src="https://cdn.vuetifyjs.com/images/bg.jpg"
     height="700"
     jumbotron
   ></v-parallax>

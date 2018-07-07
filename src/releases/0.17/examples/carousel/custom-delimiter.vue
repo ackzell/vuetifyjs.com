@@ -10,16 +10,16 @@
       return {
         items: [
           {
-            src: '/doc-images/carousel/squirrel.jpg'
+            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
           },
           {
-            src: '/doc-images/carousel/sky.jpg'
+            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
           },
           {
-            src: '/doc-images/carousel/bird.jpg'
+            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
           },
           {
-            src: '/doc-images/carousel/planet.jpg'
+            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
           }
         ]
       }

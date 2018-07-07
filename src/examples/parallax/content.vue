@@ -1,7 +1,7 @@
 <template>
   <v-parallax
     dark
-    src="/doc-images/vbanner.jpg"
+    src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
   >
     <v-layout
       align-center

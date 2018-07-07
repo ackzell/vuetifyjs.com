@@ -3,7 +3,7 @@
     <v-layout flex justify-center>
       <v-card
         class="portrait"
-        img="/doc-images/cards/girl.jpg"
+        img="https://cdn.vuetifyjs.com/images/cards/girl.jpg"
         height="300px"
         @contextmenu="show"
       ></v-card>

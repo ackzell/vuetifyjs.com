@@ -43,6 +43,9 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import VeeValidate from 'vee-validate'
+
   export default {
     $_veeValidate: {
       validator: 'new'
@@ -98,7 +101,7 @@
 
 <codepen-resources lang="json">
   {
-    "js": ["https://unpkg.com/vee-validate@latest/dist/vee-validate.js"]
+    "js": ["https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js"]
   }
 </codepen-resources>
 

@@ -1,13 +1,22 @@
-import Core from '@/components/core'
-import Helpers from '@/components/helpers'
-import Misc from '@/components/misc'
-import Views from '@/components/views'
-import Translation from '@/components/translation'
+import Vue from 'vue'
+import upperFirst from 'lodash/upperFirst'
+import camelCase from 'lodash/camelCase'
 
-export default Object.assign({},
-  Core,
-  Helpers,
-  Misc,
-  Views,
-  Translation
+const requireComponent = require.context(
+  '@/components', true, /\.vue$/
 )
+
+// Dynamically load all components
+// and lazily load them
+// https://vuejs.org/v2/guide/components-dynamic-async
+requireComponent.keys().forEach(fileName => {
+  const componentName = upperFirst(
+    camelCase(fileName.replace(/^\.\//, '').replace(/\.\w+$/, ''))
+  )
+
+  Vue.component(componentName, resolve => {
+    const componentConfig = requireComponent(fileName)
+
+    resolve(componentConfig.default || componentConfig)
+  })
+})

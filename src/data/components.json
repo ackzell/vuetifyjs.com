@@ -15,10 +15,12 @@
       "v-autocomplete"
     ],
     "examples": [
-      "autocomplete",
-      "scopedSlots",
-      "customFilter",
-      "asynchronous"
+      { "file": "autocomplete", "newIn": "1.1" },
+      { "file": "api", "newIn": "1.1" },
+      { "file": "scopedSlots", "newIn": "1.1" },
+      { "file": "customFilter", "newIn": "1.1" },
+      { "file": "asynchronous", "newIn": "1.1" },
+      { "file": "advanced", "newIn": "1.1" }
     ]
   },
   "avatars": {
@@ -117,7 +119,8 @@
       "default",
       "customTransition",
       "customIcons",
-      "hideControls"
+      "hideControls",
+      "hideDelimiters"
     ],
     "spec": false
   },
@@ -139,7 +142,9 @@
       "v-combobox"
     ],
     "examples": [
-      "combobox",
+      { "file": "combobox", "newIn": "1.1" },
+      "noData",
+      { "file": "advanced", "newIn": "1.1" },
       "comboboxMultiple"
     ]
   },
@@ -229,7 +234,7 @@
       "subheaders",
       "dividerList",
       "dividerListPortrait",
-      "vertical"
+      { "file": "vertical", "newIn": "1.1" }
     ],
     "spec": false
   },
@@ -280,6 +285,13 @@
       "validationWithSubmitAndClear",
       "vuelidate",
       "veeValidate"
+    ],
+    "spec": false
+  },
+  "goto": {
+    "components": ["$vuetify"],
+    "examples": [
+      "usage"
     ],
     "spec": false
   },
@@ -500,18 +512,18 @@
     "spec": false
   },
   "sliders": {
-    "components": ["v-slider"],
+    "components": ["v-slider", "v-range-slider"],
     "examples": [
       "usage",
       "thumb",
-      "customThumb",
-      "ticks",
+      { "file": "customThumb", "newIn": "1.1" },
+      { "file": "ticks", "newIn": "1.1" },
       "discrete",
       "icons",
       "editableNumericValue",
       "customColors",
       "validation",
-      "range",
+      { "file": "range", "newIn": "1.1" },
       "minMax"
     ],
     "spec": false
@@ -583,9 +595,10 @@
     "spec": false
   },
   "textarea": {
-    "components": ["v-text-area"],
+    "components": ["v-textarea"],
     "examples": [
-      "multiLine"
+      "multiLine",
+      "autoGrow"
     ],
     "spec": false
   },

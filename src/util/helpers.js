@@ -18,6 +18,12 @@ export function capitalize (str) {
   return `${str.substr(0, 1).toUpperCase()}${str.slice(1)}`
 }
 
+export function shortId (id) {
+  // atob() but for node
+  const arr = Buffer.from(id, 'base64').toString('binary').split('/')
+  return arr[arr.length - 1]
+}
+
 export function getLongId (id) {
   // btoa() but for node
   return Buffer.from(`gid://shopify/Product/${id}`, 'binary').toString('base64')
@@ -46,4 +52,19 @@ export function randomString (length = 5) {
   }
 
   return text
+}
+
+// Must be called in Vue context
+export function goTo (id) {
+  this.$vuetify.goTo(id).then(() => {
+    if (!id) {
+      return (document.location.hash = '')
+    }
+
+    if (history.replaceState) {
+      history.replaceState(null, null, id)
+    } else {
+      document.location.hash = id
+    }
+  })
 }

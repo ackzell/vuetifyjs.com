@@ -101,7 +101,7 @@
 
     methods: {
       genSrc (name) {
-        return `'/doc-images/layouts/${name.toLowerCase().replace(' ', '-')}.png'`
+        return `'https://cdn.vuetifyjs.com/images/layouts/${name.toLowerCase().replace(' ', '-')}.png'`
       }
     }
   }

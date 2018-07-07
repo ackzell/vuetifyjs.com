@@ -20,6 +20,11 @@
     "country": "kr"
   },
   {
+    "name": "Português",
+    "locale": "pt-BR",
+    "country": "br"
+  },
+  {
     "name": "Русский",
     "locale": "ru",
     "country": "ru"

@@ -3,7 +3,7 @@
     <v-flex xs12 sm6 offset-sm3>
       <v-card>
         <v-card-media
-          src="/doc-images/lists/ali.png"
+          src="https://cdn.vuetifyjs.com/images/lists/ali.png"
           height="300px"
         >
           <v-layout

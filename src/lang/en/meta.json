@@ -293,6 +293,12 @@
     "description": "Icon component for Vuetify Framework",
     "keywords": "icon"
   },
+  "components/inputs": {
+    "h1": "Inputs",
+    "title": "Input Component",
+    "description": "Create customized inputs by extending the v-input component",
+    "keywords": "inputs"
+  },
   "components/lists": {
     "h1": "Lists",
     "title": "List Component",
@@ -394,6 +400,12 @@
     "title": "Tabs",
     "description": "Tabs component for the Vuetify framework.",
     "keywords": "tabs"
+  },
+  "components/textarea": {
+    "h1": "Textareas",
+    "title": "Textareas",
+    "description": "Textarea component for the Vuetify framework.",
+    "keywords": "textarea"
   },
   "components/text-fields": {
     "h1": "Text fields",
@@ -509,7 +521,7 @@
     "description": "Create a custom Material Design theme for your next application.",
     "keywords": "material theme, theme generator, material theme generator, vuetify theme generator"
   },
-  "store": {
+  "store/": {
     "h1": "Vuetify Store",
     "title": "Store",
     "description": "Vuetify Themes, fitted soft t-shirts, vinyl stickers and more.",

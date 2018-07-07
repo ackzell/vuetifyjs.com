@@ -1,37 +1,50 @@
 <template lang="pug">
-  example-view(:data="data")
+  views-example(:data="data")
     section(slot-scope="props")
-      section-head(value="Motion.Scrolling.firstHeader")#first
-      section-text(value="Motion.Scrolling.loremIpsum")
-      section-text(value="Motion.Scrolling.loremIpsum")
-      section-text(value="Motion.Scrolling.loremIpsum")
+      helpers-section-head(value="Motion.Scrolling.firstHeader")#first
+      helpers-section-text(value="Motion.Scrolling.loremIpsum")
+      helpers-section-text(value="Motion.Scrolling.loremIpsum")
+      helpers-section-text(value="Motion.Scrolling.loremIpsum")
 
-      section-head(value="Motion.Scrolling.secondHeader")#second
-      section-text(value="Motion.Scrolling.loremIpsum")
-      section-text(value="Motion.Scrolling.loremIpsum")
-      section-text(value="Motion.Scrolling.loremIpsum")
+      helpers-section-head(value="Motion.Scrolling.secondHeader")#second
+      helpers-section-text(value="Motion.Scrolling.loremIpsum")
+      helpers-section-text(value="Motion.Scrolling.loremIpsum")
+      helpers-section-text(value="Motion.Scrolling.loremIpsum")
 
-      section-head(value="Motion.Scrolling.thirdHeader")#third
-      section-text(value="Motion.Scrolling.loremIpsum")
-      section-text(value="Motion.Scrolling.loremIpsum")
-      section-text(value="Motion.Scrolling.loremIpsum")
+      helpers-section-head(value="Motion.Scrolling.thirdHeader")#third
+      helpers-section-text(value="Motion.Scrolling.loremIpsum")
+      helpers-section-text(value="Motion.Scrolling.loremIpsum")
+      helpers-section-text(value="Motion.Scrolling.loremIpsum")
 </template>
 
 <script>
+  // Helpers
+  import { mapState } from 'vuex'
+
   export default {
     computed: {
-      components () {
-        return this.$t('Motion.Scrolling.components')
-      },
+      ...mapState('app', ['components']),
       data () {
         return {
           folder: 'scrolling',
-          components: this.components,
+          components: this.components.goto.components,
           examples: this.examples
         }
       },
       examples () {
-        return this.$t('Motion.Scrolling.examples')[0]
+        const component = this.components['goto']
+
+        if (!component) return []
+
+        return component.examples.map(example => {
+          let file = example
+
+          return {
+            file,
+            desc: `Motion.Scrolling.examples.${file}.desc`,
+            header: `Motion.Scrolling.examples.${file}.header`
+          }
+        })
       }
     }
   }

@@ -18,6 +18,9 @@
   "props": {
     "closeDelay": "Delay (in ms) after which menu closes (when open-on-hover prop is set to true)",
     "debounce": "Duration before tooltip is shown and hidden when hovered",
-    "openDelay": "Delay (in ms) after which menu opens (when open-on-hover prop is set to true)"
+    "disabled": "Disables the tooltip",
+    "openDelay": "Delay (in ms) after which menu opens (when open-on-hover prop is set to true)",
+    "tag": "Specifies a custom tag for the activator wrapper",
+    "transition": "Mixins.Transitionable.props.transition"
   }
 }

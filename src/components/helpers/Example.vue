@@ -2,13 +2,7 @@
   section.component-example(:id="id")
     //- Section header
     h3(v-if="header.length > 0").title.layout.align-center.mb-3
-      router-link(
-        :to="{ hash: id }"
-        v-if="id"
-        style="text-decoration: none;"
-      ).mr-2
-        v-icon(color="accent") mdi-pound
-      translatable(:i18n="header").d-inline-flex.align-center
+      translation-translatable(:i18n="header").d-inline-flex.align-center
         span(v-text="$t(header)")
         v-chip(
           v-if="newIn"
@@ -22,12 +16,21 @@
 
     //- Description
     // TODO: make independant of english locale
-    translatable(v-if="$te(desc, 'en')" :i18n="desc")
-      markdown(:source="$t(desc)")
+    translation-translatable(v-if="$te(desc, 'en')" :i18n="desc")
+      helpers-markdown(
+        v-if="$t(desc)"
+        :source="$t(desc)"
+      )
 
     v-card(:class="{ 'elevation-0': readonly }").mt-4
       //- Example options
       v-toolbar(flat dense card v-if="!readonly").pr-1
+        v-btn(
+          :href="`#${id}`"
+          icon
+          @click.prevent.stop="goTo"
+        )
+          v-icon(color="grey darken-1") mdi-pound-box
         v-spacer
         v-tooltip(lazy top v-if="hasInverted")
           v-btn(icon slot="activator" @click="invertedProxy = !invertedProxy")
@@ -37,7 +40,7 @@
           v-btn(
             icon
             tag="a"
-            :href="`https://github.com/vuetifyjs/vuetifyjs.com/tree/master/examples/${file}.vue`"
+            :href="`https://github.com/vuetifyjs/vuetifyjs.com/tree/master/src/examples/${file}.vue`"
             target="_blank"
             slot="activator"
           )
@@ -81,7 +84,7 @@
             ) {{ tab }}
             v-tabs-items(class="grey lighten-3")
               v-tab-item(v-for="tab in tabs" :key="tab")
-                markup(:lang="getLang(tab)" v-if="parsed[tab]").ma-0
+                helpers-markup(lang="html" v-if="parsed[tab]").ma-0
                   | {{ parsed[tab] }}
 
       v-divider(v-if="!readonly")
@@ -91,10 +94,12 @@
         component(:is="component")
 
     //- Codepen
-    codepen(ref="codepen" :pen="parsed")
+    helpers-codepen(ref="codepen" :pen="parsed")
 </template>
 
 <script>
+  import { goTo } from '@/util/helpers'
+
   const release = process.env.RELEASE
 
   export default {
@@ -221,6 +226,9 @@
           codepenResources,
           codepenAdditional
         }
+      },
+      goTo () {
+        goTo.call(this, `#${this.id}`)
       },
       toggle () {
         this.active = !this.active

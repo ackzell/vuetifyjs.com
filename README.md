@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://vuetifyjs.com" target="_blank"><img width="100"src="https://vuetifyjs.com/doc-images/logo.svg"></a>
+  <a href="https://vuetifyjs.com" target="_blank"><img width="100"src="https://cdn.vuetifyjs.com/images/logos/logo.svg"></a>
 </p>
 
 ## Vuetify Documentation

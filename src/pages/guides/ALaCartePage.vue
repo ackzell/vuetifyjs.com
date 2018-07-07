@@ -1,6 +1,6 @@
 <template lang="pug">
-  doc-view
-    section-text(slot="sup" :value="`Guides.ALaCarte.headerText2`")
+  views-doc
+    helpers-section-text(slot="sup" :value="`Guides.ALaCarte.headerText2`")
     template(slot-scope="{ namespace }")
       textarea(
         :style="{ position: 'absolute', left: '-1000px', top: '-1000px' }"
@@ -8,9 +8,9 @@
         ref="copy"
       )
       section#importing-components
-        section-head(:value="`${namespace}.importHeader`")
-        section-text(:value="`${namespace}.importText1`")
-        markup(lang="js")
+        helpers-section-head(:value="`${namespace}.importHeader`")
+        helpers-section-text(:value="`${namespace}.importText1`")
+        helpers-markup(lang="js")
           |// .babelrc
           |["transform-imports", {
           |  "vuetify": {
@@ -18,8 +18,8 @@
           |    "preventFullImport": true
           |  }
           |}]
-        app-alert(:value="`${namespace}.alert2`" error)
-        markup(lang="js")
+        core-alert(:value="`${namespace}.alert2`" error)
+        helpers-markup(lang="js")
           |// main.js
           |import Vue from 'vue'
           |import App from './App.vue'
@@ -45,9 +45,9 @@
           |     Ripple
           |   }
           |})
-        app-alert(:value="`${namespace}.alert3`" info)
-        section-text(:value="`${namespace}.importText2`")
-        markup(lang="js")
+        core-alert(:value="`${namespace}.alert3`" info)
+        helpers-section-text(:value="`${namespace}.importText2`")
+        helpers-markup(lang="js")
           |// main.js
           |// Without `transform-imports` package
           |import Vue from 'vue'
@@ -64,8 +64,8 @@
           |   directives,
           |   transitions,
           |})
-        section-text(:value="`${namespace}.importText3`")
-        markup(lang="js")
+        helpers-section-text(:value="`${namespace}.importText3`")
+        helpers-markup(lang="js")
           |// .vue files
           |import * as VCard from 'vuetify/es5/components/VCard'
           |
@@ -76,20 +76,20 @@
           |}
 
       section#required-styles
-        section-head(:value="`${namespace}.styleHeader`")
-        section-text(:value="`${namespace}.styleText1`")
-        markup(lang="cli")
+        helpers-section-head(:value="`${namespace}.styleHeader`")
+        helpers-section-text(:value="`${namespace}.styleText1`")
+        helpers-markup(lang="cli")
           |$ npm install --save-dev stylus stylus-loader
           |# or
           |$ yarn add --dev stylus stylus-loader
-        section-text(:value="`${namespace}.styleText2`")
-        markup(lang="js")
+        helpers-section-text(:value="`${namespace}.styleText2`")
+        helpers-markup(lang="js")
           |// src/main.js
           |require('vuetify/src/stylus/app.styl')
 
       section#component-name-list
-        section-head(:value="`${namespace}.componentNameListHeader`")
-        section-text(:value="`${namespace}.componentNameListText1`")
+        helpers-section-head(:value="`${namespace}.componentNameListHeader`")
+        helpers-section-text(:value="`${namespace}.componentNameListText1`")
         v-card
           v-card-title
             v-spacer
@@ -108,6 +108,7 @@
               v-model="selected"
               item-key="name"
               select-all
+              :rows-per-page-items="[10, 20, {text: '$vuetify.dataIterator.rowsPerPageAll', value: -1}]"
               class="elevation-1"
             )
             template(slot="headerCell" slot-scope="props")
@@ -121,110 +122,95 @@
                   hide-details
                   v-model="props.selected"
                 )
-              td(class="text-xs-right") {{ props.item.name }}
+              td(class="text-xs-right")
+                span(v-if="props.item.name !== 'directives'") <{{ props.item.name }}></{{ props.item.name }}>
               td(class="text-xs-right") {{ props.item.component }}
+              td(class="text-xs-right") {{ props.item.group }}
             template(slot="footer")
-              td(colspan="100%")
-                v-tooltip(
-                  lazy
-                  right
-                  debounce="300"
-                  dark
-                )
+              td(colspan="4")
+                v-layout(align-center)
+                  div
+                    v-switch(
+                      label="ES5"
+                      v-model="es5"
+                      hide-details
+                    )
+                  v-flex
                     v-btn(
-                      icon
                       color="primary"
-                      dark
+                      flat
                       @click="copyMarkup"
                       slot="activator"
                     )
-                      v-icon content_copy
-                    span Copy components
+                      | Copy markup
+                      v-icon(right) content_copy
 </template>
 
 <script>
+  import alacarteComponents from '@/util/alacarteComponents'
+
   export default {
     data () {
       return {
         search: '',
         pagination: {},
-        selected: [],
+        selected: [{ name: 'v-app', component: 'VApp', group: 'VApp' }],
         headers: [
-          { text: 'Markup', value: 'markup' },
-          { text: 'Component Name', value: 'component' }
+          { text: 'Markup', value: 'name' },
+          { text: 'Component', value: 'component' },
+          { text: 'Group', value: 'group' }
         ],
+        es5: false,
         // component list.
-        items: [
-          { value: false, name: 'v-alert', component: 'VAlert', group: 'VAlert' },
-          { value: false, name: 'v-app', component: 'VApp', group: 'VApp' },
-          { value: false, name: 'v-avatar', component: 'VAvatar', group: 'VAvatar' },
-          { value: false, name: 'v-badge', component: 'VBadge', group: 'VBadge' },
-          { value: false, name: 'v-bottom-nav', component: 'VBottomNav', group: 'VBottomNav' },
-          { value: false, name: 'v-bottom-sheet', component: 'VBottomSheet', group: 'VBottomSheet' },
-          { value: false, name: 'v-breadcrumbs', component: 'VBreadcrumbs', group: 'VBreadcrumbs' },
-          { value: false, name: 'v-breadcrumbs-item', component: 'VBreadcrumbs', group: 'VBreadcrumbs' },
-          { value: false, name: 'v-btn', component: 'VBtn', group: 'VBtn' },
-          { value: false, name: 'v-btn-toggle', component: 'VBtnToggle', group: 'VBtnToggle' },
-          { value: false, name: 'v-card', component: 'VCard', group: 'VCard' },
-          { value: false, name: 'v-card-title', component: 'VCard', group: 'VCard' },
-          { value: false, name: 'v-card-media', component: 'VCard', group: 'VCard' },
-          { value: false, name: 'v-carousel', component: 'VCarousel', group: 'VCarousel' },
-          { value: false, name: 'v-checkbox', component: 'VCheckbox', group: 'VCheckbox' },
-          { value: false, name: 'v-chip', component: 'VChip', group: 'VChip' },
-          { value: false, name: 'v-data-table', component: 'VDataTable', group: 'VDataTable' },
-          { value: false, name: 'v-edit-dialog', component: 'VDataTable', group: 'VDataTable' },
-          { value: false, name: 'v-date-picker', component: 'VDatePicker', group: 'VDatePicker' },
-          { value: false, name: 'v-dialog', component: 'VDialog', group: 'VDialog' },
-          { value: false, name: 'v-divider', component: 'VDivider', group: 'VDivider' },
-          { value: false, name: 'v-expansion-panel', component: 'VExpansionPanel', group: 'VExpansionPanel' },
-          { value: false, name: 'v-expansion-panel-content', component: 'VExpansionPanel', group: 'VExpansionPanel' },
-          { value: false, name: 'v-footer', component: 'VFooter', group: 'VFooter' },
-          { value: false, name: 'v-form', component: 'VForm', group: 'VForm' },
-          { value: false, name: 'v-footer', component: 'VFooter', group: 'VFooter' },
-          { value: false, name: 'v-layout', component: 'VGrid', group: 'VGrid' },
-          { value: false, name: 'v-flex', component: 'VGrid', group: 'VGrid' },
-          { value: false, name: 'v-container', component: 'VGrid', group: 'VGrid' },
-          { value: false, name: 'v-content', component: 'VGrid', group: 'VGrid' },
-          { value: false, name: 'v-icon', component: 'VIcon', group: 'VIcon' },
-          { value: false, name: 'v-list', component: 'VList', group: 'VList' },
-          { value: false, name: 'v-list-group', component: 'VList', group: 'VList' },
-          { value: false, name: 'v-list-tile', component: 'VList', group: 'VList' },
-          { value: false, name: 'v-list-tile-action', component: 'VList', group: 'VList' },
-          { value: false, name: 'v-menu', component: 'VMenu', group: 'VMenu' },
-          { value: false, name: 'v-navigation-drawer', component: 'VNavigationDrawer', group: 'VNavigationDrawer' },
-          { value: false, name: 'v-pagination', component: 'VPagination', group: 'VPagination' },
-          { value: false, name: 'v-parallax', component: 'VParallax', group: 'VParallax' },
-          { value: false, name: 'v-progress-circular', component: 'VProgressCircular', group: 'VProgressCircular' },
-          { value: false, name: 'v-progress-linear', component: 'VProgressLinear', group: 'VProgressLinear' },
-          { value: false, name: 'v-radio', component: 'VRadioGroup', group: 'VRadioGroup' },
-          { value: false, name: 'v-radio-group', component: 'VRadioGroup', group: 'VRadioGroup' },
-          { value: false, name: 'v-select', component: 'VSelect', group: 'VSelect' },
-          { value: false, name: 'v-slider', component: 'VSlider', group: 'VSlider' },
-          { value: false, name: 'v-snackbar', component: 'VSnackbar', group: 'VSnackbar' },
-          { value: false, name: 'v-speed-dial', component: 'VSpeedDial', group: 'VSpeedDial' },
-          { value: false, name: 'v-stepper', component: 'VStepper', group: 'VStepper' },
-          { value: false, name: 'v-stepper-content', component: 'VStepper', group: 'VStepper' },
-          { value: false, name: 'v-stepper-step', component: 'VStepper', group: 'VStepper' },
-          { value: false, name: 'v-subheader', component: 'VSubheader', group: 'VSubheader' },
-          { value: false, name: 'v-switch', component: 'VSwitch', group: 'VSwitch' },
-          { value: false, name: 'v-system-bar', component: 'VSystemBar', group: 'VSystemBar' },
-          { value: false, name: 'v-tabs', component: 'VTabs', group: 'VTabs' },
-          { value: false, name: 'v-tab', component: 'VTabs', group: 'VTabs' },
-          { value: false, name: 'v-tabs-slider', component: 'VTabs', group: 'VTabs' },
-          { value: false, name: 'v-tabs-items', component: 'VTabs', group: 'VTabs' },
-          { value: false, name: 'v-tab-item', component: 'VTabs', group: 'VTabs' },
-          { value: false, name: 'v-text-field', component: 'VTextField', group: 'VTextField' },
-          { value: false, name: 'v-time-picker', component: 'VTimePicker', group: 'VTimePicker' },
-          { value: false, name: 'v-toolbar', component: 'VToolbar', group: 'VToolbar' },
-          { value: false, name: 'v-toolbar-side-icon', component: 'VToolbar', group: 'VToolbar' },
-          { value: false, name: 'v-tooltip', component: 'VTooltip', group: 'VTooltip' },
-          { value: false, name: 'transitions', component: 'transitions', group: 'transitions' }
-        ]
+        items: alacarteComponents()
       }
     },
     computed: {
       copy () {
-        return this.generateCustomComponent()
+        const components = `components: {\n` + this.componentSelection.filter(name => name !== 'directives').map(name => `    ${name}`).join(',\n') + '\n  }'
+        const hasDirectives = this.componentSelection.includes('directives')
+        const directivesImport = hasDirectives ? `import directives from 'vuetify/es5/directives';\n` : ''
+        const items = (hasDirectives ? [components, 'directives'] : [components]).map(v => `  ${v}`).join(',\n')
+        const use = `Vue.use(Vuetify, {\n${items}\n});`
+        const imports = this.es5 ? this.es5Imports : this.es6Imports
+        return `import Vue from 'vue';\n${imports}\n${directivesImport}\n${use}`
+      },
+      es5Imports () {
+        const imports = this.componentSelection
+          .filter(name => name !== 'directives')
+          .map(name => `import ${name} from 'vuetify/es5/components/${name}';`).join('\n')
+
+        return `import Vuetify from 'vuetify/es5/components/Vuetify';\n${imports}`
+      },
+      es6Imports () {
+        const imports = this.componentSelection
+          .filter(name => name !== 'directives')
+          .map(name => `  ${name}`)
+          .join(',\n')
+
+        return `import {\n  Vuetify,\n${imports}\n} from 'vuetify';`
+      },
+      isGroup () {
+        const isGroup = {}
+        this.items.forEach(({ group }) => (isGroup[group] = (group in isGroup) ? isGroup[group] + 1 : 0))
+        return isGroup
+      },
+      isVAppSelected () {
+        return !!this.selected.find(item => item.name === 'v-app')
+      },
+      componentSelection () {
+        const names = [...new Set(this.selected.map(({group}) => group))]
+        names.sort((a, b) => {
+          a = a === 'VApp' ? '' : a
+          b = b === 'VApp' ? '' : b
+          return a < b ? -1 : a > b
+        })
+        return names
+      }
+    },
+    watch: {
+      isVAppSelected () {
+        this.isVAppSelected || alert('VApp component is required, removing it may cause your application not working properly!')
       }
     },
     methods: {
@@ -235,10 +221,6 @@
         return items.filter(item => (
           filter(item['name'], search) || filter(item['component'], search) || filter(item['group'], search)
         ))
-      },
-      generateCustomComponent () {
-        const components = this.selected.map(({ component }) => component).join(', ')
-        return `import Vue from 'vue';\nimport { Vuetify, ${components} } from 'vuetify';\nVue.use(Vuetify, { components: { ${components} } });`
       },
       copyMarkup () {
         this.$refs.copy.select()

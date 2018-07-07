@@ -17,14 +17,14 @@
   const title = 'Vuetify Example Pen'
 
   const cssResources = [
-    'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
-    `https://unpkg.com/vuetify@${version}/dist/vuetify.min.css`
+    'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons',
+    `https://cdn.jsdelivr.net/npm/vuetify@${version}/dist/vuetify.min.css`
   ]
 
   const jsResources = [
-    'https://unpkg.com/babel-polyfill/dist/polyfill.min.js',
-    'https://unpkg.com/vue/dist/vue.js',
-    `https://unpkg.com/vuetify@${version}/dist/vuetify.min.js`
+    'https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js',
+    'https://cdn.jsdelivr.net/npm/vue/dist/vue.js',
+    `https://cdn.jsdelivr.net/npm/vuetify@${version}/dist/vuetify.min.js`
   ]
 
   export default {
@@ -47,7 +47,6 @@
 
         return additional
           .replace(/(<codepen-additional.*?>|<\/codepen-additional>$)/g, '')
-          .replace(/\//g, 'https://vuetifyjs.com/')
           .replace(/\n {2}/g, '\n')
           .trim() + (additional ? '\n\n' : '')
       },
@@ -67,7 +66,6 @@
         return (this.pen.script || '')
           .replace(replace, '')
           .replace(imports, '')
-          .replace(/\//g, 'https://vuetifyjs.com/')
           .replace(/\n {2}/g, '\n')
           .trim()
       },
@@ -81,7 +79,6 @@
         const template = this.pen.template || ''
 
         return template
-          .replace(/\//g, 'https://vuetifyjs.com/')
           .replace(/(<template>|<\/template>$)/g, '')
           .replace(/\n/g, '\n  ')
           .trim()
