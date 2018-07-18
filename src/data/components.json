@@ -72,7 +72,7 @@
     "spec": false
   },
   "buttons": {
-    "components": ["v-btn"],
+    "components": ["v-btn", "v-btn-toggle"],
     "examples": [
       "usage",
       "flat",
@@ -299,6 +299,7 @@
     "components": ["v-container", "v-layout", "v-flex", "v-spacer"],
     "examples": [
       "grid",
+      "playground",
       "offset",
       "order",
       "directionAndAlign",

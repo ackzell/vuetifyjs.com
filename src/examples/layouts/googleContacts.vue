@@ -79,7 +79,8 @@
       <v-text-field
         flat
         solo-inverted
-        prepend-icon="search"
+        hide-details
+        prepend-inner-icon="search"
         label="Search"
         class="hidden-sm-and-down"
       ></v-text-field>
@@ -93,7 +94,7 @@
       <v-btn icon large>
         <v-avatar size="32px" tile>
           <img
-            src="https://vuetifyjs.comhttps://cdn.vuetifyjs.com/images/logos/logo.svg"
+            src="https://cdn.vuetifyjs.com/images/logos/logo.svg"
             alt="Vuetify"
           >
         </v-avatar>

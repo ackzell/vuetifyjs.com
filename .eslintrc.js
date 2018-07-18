@@ -38,11 +38,16 @@ module.exports = {
           "baseIndent": 1,
           "switchCase": 1,
           "ignores": []
-        }]
+        }],
+        "vue/html-closing-bracket-newline": ["error", {
+          "singleline": "never",
+          "multiline": "always"
+        }],
+        "vue/html-closing-bracket-spacing": "error"
       }
     },
     {
-      files: 'examples/**/*.vue',
+      files: 'src/examples/**/*.vue',
       rules: {
         "vue/valid-v-on": false,
         "vue/no-parsing-error": false, // This rule doesn't allow empty event listeners
@@ -58,7 +63,7 @@ module.exports = {
       }
     },
     {
-      files: 'examples/layouts/**/*.vue',
+      files: 'src/examples/layouts/**/*.vue',
       rules: {
         "vue/order-in-components": false,
         "vue/require-default-prop": false

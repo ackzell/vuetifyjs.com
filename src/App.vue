@@ -47,10 +47,10 @@
       this.snackbar({
         color: 'default',
         close: true,
-        id: 'v1-docs-link',
-        text: 'v1.0 Docs',
-        msg: 'If you need v1.0 docs navigate here',
-        href: 'https://v1.vuetifyjs.com',
+        id: 'our-point-of-vue-evolving-through-innovation-at-veoci-6cf4a47a08ca',
+        text: 'Go To Article',
+        msg: '**New Article** — _Our Point of Vue_',
+        href: 'https://medium.com/vuetify/our-point-of-vue-evolving-through-innovation-at-veoci-6cf4a47a08ca',
         timeout: 0
       })
     },
