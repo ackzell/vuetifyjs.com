@@ -22,6 +22,7 @@ import Footer from './Footer'
 import Forms from './Forms'
 import HelpMeChoose from './HelpMeChoose'
 import Icons from './Icons'
+import Images from './Images'
 import Inputs from './Inputs'
 import Lists from './Lists'
 import Jumbotrons from './Jumbotrons'
@@ -31,6 +32,7 @@ import OverflowBtns from './OverflowBtns'
 import Paginations from './Paginations'
 import Parallax from './Parallax'
 import Progress from './Progress'
+import Ratings from './Ratings'
 import SelectionControls from './SelectionControls'
 import Selects from './Selects'
 import Sliders from './Sliders'
@@ -70,6 +72,7 @@ export default {
   Forms,
   HelpMeChoose,
   Icons,
+  Images,
   Inputs,
   Lists,
   Jumbotrons,
@@ -79,6 +82,7 @@ export default {
   Paginations,
   Parallax,
   Progress,
+  Ratings,
   SelectionControls,
   Selects,
   Sliders,

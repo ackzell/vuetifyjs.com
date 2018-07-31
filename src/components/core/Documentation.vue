@@ -1,8 +1,10 @@
 <template>
   <v-app v-cloak>
-    <core-drawer />
+    <core-ad />
 
     <core-toolbar />
+
+    <core-drawer />
 
     <core-view />
 

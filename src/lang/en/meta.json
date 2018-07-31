@@ -293,6 +293,12 @@
     "description": "Icon component for Vuetify Framework",
     "keywords": "icon"
   },
+  "components/images": {
+    "h1": "Images",
+    "title": "Image Component",
+    "description": "Image component for Vuetify Framework",
+    "keywords": "image, progressive, lazy, load"
+  },
   "components/inputs": {
     "h1": "Inputs",
     "title": "Input Component",
@@ -358,6 +364,12 @@
     "title": "Progress",
     "description": "Progress components for the Vuetify framework.",
     "keywords": "progress"
+  },
+  "components/ratings": {
+    "h1": "Ratings",
+    "title": "Ratings",
+    "description": "Star rating component for the Vuetify framework.",
+    "keywords": "rating, star rating, ratings, stars"
   },
   "components/sliders": {
     "h1": "Sliders",

@@ -334,6 +334,16 @@
     ],
     "spec": false
   },
+  "images": {
+    "components": ["v-img"],
+    "examples": [
+      "usage",
+      "containCover",
+      "maxHeight",
+      "ratio"
+    ],
+    "spec": false
+  },
   "inputs": {
     "components": ["v-input"],
     "examples": ["usage"],
@@ -448,6 +458,18 @@
       "linearCustomColors"
     ],
     "spec": false
+  },
+  "ratings": {
+    "components": ["v-rating"],
+    "examples": [
+      { "file": "default", "newIn": "1.2" },
+      { "file": "sizes", "newIn": "1.2" },
+      { "file": "length", "newIn": "1.2" },
+      { "file": "increments", "newIn": "1.2" },
+      { "file": "slots", "newIn": "1.2" },
+      { "file": "card", "newIn": "1.2" },
+      { "file": "advanced", "newIn": "1.2" }
+    ]
   },
   "resizing": {
     "components": ["v-resize"],
@@ -599,7 +621,8 @@
     "components": ["v-textarea"],
     "examples": [
       "multiLine",
-      "autoGrow"
+      "autoGrow",
+      { "file": "signupBox", "newIn": "1.1" }
     ],
     "spec": false
   },

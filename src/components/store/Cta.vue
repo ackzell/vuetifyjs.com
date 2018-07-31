@@ -16,7 +16,7 @@
           height="100%"
           tile
         >
-          <v-card-media
+          <v-img
             height="100%"
             src="https://cdn.vuetifyjs.com/images/store/angryman.png"
           />
@@ -50,8 +50,8 @@
               @mouseenter="highlight.value = true"
               @mouseleave="highlight.value = false"
             >
-              <v-card-media
-                :src="highlight.variants[0].image.src"
+              <v-img
+                :src="getSrc(highlight)"
                 contain
                 height="135px"
               >
@@ -68,7 +68,7 @@
                     {{ $t('Vuetify.Store.onSale') }}
                   </v-chip>
                 </div>
-              </v-card-media>
+              </v-img>
             </v-card>
           </v-flex>
         </v-layout>
@@ -113,6 +113,13 @@
     },
 
     methods: {
+      getSrc (highlight) {
+        if (highlight.images.length > 0) {
+          return highlight.images[0].src
+        }
+
+        return highlight.variants[0].image.src
+      },
       shortId: shortId
     }
   }

@@ -6,7 +6,7 @@
     <v-container>
       <v-layout>
         <v-flex xs5>
-          <v-card-media
+          <v-img
             :src="src"
             contain
             height="150"
@@ -87,6 +87,10 @@
         return shortId(this.value.id)
       },
       src () {
+        if (this.value.images.length > 0) {
+          return this.value.images[0].src
+        }
+
         return this.value.variants[0].image.src
       },
       title () {
