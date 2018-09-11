@@ -97,7 +97,7 @@
                   :selected="data.selected"
                   close
                   class="chip--select-multi"
-                  @input="data.parent.selectItem(data.item)"
+                  @input="remove(data.item)"
                 >
                   <v-avatar>
                     <img :src="data.item.avatar">
@@ -191,6 +191,19 @@
           setTimeout(() => (this.isUpdating = false), 3000)
         }
       }
+    },
+
+    methods: {
+      remove (item) {
+        const index = this.friends.indexOf(item.name)
+        if (index >= 0) this.friends.splice(index, 1)
+      }
     }
   }
 </script>
+
+<codepen-resources lang="json">
+  {
+    "css": ["https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css"]
+  }
+</codepen-resources>

@@ -15,7 +15,7 @@
   "optionHeader2": "Minification",
   "optionText3": "For SSR applications, you can pass a callback function to **$vuetify.options.minifyTheme** to reduce the initial page size. When using this option, it is recommended to also use **themeCache**.",
   "optionHeader3": "Caching",
-  "optionText4": "A custom caching object and be provided (works in tandem with **minifyTheme**) to increase SSR efficiency. The object must contain a **get** and a **set** method. Below is an example using [LRU cache](https://www.npmjs.com/package/lru-cache).",
+  "optionText4": "A custom caching object can be provided (works in tandem with **minifyTheme**) to increase SSR efficiency. The object must contain a **get** and a **set** method. Below is an example using [LRU cache](https://www.npmjs.com/package/lru-cache).",
   "stylusHeader": "Modifying Stylus variables",
   "stylusText1": "Vuetify is built on top of **stylus**. Similar to **scss**, you can change variables and re-compile the style files. A list of available variables is located [here](https://github.com/vuetifyjs/vuetify/blob/master/src/stylus/settings/_variables.styl). In order to build the stylus file, you will need to configure your application to support stylus. If you are using one of the pre-made templates available on the [Quick Start](/getting-started/quick-start) guide, you can skip the next section.",
   "stylusHeader2": "Setup stylus-loader with Webpack",
@@ -27,5 +27,9 @@
   "stylusHeader3": "Changing values",
   "stylusText7": "Now that stylus is configured, you can set default values for the stylus variables that you wish to change. These must be declared _before_ the import and will automatically override the Vuetify defaults.",
   "themeGeneratorHeader": "Theme generator",
-  "themeGeneratorText1": "Discover and generate new color themes for your **Vuetify** applications using our [Theme Generator](/theme-generator) tool."
+  "themeGeneratorText1": "Discover and generate new color themes for your **Vuetify** applications using our [Theme Generator](/theme-generator) tool.",
+  "variantsSubheader": "Custom theme variants",
+  "variantsText1": "While Vuetify automatically generates _lighten_ and _darken_ variants for theme colors, you may want to control this yourself. Simply pass a theme object that contains the variants that you wish to modify. Anything not provided will still be generated for you.",
+  "variantsText2": "You can now import your custom theme object and apply it to Vuetify",
+  "variantsText3": "Below is a full list of the overwritable keys on the theme object:"
 }

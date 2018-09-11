@@ -40,9 +40,9 @@ export default [
       },
       { name: 'Breakpoints', title: 'Breakpoints' },
       { name: 'AspectRatios', title: 'Aspect ratios', badge: 'new' },
-      { name: 'Spacing', title: 'Spacing' },
+      { name: 'Spacing', title: 'Spacing', badge: 'updated', color: 'tertiary' },
       { name: 'Alignment', title: 'Text alignment' },
-      { name: 'Display', title: 'Display' },
+      { name: 'Display', title: 'Display', badge: 'updated', color: 'tertiary' },
       { name: 'Elevation', title: 'Elevation' },
       { name: 'Sandbox', title: 'Sandbox' }
     ]
@@ -54,7 +54,7 @@ export default [
     items: [
       { name: 'Colors', title: 'Colors', color: 'tertiary' },
       { name: 'Theme', title: 'Theme', color: 'tertiary', badge: 'updated' },
-      { name: 'Typography', title: 'Typography', color: 'tertiary' },
+      { name: 'Typography', title: 'Typography', color: 'tertiary', badge: 'updated' },
       { name: 'Content', title: 'Content' }
     ]
   },
@@ -64,7 +64,7 @@ export default [
     icon: 'mdi-clock-fast',
     items: [
       { name: 'Scrolling', title: 'Scrolling' },
-      { name: 'Transitions', title: 'Transitions' }
+      { name: 'Transitions', title: 'Transitions', color: 'tertiary', badge: 'updated' }
     ]
   },
   {
@@ -108,9 +108,10 @@ export default [
           { name: 'text-fields', title: 'Text fields', color: 'tertiary' }
         ]
       },
+      { name: 'hover', title: 'Hover', badge: 'new' },
       { name: 'icons', title: 'Icons', badge: 'updated', color: 'tertiary' },
       { name: 'images', 'title': 'Images', badge: 'new' },
-      { name: 'jumbotrons', title: 'Jumbotrons' },
+      { name: 'jumbotrons', title: 'Jumbotrons', badge: 'deprecated', color: 'black' },
       { name: 'lists', title: 'Lists' },
       { name: 'menus', title: 'Menus' },
       { name: 'navigation-drawers', title: 'Navigation drawers' },

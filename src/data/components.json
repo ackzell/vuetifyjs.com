@@ -105,9 +105,10 @@
   "cards": {
     "components": [
       "v-card",
+      "v-card-actions",
       "v-card-media",
-      "v-card-title",
-      "v-card-actions"
+      "v-card-text",
+      "v-card-title"
     ],
     "examples": [
       "components",
@@ -329,6 +330,14 @@
     ],
     "spec": false
   },
+  "hover": {
+    "components": ["v-hover"],
+    "examples": [
+      { "file": "default", "newIn": "1.2" },
+      { "file": "transition", "newIn": "1.2" }
+    ],
+    "spec": false
+  },
   "icons": {
     "components": ["v-icon"],
     "examples": [
@@ -350,7 +359,8 @@
       "usage",
       "containCover",
       "maxHeight",
-      "ratio"
+      "ratio",
+      "gradients"
     ],
     "spec": false
   },
@@ -647,6 +657,7 @@
       "icon",
       "clearable",
       "iconEvents",
+      "iconSlots",
       "characterCounter",
       "password",
       "validation",
@@ -709,5 +720,27 @@
   "touch-support": {
     "components": ["v-touch"],
     "examples": ["default"]
+  },
+  "transitions": {
+    "components": [
+      "v-fade-transition",
+      "v-scroll-x-transition",
+      "v-scroll-x-reverse-transition",
+      "v-scroll-y-transition",
+      "v-scroll-y-reverse-transition",
+      "v-slide-x-transition",
+      "v-slide-x-reverse-transition",
+      "v-slide-y-transition",
+      "v-slide-y-reverse-transition",
+      "v-scale-transition"
+    ],
+    "examples": [
+      "slideXTransitions",
+      "slideYTransitions",
+      "scaleTransition",
+      "fadeTransition",
+      "customOrigin",
+      { "file": "todo", "newIn": "1.2" }
+    ]
   }
 }
